@@ -7,7 +7,11 @@
 ```bash
 echo '
 .vscode
+main.c
+a.out.dSYM
 *.out
+*.a
+*.o
 */core
 *.rb
 ' >> .git/info/exclude

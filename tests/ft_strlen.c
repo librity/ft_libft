@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/03 00:27:15 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/03 00:36:07 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/04 22:18:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include "libft.h"
+
 #include <stdio.h>
 #include <string.h>
+
 int		main(void)
 {
 	printf("%lu\n", ft_strlen("1234"));

@@ -1,3 +1,8 @@
 {
-  "editor.insertSpaces": false
+  "editor.insertSpaces": false,
+  "files.associations": {
+    "exclude": "ignore",
+    "string.h": "c",
+    "stdio.h": "c"
+  }
 }
