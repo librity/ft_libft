@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 22:16:37 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/05 01:43:11 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/07 13:20:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,7 +38,7 @@ int main()
 
 	char csrc_ft[] = "GeeksforGeeks";
 	char cdest_ft[100];
-	memcpy(cdest_ft, csrc_ft, strlen(csrc_ft) + 1);
+	ft_memcpy(cdest_ft, csrc_ft, strlen(csrc_ft) + 1);
 	printf("Copied string is %s\n", cdest_ft);
 	printf("---------------\n");
 
