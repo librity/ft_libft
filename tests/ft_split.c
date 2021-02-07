@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 22:16:37 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/06 21:06:55 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/06 21:18:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,9 +23,6 @@ int main(void)
 	char **strings;
 
 	strings = ft_split("If money can't buy happyness", 'y');
-	while (*strings)
-		printf("%s\n", *strings++);
-	printf("----------\n");
 	while (*strings)
 		printf("%s\n", *strings++);
 	printf("----------\n");
