@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strnstr.c                                       :+:      :+:    :+:   */
+/*   ft_strrchr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 22:16:37 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/06 16:15:29 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/06 15:08:04 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,30 +19,22 @@
 int main(void)
 {
 
-	const char *hay1 = "Foo Bar Baz";
-	const char *needle1 = "Bar";
+	char string1[] = {"/home/test/sample"};
 
-	char *hay2 = "la da\ndoo a da\nnow here comes the stack\nok there it was.\n stackdummy";
-	char *needle2 = "stackdummy";
-
-	printf("%s\n", strnstr(hay1, needle1, 4));
-	printf("%s\n", ft_strnstr(hay1, needle1, 4));
+	printf("%s\n", strrchr(string1, 't'));
+	printf("%s\n", ft_strrchr(string1, 't'));
 	printf("---------------\n");
 
-	printf("%s\n", strnstr(hay1, needle1, 10));
-	printf("%s\n", ft_strnstr(hay1, needle1, 10));
+	printf("%s\n", strrchr(string1, 'a'));
+	printf("%s\n", ft_strrchr(string1, 'a'));
 	printf("---------------\n");
 
-	printf("%s\n", strnstr(hay1, needle1, 0));
-	printf("%s\n", ft_strnstr(hay1, needle1, 0));
+	printf("%s\n", strrchr(string1, '\0'));
+	printf("%s\n", ft_strrchr(string1, '\0'));
 	printf("---------------\n");
 
-	printf("%s\n", strnstr(hay2, needle2, 10));
-	printf("%s\n", ft_strnstr(hay2, needle2, 10));
-	printf("---------------\n");
-
-	printf("%s\n", strnstr(hay2, needle2, 70));
-	printf("%s\n", ft_strnstr(hay2, needle2, 70));
+	printf("%s\n", strrchr(string1, 'e'));
+	printf("%s\n", ft_strrchr(string1, 'e'));
 	printf("---------------\n");
 
 	return 0;

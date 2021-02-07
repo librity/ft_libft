@@ -3,6 +3,7 @@
   "files.associations": {
     "exclude": "ignore",
     "string.h": "c",
-    "stdio.h": "c"
+    "stdio.h": "c",
+    "ctype.h": "c"
   }
 }
