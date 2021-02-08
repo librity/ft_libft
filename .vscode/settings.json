@@ -4,6 +4,8 @@
     "exclude": "ignore",
     "string.h": "c",
     "stdio.h": "c",
-    "ctype.h": "c"
+    "ctype.h": "c",
+    "unity.h": "c",
+    "libft.h": "c"
   }
 }
