@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 02:46:24 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/08 00:58:41 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/08 11:30:41 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,7 +22,7 @@ size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 	unsigned int	iterator;
 
 	if (src == NULL)
-		return (NULL);
+		return (0);
 	if (size > 0)
 	{
 		iterator = 0;
