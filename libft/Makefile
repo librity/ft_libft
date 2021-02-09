@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/02/07 18:02:15 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/02/09 12:33:55 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,8 +18,7 @@ DEBUG_CC_FLAGS = -g -Wall -Wextra -Werror
 
 REMOVE = /bin/rm -f
 REMOVE_RECURSIVE = /bin/rm -rf
-ARCHIVE = ar -rcs
-INDEX_ARCHIVE = ranlib
+ARCHIVE_AND_INDEX = ar -rcs
 
 HEADER = libft.h
 
@@ -43,13 +42,11 @@ all: $(NAME)
 
 $(NAME): $(OBJECTS) $(HEADER)
 	$(CC) $(CC_FLAGS) -c $(SOURCES)
-	$(ARCHIVE) $(NAME) $(OBJECTS) 
-	$(INDEX_ARCHIVE) $(NAME)
+	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS) 
 
 bonus: $(BONUS_OBJECTS) $(NAME)
 	$(CC) $(CC_FLAGS) -c $(BONUS_SOURCES)
-	$(ARCHIVE) $(NAME) $(BONUS_OBJECTS)
-	$(INDEX_ARCHIVE) $(NAME)
+	$(ARCHIVE_AND_INDEX) $(NAME) $(BONUS_OBJECTS)
 
 test: $(NAME) bonus
 	$(CC) $(DEBUG_CC_FLAGS) $(TEST_MAIN) $(NAME)

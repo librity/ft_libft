@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/04 22:16:37 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/07 00:21:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/02/09 12:40:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,13 @@ char squares(unsigned int a, char b)
 char alpha(unsigned int a, char b)
 {
 	b = 0;
-	return (a + 'A');
+	return ('A' + (char)a);
+}
+
+char a_less_than_five(unsigned int a, char b)
+{
+	if (a < 5)
+		return ('A') else return (b);
 }
 
 int main(void)
