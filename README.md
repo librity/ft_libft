@@ -4,6 +4,13 @@
 
 Tested with [Unity](https://github.com/ThrowTheSwitch/Unity).
 
+## Tests
+
+```bash
+cd tests
+make test
+```
+
 ## Snippets
 
 ```bash
