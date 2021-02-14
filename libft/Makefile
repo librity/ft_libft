@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/02/09 12:33:55 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/02/13 22:56:05 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -34,9 +34,9 @@ BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
 	ft_lstadd_back.c ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
 BONUS_OBJECTS = $(subst .c,.o,$(BONUS_SOURCES))
 
-TEST_MAIN = test.c
-EXECUTE_TEST = time ./a.out
-TEST_GARBAGE = a.out a.out.dSYM
+EXAMPLE_MAIN = example.c
+EXECUTE_EXAMPLE = time ./a.out
+EXAMPLE_GARBAGE = a.out a.out.dSYM
 
 all: $(NAME)
 
@@ -48,9 +48,9 @@ bonus: $(BONUS_OBJECTS) $(NAME)
 	$(CC) $(CC_FLAGS) -c $(BONUS_SOURCES)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(BONUS_OBJECTS)
 
-test: $(NAME) bonus
-	$(CC) $(DEBUG_CC_FLAGS) $(TEST_MAIN) $(NAME)
-	$(EXECUTE_TEST)
+example: $(NAME) bonus
+	$(CC) $(DEBUG_CC_FLAGS) $(EXAMPLE_MAIN) $(NAME)
+	$(EXECUTE_EXAMPLE)
 
 clean:
 	$(REMOVE) $(OBJECTS) $(BONUS_OBJECTS)
@@ -58,9 +58,9 @@ clean:
 fclean: clean
 	$(REMOVE) $(NAME)
 
-test_clean: fclean
-	$(REMOVE_RECURSIVE) $(TEST_GARBAGE)
+example_clean: fclean
+	$(REMOVE_RECURSIVE) $(EXAMPLE_GARBAGE)
 
 re: fclean all
 
-.PHONY: all test re clean fclean test_clean
+.PHONY: all example re clean fclean example_clean

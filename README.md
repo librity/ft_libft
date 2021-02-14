@@ -2,6 +2,8 @@
 
 42 Sao Paulo's main cursus project - Libft
 
+Tested with [Unity](https://github.com/ThrowTheSwitch/Unity).
+
 ## Snippets
 
 ```bash
@@ -9,6 +11,7 @@ echo '
 .vscode
 main.c
 test.c
+example.c
 a.out.dSYM
 *.out
 *.a
