@@ -3,10 +3,10 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
+#    By: lpaulo-m@student.42sp.org.br <lpaulo-m>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/02/13 22:56:05 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/02/26 00:45:36 by lpaulo-m@st      ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -27,7 +27,8 @@ SOURCES = ft_memset.c ft_bzero.c ft_memcpy.c ft_memccpy.c ft_memmove.c \
 	ft_strrchr.c ft_strnstr.c ft_strncmp.c ft_atoi.c ft_isalpha.c ft_isdigit.c \
 	ft_isalnum.c ft_isprint.c ft_isascii.c ft_toupper.c ft_tolower.c ft_calloc.c \
 	ft_strdup.c ft_substr.c ft_strjoin.c ft_strtrim.c ft_split.c ft_itoa.c \
-	ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c
+	ft_strmapi.c ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
+	ft_putchar.c ft_putstr.c ft_putendl.c ft_putnbr.c
 OBJECTS = $(subst .c,.o,$(SOURCES))
 
 BONUS_SOURCES = ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c \
