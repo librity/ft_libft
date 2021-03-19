@@ -1,22 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_puthex_downcase.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/19 02:01:16 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/03 07:38:23 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2021/03/19 02:02:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Checks if c is an ASCII character.
-*/
-
-bool	ft_isascii(int c)
+void	ft_puthex_downcase(unsigned int number)
 {
-	return (c >= 0 && c <= 127);
+	ft_putnbr_base_ui(number, DOWNCASE_HEX_BASE);
 }

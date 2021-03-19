@@ -1,22 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putnbr_i.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/19 02:01:16 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/03 03:17:29 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2021/03/19 02:02:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Checks if c is an ASCII character.
+** Writes ascii representation of number to file descriptor fd.
 */
 
-bool	ft_isascii(int c)
+void	ft_putnbr_i(int number)
 {
-	return (c >= 0 && c <= 127);
+	ft_putnbr(number);
 }

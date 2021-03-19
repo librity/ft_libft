@@ -1,22 +1,28 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_up_to.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/19 02:01:16 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/03 03:17:38 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2021/03/19 02:02:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
-** Checks if c is an ASCII character.
+** Writes string s to file descriptor fd without null terminator.
 */
 
-bool	ft_isascii(int c)
+void	ft_putstr_up_to(char *s, size_t up_to)
 {
-	return (c >= 0 && c <= 127);
+	size_t control;
+
+	control = 0;
+	if (s == NULL)
+		return ;
+	while (s[control] != '\0' && control < up_to)
+		ft_putchar(s[control++]);
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 23:02:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/08 01:00:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/19 01:56:41 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,8 @@ size_t	ft_strlen(const char *s)
 {
 	size_t length;
 
+	if (s == NULL)
+		return (0);
 	length = 0;
 	while (s[length])
 		length++;

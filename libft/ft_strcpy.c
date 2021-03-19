@@ -1,22 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/19 02:01:16 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/05 02:32:09 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2021/03/19 02:02:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Checks if c is an ASCII character.
-*/
-
-bool	ft_isascii(int c)
+char	*ft_strcpy(char *dest, char *src)
 {
-	return (c >= 0 && c <= 127);
+	char *initial_destination;
+
+	initial_destination = dest;
+	while (*src != '\0')
+		*dest++ = *src++;
+	*dest = '\0';
+	return (initial_destination);
 }

@@ -1,22 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isascii.c                                       :+:      :+:    :+:   */
+/*   ft_strdel.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/19 02:01:16 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/04 22:56:16 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2021/03/19 02:02:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-/*
-** Checks if c is an ASCII character.
-*/
-
-bool	ft_isascii(int c)
+void	ft_strdel(char **delete_me)
 {
-	return (c >= 0 && c <= 127);
+	if (delete_me == NULL || *delete_me == NULL)
+		return ;
+	free(*delete_me);
+	*delete_me = NULL;
 }

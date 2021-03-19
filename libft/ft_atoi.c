@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/07 22:27:21 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/19 02:02:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,19 +16,7 @@
 ** Takes in a string and parses its digits characters into an integer.
 */
 
-static int	is_whitespace(char character)
-{
-	return (character == '\n' || character == '\t' ||
-					character == '\v' || character == '\r' ||
-					character == '\f' || character == ' ');
-}
-
-static int	is_plus_or_minus(char character)
-{
-	return (character == '+' || character == '-');
-}
-
-int			ft_atoi(const char *nptr)
+int			ft_atoi(const char *number_pointer)
 {
 	int number;
 	int sign;
@@ -37,15 +25,15 @@ int			ft_atoi(const char *nptr)
 	number = 0;
 	sign = -1;
 	previous_number = 0;
-	while (is_whitespace(*nptr))
-		nptr++;
-	if (is_plus_or_minus(*nptr))
-		if (*nptr++ == '-')
+	while (ft_is_whitespace(*number_pointer))
+		number_pointer++;
+	if (ft_is_plus_or_minus(*number_pointer))
+		if (*number_pointer++ == '-')
 			sign = 1;
-	while (ft_isdigit(*nptr))
+	while (ft_isdigit(*number_pointer))
 	{
 		number *= 10;
-		number -= (*nptr++ - '0');
+		number -= (*number_pointer++ - '0');
 		if (previous_number < number)
 		{
 			if (sign < 0)
