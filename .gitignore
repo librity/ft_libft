@@ -52,7 +52,7 @@ Mkfile.old
 dkms.conf
 
 # Examples and Tests
-*/example.c
+example.c
 a.out.dSYM
 *.out
 *.a
