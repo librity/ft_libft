@@ -13,7 +13,7 @@
 </div>
 
 <p align="center"> A partial implementation of stdlib.
-    <br> 
+  <br>
 </p>
 
 ---
@@ -32,9 +32,15 @@
 This was the first project I did at 42 São Paulo:
 an implementation of many `stdlib.h` functions from scratch.
 
-It's a good first project that'll follow you through the rest of your carreer.
-You learn about memory manipulations, string utilities and linked lists.
+I've used this on all other projects that followed,
+and I learned a lot about memory manipulations,
+string utilities and linked lists.
+As a developer I've been using all these functions for years
+in some form or another,
+but I had no idea how they worked until I did this project.
 
+So far it has over 80 functions,
+and the implementations are simple and readable.
 I'm always updating my libft as I do more projects
 and write more useful functions.
 

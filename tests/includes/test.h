@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 23:46:59 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 03:12:16 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/25 20:47:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@
 #include <stdlib.h>
 #include <ctype.h>
 
-#include "Unity/unity.h"
-#include "../libft/libft.h"
+#include <unity.h>
+#include <libft.h>
 
 void test_ft_memset(void);
 void test_ft_bzero(void);
