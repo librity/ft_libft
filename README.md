@@ -86,7 +86,7 @@ To run all tests, go to the tests directory and run `make`:
 
 ```bash
 cd tests
-make test
+make
 ```
 
 ## 🐙 Github Actions <a name = "github_actions"></a>

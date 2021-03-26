@@ -6,11 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 22:59:02 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/02/14 01:18:21 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/25 21:11:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "test.h"
+#include <tests.h>
 
 void setUp(void){};
 

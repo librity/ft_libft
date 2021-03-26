@@ -6,12 +6,12 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/13 23:46:59 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 20:47:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/25 21:08:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef TEST_H
-#define TEST_H
+#ifndef TESTS_H
+#define TESTS_H
 
 #include <stdio.h>
 #include <string.h>

@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/03/25 20:34:10 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/03/25 21:21:20 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -15,10 +15,11 @@ NAME = libft.a
 OBJECTS_PATH = ./objects
 SOURCES_PATH = ./sources
 INCLUDES_PATH = ./includes
+LIBS_PATH = ./libs
 
 CC = gcc
 CC_FLAGS = -Wall -Wextra -Werror
-DEBUG_CC_FLAGS = -g
+CC_DEBUG_FLAGS = -g
 
 SAFE_MAKEDIR = mkdir -p
 ARCHIVE_AND_INDEX = ar -rcs
@@ -98,7 +99,7 @@ $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
 	$(CC) $(CC_FLAGS) -I $(INCLUDES_PATH) -o $@ -c $<
 
 example: $(NAME)
-	$(CC) $(DEBUG_CC_FLAGS) -I $(INCLUDES_PATH) $(EXAMPLE_MAIN) $(NAME)
+	$(CC) $(CC_DEBUG_FLAGS) -I $(INCLUDES_PATH) $(EXAMPLE_MAIN) $(NAME)
 	$(EXECUTE_EXAMPLE)
 
 clean:
