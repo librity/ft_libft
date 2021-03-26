@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/03/25 21:21:20 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/03/26 02:25:46 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -16,11 +16,13 @@ OBJECTS_PATH = ./objects
 SOURCES_PATH = ./sources
 INCLUDES_PATH = ./includes
 LIBS_PATH = ./libs
+TESTS_PATH = ./tests
 
 CC = gcc
 CC_FLAGS = -Wall -Wextra -Werror
 CC_DEBUG_FLAGS = -g
 
+MAKE_EXTERNAL = make -C
 SAFE_MAKEDIR = mkdir -p
 ARCHIVE_AND_INDEX = ar -rcs
 
@@ -80,7 +82,9 @@ SOURCE_FILES = unless.c \
 	ft_skip_digits.c ft_skip_number.c \
 	\
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
-	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c
+	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
+	\
+	ft_get_next_line.c
 SOURCES = $(addprefix $(SOURCES_PATH)/,$(SOURCE_FILES))
 
 OBJECTS = $(addprefix $(OBJECTS_PATH)/,$(subst .c,.o,$(SOURCE_FILES)))
@@ -102,6 +106,9 @@ example: $(NAME)
 	$(CC) $(CC_DEBUG_FLAGS) -I $(INCLUDES_PATH) $(EXAMPLE_MAIN) $(NAME)
 	$(EXECUTE_EXAMPLE)
 
+test:
+	$(MAKE_EXTERNAL) $(TESTS_PATH)
+
 clean:
 	$(REMOVE) $(OBJECTS)
 
@@ -110,6 +117,9 @@ fclean: clean
 
 example_clean: fclean
 	$(REMOVE_RECURSIVE) $(EXAMPLE_GARBAGE)
+
+test_clean:
+	$(MAKE_EXTERNAL) $(TESTS_PATH) fclean
 
 re: fclean all
 
@@ -128,4 +138,4 @@ gitm:
 	git commit -m $m
 	git push
 
-.PHONY: all example re clean fclean example_clean norme git gitm
+.PHONY: all example test re clean fclean example_clean test_clean norme git gitm

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/19 02:13:37 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/03/26 02:26:15 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,17 @@
 # include <unistd.h>
 # include <stdlib.h>
 # include <stdbool.h>
+# include <limits.h>
+# include <sys/resource.h>
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
+# define MAX_FILE_DESCRIPTOR RLIMIT_NOFILE
+
+# define GNL_FOUND_LINEBREAK 1
+# define GNL_FOUND_EOF 0
+# define GNL_ERROR -1
 
 # define DECIMAL_BASE "0123456789"
 # define DOWNCASE_HEX_BASE "0123456789abcdef"
@@ -143,5 +154,7 @@ void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst,
 								void *(*f)(void *),
 								void (*del)(void *));
+
+int					ft_get_next_line(int fd, char **line);
 
 #endif
