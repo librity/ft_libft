@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/26 02:26:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/04/03 15:48:51 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,28 @@ typedef struct		s_list
 }					t_list;
 
 bool				unless(bool condition);
+
+double				ft_abs_d(double number);
+float				ft_abs_f(float number);
+int					ft_abs_i(int number);
+int					ft_abs(int number);
+
+double				ft_min_d(double x, double y);
+double				ft_max_d(double x, double y);
+double				ft_clamp_d(double x, double min, double max);
+
+void				ft_swap(int *a, int *b);
+void				ft_swap_i(int *a, int *b);
+
+void				ft_div_mod(int a, int b, int *div, int *mod);
+void				ft_div_mod_i(int a, int b, int *div, int *mod);
+
+int					ft_sqrt(int number);
+int					ft_sqrt_i(int number);
+int					ft_pow(int number, int power);
+int					ft_pow_i(int number, int power);
+int					ft_fibonacci(int index);
+int					ft_factorial(int number);
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
