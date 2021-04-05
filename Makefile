@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/04/03 15:49:19 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/04/04 21:57:00 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -121,7 +121,7 @@ test:
 clean:
 	$(REMOVE) $(OBJECTS)
 
-fclean: clean
+fclean: clean test_clean
 	$(REMOVE) $(NAME)
 
 example_clean: fclean
