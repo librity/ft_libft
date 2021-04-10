@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2021/04/04 21:57:00 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2021/04/09 23:00:55 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,7 +32,7 @@ REMOVE_RECURSIVE = /bin/rm -rf
 HEADER_FILE = ft_printf.h
 HEADER = $(addprefix $(INCLUDES_PATH)/,$(HEADER_FILE))
 
-SOURCE_FILES = unless.c \
+SOURCE_FILES = unless.c ft_salloc.c \
 	ft_abs.c ft_abs_i.c ft_abs_f.c ft_abs_d.c \
 	\
 	ft_min_d.c ft_max_d.c ft_clamp_d.c \
