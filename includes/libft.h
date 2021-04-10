@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/04/03 15:48:51 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2021/04/09 22:58:44 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,6 +39,7 @@ typedef struct		s_list
 }					t_list;
 
 bool				unless(bool condition);
+void				*ft_salloc(size_t size);
 
 double				ft_abs_d(double number);
 float				ft_abs_f(float number);
