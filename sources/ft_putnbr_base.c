@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 20:02:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/07 00:29:33 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ static void	print_number_with_base(int nb, const int base_length, char *base)
 	ft_putchar(base[number % base_length]);
 }
 
-void		ft_putnbr_base(int number, char *base)
+void	ft_putnbr_base(int number, char *base)
 {
 	const int	base_length = ft_strlen(base);
 

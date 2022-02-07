@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 20:02:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/07 00:35:13 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,9 +18,9 @@
 
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
-	char *haystack_start;
-	char *needle_pointerator;
-	char *possible_match;
+	char	*haystack_start;
+	char	*needle_pointerator;
+	char	*possible_match;
 
 	haystack_start = (char *)haystack;
 	if (*needle == '\0')

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/04/09 22:58:44 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/07 00:47:08 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -32,7 +32,7 @@
 # define DOWNCASE_HEX_BASE "0123456789abcdef"
 # define UPPERCASE_HEX_BASE "0123456789ABCDEF"
 
-typedef struct		s_list
+typedef struct s_list
 {
 	void			*content;
 	struct s_list	*next;
@@ -81,8 +81,8 @@ size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack,
-								const char *needle,
-								size_t len);
+						const char *needle,
+						size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
 int					ft_atoi(const char *number_pointer);
@@ -113,12 +113,12 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strjoin_and_free(char *free_me,
-											char const *dont_free_me);
+						char const *dont_free_me);
 char				*ft_strjoin_and_free_free(char *free_me, char *free_me_too);
 char				*ft_strjoin_and_del(char *delete_me,
-										char const *dont_delete_me);
+						char const *dont_delete_me);
 char				*ft_strjoin_and_del_del(char *delete_me,
-											char *delete_me_too);
+						char *delete_me_too);
 
 char				*ft_itoa(int n);
 unsigned int		ft_i_to_buffer(int n, char *buffer);
@@ -134,7 +134,7 @@ void				ft_putstr_up_to(char *s, size_t up_to);
 void				ft_putendl(char *s);
 
 bool				ft_is_valid_base(const char *base,
-										const size_t base_length);
+						const size_t base_length);
 void				ft_aux_handle_minus_sign_li(long int *number_pointer);
 
 void				ft_putnbr(int n);
@@ -175,8 +175,8 @@ void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
 void				ft_lstiter(t_list *lst, void (*f)(void *));
 t_list				*ft_lstmap(t_list *lst,
-								void *(*f)(void *),
-								void (*del)(void *));
+						void *(*f)(void *),
+						void (*del)(void *));
 
 int					ft_get_next_line(int fd, char **line);
 

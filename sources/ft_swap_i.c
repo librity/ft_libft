@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 15:30:55 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/04/03 15:59:52 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/07 00:19:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 void	ft_swap_i(int *a, int *b)
 {
-	int auxiliary;
+	int	auxiliary;
 
 	auxiliary = *a;
 	*a = *b;

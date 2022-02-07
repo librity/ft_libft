@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/26 02:35:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/07 00:21:22 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ static char	*read_and_join(int fd,
 	return (line_buffer);
 }
 
-int			ft_get_next_line(int fd, char **line)
+int	ft_get_next_line(int fd, char **line)
 {
 	static char	read_buffer[BUFFER_SIZE + 1];
 	char		*line_buffer;
