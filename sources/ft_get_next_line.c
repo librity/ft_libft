@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 16:50:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 17:16:27 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,7 +45,7 @@ static char	*initialize_line_buffer(char *read_buffer, bool *found_linebreak)
 	return (line_buffer);
 }
 
-static int	free_line_buffer(char *line_buffer)
+static void	*free_line_buffer(char *line_buffer)
 {
 	free(line_buffer);
 	return (NULL);

@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/13 17:07:00 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/13 17:08:12 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -93,7 +93,13 @@ SOURCE_FILES = unless.c ft_salloc.c \
 	ft_lstnew.c ft_lstadd_front.c ft_lstsize.c ft_lstlast.c ft_lstadd_back.c \
 	ft_lstdelone.c ft_lstclear.c ft_lstiter.c ft_lstmap.c \
 	\
-	ft_get_next_line.c
+	ft_get_next_line.c\
+	\
+	ft_printf.c ft_vprintf.c pf_c.c pf_handled_c.c pf_handled_hex.c \
+	pf_handled_int.c pf_handled_no_conversion.c pf_handled_p.c \
+	pf_handled_percent.c pf_handled_s.c pf_handled_u.c \
+	pf_hex.c pf_initializers.c pf_int.c pf_p.c pf_parse_flags.c \
+	pf_parse_wildcars.c pf_percent.c pf_s.c pf_u.c
 SOURCES = $(addprefix $(SOURCES_PATH)/,$(SOURCE_FILES))
 
 OBJECTS = $(addprefix $(OBJECTS_PATH)/,$(subst .c,.o,$(SOURCE_FILES)))
