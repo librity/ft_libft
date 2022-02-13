@@ -1,2 +1,4 @@
 examples/*.c
 example.c
+
+tests
