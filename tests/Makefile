@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/13 22:59:07 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/13 15:30:04 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/13 18:27:03 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -14,7 +14,7 @@ NAME = tests.a
 
 CC = gcc
 CC_DEBUG_FLAGS = -g
-CC_INCLUDES = -I $(LIBFT_INCLUDES) -I $(INCLUDES_PATH)
+CC_INCLUDES = -I $(INCLUDES_PATH) -I $(LIBFT_INCLUDES)
 
 MAKE_EXTERNAL = make -C
 SAFE_MAKEDIR = mkdir -p
@@ -27,10 +27,6 @@ OBJECTS_PATH = ./objects
 SOURCES_PATH = ./sources
 INCLUDES_PATH = ./includes
 LIBS_PATH = ./libs
-
-LIBFT_PATH = ..
-LIBFT_INCLUDES = $(LIBFT_PATH)/includes
-LIBFT = $(LIBFT_PATH)/libft.a
 
 UNITY = $(LIBS_PATH)/Unity/unity.c
 
@@ -50,15 +46,7 @@ SOURCES = $(addprefix $(SOURCES_PATH)/,$(SOURCE_FILES))
 
 OBJECTS = $(addprefix $(OBJECTS_PATH)/,$(subst .c,.o,$(SOURCE_FILES)))
 
-TEST_MAIN = main.c
-EXECUTE_TESTS = ./a.out
-TEST_GARBAGE = a.out
-
 all: test
-
-test: build_libft $(NAME)
-	$(CC) $(CC_DEBUG_FLAGS) $(CC_INCLUDES) $(TEST_MAIN) $(NAME) $(UNITY) $(LIBFT)
-	$(EXECUTE_TESTS)
 
 $(NAME): $(OBJECTS)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS)
@@ -66,9 +54,6 @@ $(NAME): $(OBJECTS)
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
 	$(SAFE_MAKEDIR) $(OBJECTS_PATH)
 	$(CC) $(CC_DEBUG_FLAGS) $(CC_INCLUDES) -o $@ -c $<
-
-build_libft:
-	$(MAKE_EXTERNAL) $(LIBFT_PATH)
 
 clean:
 	$(REMOVE) $(OBJECTS)
@@ -79,4 +64,33 @@ fclean: clean
 
 re: fclean all
 
-.PHONY: all test build_libft re clean fclean
+################################################################################
+# TEST
+################################################################################
+
+TEST_MAIN = main.c
+EXECUTE_TESTS = ./a.out
+TEST_GARBAGE = a.out
+
+test: build_libft $(NAME)
+	$(CC) $(CC_DEBUG_FLAGS) $(CC_INCLUDES) $(TEST_MAIN) $(NAME) $(UNITY) $(LIBFT)
+	$(EXECUTE_TESTS)
+
+################################################################################
+# LIBFT
+################################################################################
+
+LIBFT_PATH = ..
+LIBFT_INCLUDES = $(LIBFT_PATH)/includes
+LIBFT = $(LIBFT_PATH)/libft.a
+
+build_libft:
+	$(MAKE_EXTERNAL) $(LIBFT_PATH)
+
+################################################################################
+# PHONY
+################################################################################
+
+.PHONY: all re clean fclean \
+	test \
+	build_libft
