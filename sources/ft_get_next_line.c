@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 15:00:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 16:50:31 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,12 @@ static char	*initialize_line_buffer(char *read_buffer, bool *found_linebreak)
 	return (line_buffer);
 }
 
+static int	free_line_buffer(char *line_buffer)
+{
+	free(line_buffer);
+	return (NULL);
+}
+
 static char	*read_and_join(int fd,
 							char *read_buffer,
 							char *line_buffer,
@@ -57,10 +63,7 @@ static char	*read_and_join(int fd,
 	{
 		bytes_read = read(fd, read_buffer, BUFFER_SIZE);
 		if (bytes_read < 0 || bytes_read > SSIZE_MAX)
-		{
-			free(line_buffer);
-			return (NULL);
-		}
+			return (free_line_buffer(line_buffer));
 		read_buffer[bytes_read] = '\0';
 		line_buffer = ft_strjoin_and_free(line_buffer, read_buffer);
 		if (line_buffer == NULL)

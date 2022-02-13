@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:36:09 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 16:42:17 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ static char const	*skip_equal_chars(char const *s, char c)
 	return (s);
 }
 
-static void			create_words(
+static void	create_words(
 	char **words, char const *s, char c, size_t word_count)
 {
 	char	*pointerator;

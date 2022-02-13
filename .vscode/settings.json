@@ -8,5 +8,11 @@
 
   "[c]": {
     "editor.defaultFormatter": "keyhr.42-c-format"
+  },
+  "files.associations": {
+    "*.gohtml": "html",
+    "limits.h": "c",
+    "stdlib.h": "c",
+    "resource.h": "c"
   }
 }

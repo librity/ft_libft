@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:20:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 16:41:13 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,11 @@ unsigned int	ft_count_digits_ui(unsigned int number)
 	int	digit_count;
 
 	digit_count = 1;
-	while (number /= 10)
+	number /= 10;
+	while (number != 0)
+	{
 		digit_count++;
+		number /= 10;
+	}
 	return (digit_count);
 }
