@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:14:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 18:00:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,6 +51,18 @@ int					ft_pow(int number, int power);
 int					ft_pow_i(int number, int power);
 int					ft_fibonacci(int index);
 int					ft_factorial(int number);
+
+typedef struct s_map_d
+{
+	double	mapped;
+	double	start1;
+	double	stop1;
+	double	start2;
+	double	stop2;
+}					t_map_d;
+
+double				ft_map_d(t_map_d args);
+double				ft_map_clamped_d(t_map_d args);
 
 /******************************************************************************\
  * MEMORY

@@ -13,6 +13,7 @@
     "*.gohtml": "html",
     "limits.h": "c",
     "stdlib.h": "c",
-    "resource.h": "c"
+    "resource.h": "c",
+    "libft.h": "c"
   }
 }
