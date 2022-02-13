@@ -13,13 +13,12 @@
 #ifndef TESTS_H
 # define TESTS_H
 
-# include <stdio.h>
-# include <string.h>
-# include <stdlib.h>
 # include <ctype.h>
-
-# include <unity.h>
 # include <libft.h>
+# include <stdio.h>
+# include <stdlib.h>
+# include <string.h>
+# include <unity.h>
 
 void	test_ft_memset(void);
 void	test_ft_bzero(void);

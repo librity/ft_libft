@@ -30,8 +30,8 @@ char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 		needle_pointerator = (char *)needle;
 		possible_match = (char *)haystack;
 		while (*needle_pointerator &&
-			*haystack == *needle_pointerator &&
-			(unsigned long)(haystack - haystack_start) < len)
+				*haystack == *needle_pointerator &&
+				(unsigned long)(haystack - haystack_start) < len)
 		{
 			needle_pointerator++;
 			haystack++;

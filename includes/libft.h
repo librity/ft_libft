@@ -6,40 +6,28 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:47:08 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 15:16:29 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef LIBFT_H
 # define LIBFT_H
 
-# include <unistd.h>
-# include <stdlib.h>
-# include <stdbool.h>
 # include <limits.h>
+# include <stdbool.h>
+# include <stdlib.h>
 # include <sys/resource.h>
+# include <unistd.h>
 
-# ifndef BUFFER_SIZE
-#  define BUFFER_SIZE 100
-# endif
-# define MAX_FILE_DESCRIPTOR RLIMIT_NOFILE
-
-# define GNL_FOUND_LINEBREAK 1
-# define GNL_FOUND_EOF 0
-# define GNL_ERROR -1
-
-# define DECIMAL_BASE "0123456789"
-# define DOWNCASE_HEX_BASE "0123456789abcdef"
-# define UPPERCASE_HEX_BASE "0123456789ABCDEF"
-
-typedef struct s_list
-{
-	void			*content;
-	struct s_list	*next;
-}					t_list;
+/******************************************************************************\
+ * BOOLEANS
+\******************************************************************************/
 
 bool				unless(bool condition);
-void				*ft_salloc(size_t size);
+
+/******************************************************************************\
+ * MATH
+\******************************************************************************/
 
 double				ft_abs_d(double number);
 float				ft_abs_f(float number);
@@ -63,6 +51,11 @@ int					ft_pow_i(int number, int power);
 int					ft_fibonacci(int index);
 int					ft_factorial(int number);
 
+/******************************************************************************\
+ * MEMORY
+\******************************************************************************/
+
+void				*ft_salloc(size_t size);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
@@ -70,6 +63,28 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
+
+/******************************************************************************\
+ * CHARS
+\******************************************************************************/
+
+bool				ft_isdigit(int c);
+bool				ft_is_whitespace(char character);
+bool				ft_is_plus_or_minus(char character);
+bool				ft_is_decimal_char(char character);
+bool				ft_isupper(int c);
+bool				ft_islower(int c);
+bool				ft_isalpha(int c);
+bool				ft_isalnum(int c);
+bool				ft_isascii(int c);
+bool				ft_isprint(int c);
+
+int					ft_toupper(int c);
+int					ft_tolower(int c);
+
+/******************************************************************************\
+ * STRINGS
+\******************************************************************************/
 
 size_t				ft_strlen(const char *s);
 char				*ft_strcpy(char *dest, char *src);
@@ -88,20 +103,6 @@ int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_atoi(const char *number_pointer);
 unsigned int		ft_atoui(const char *number_pointer);
 unsigned int		ft_atoui_strict(const char *number_pointer);
-
-bool				ft_isdigit(int c);
-bool				ft_is_whitespace(char character);
-bool				ft_is_plus_or_minus(char character);
-bool				ft_is_decimal_char(char character);
-bool				ft_isupper(int c);
-bool				ft_islower(int c);
-bool				ft_isalpha(int c);
-bool				ft_isalnum(int c);
-bool				ft_isascii(int c);
-bool				ft_isprint(int c);
-
-int					ft_toupper(int c);
-int					ft_tolower(int c);
 
 void				*ft_calloc(size_t nmemb, size_t size);
 char				*ft_strdup(const char *s);
@@ -123,6 +124,10 @@ char				*ft_strjoin_and_del_del(char *delete_me,
 char				*ft_itoa(int n);
 unsigned int		ft_i_to_buffer(int n, char *buffer);
 
+/******************************************************************************\
+ * PRINT STRINGS
+\******************************************************************************/
+
 void				ft_putchar_fd(char c, int fd);
 void				ft_putstr_fd(char *s, int fd);
 void				ft_putendl_fd(char *s, int fd);
@@ -132,6 +137,14 @@ void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putstr_up_to(char *s, size_t up_to);
 void				ft_putendl(char *s);
+
+/******************************************************************************\
+ * PRINT NUMBERS
+\******************************************************************************/
+
+# define DECIMAL_BASE "0123456789"
+# define DOWNCASE_HEX_BASE "0123456789abcdef"
+# define UPPERCASE_HEX_BASE "0123456789ABCDEF"
 
 bool				ft_is_valid_base(const char *base,
 						const size_t base_length);
@@ -166,6 +179,16 @@ unsigned int		ft_count_chars_i(int number);
 char				*ft_skip_digits(char *digits);
 char				*ft_skip_number(char *digits);
 
+/******************************************************************************\
+ * LINKED_LISTS
+\******************************************************************************/
+
+typedef struct s_list
+{
+	void			*content;
+	struct s_list	*next;
+}					t_list;
+
 t_list				*ft_lstnew(void *content);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 int					ft_lstsize(t_list *lst);
@@ -178,6 +201,23 @@ t_list				*ft_lstmap(t_list *lst,
 						void *(*f)(void *),
 						void (*del)(void *));
 
+/******************************************************************************\
+ * FT_GET_NEXT_LINE
+\******************************************************************************/
+
+# ifndef BUFFER_SIZE
+#  define BUFFER_SIZE 100
+# endif
+# define MAX_FILE_DESCRIPTOR RLIMIT_NOFILE
+
+# define GNL_FOUND_LINEBREAK 1
+# define GNL_FOUND_EOF 0
+# define GNL_ERROR -1
+
 int					ft_get_next_line(int fd, char **line);
+
+/******************************************************************************\
+ * FT_PRINTF
+\******************************************************************************/
 
 #endif

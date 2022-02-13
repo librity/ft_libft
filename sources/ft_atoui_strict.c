@@ -18,9 +18,9 @@
 
 unsigned int	ft_atoui_strict(const char *number_pointer)
 {
-	int number;
-	int sign;
-	int previous_number;
+	int	number;
+	int	sign;
+	int	previous_number;
 
 	number = 0;
 	sign = -1;

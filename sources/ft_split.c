@@ -43,7 +43,7 @@ static char const	*skip_equal_chars(char const *s, char c)
 	return (s);
 }
 
-static void	create_words(
+static void			create_words(
 	char **words, char const *s, char c, size_t word_count)
 {
 	char	*pointerator;

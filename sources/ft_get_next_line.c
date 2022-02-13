@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:21:22 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 15:00:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -65,7 +65,8 @@ static char	*read_and_join(int fd,
 		line_buffer = ft_strjoin_and_free(line_buffer, read_buffer);
 		if (line_buffer == NULL)
 			return (NULL);
-		if ((linebreak_position = ft_strchr(line_buffer, '\n')) != NULL)
+		linebreak_position = ft_strchr(line_buffer, '\n');
+		if (linebreak_position != NULL)
 		{
 			*found_linebreak = true;
 			*linebreak_position = '\0';

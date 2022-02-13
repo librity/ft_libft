@@ -17,9 +17,9 @@
 */
 
 static void	write_digits(char *string,
-								unsigned int digit_count,
-								unsigned int number,
-								int is_negative)
+							unsigned int digit_count,
+							unsigned int number,
+							int is_negative)
 {
 	string[digit_count] = '\0';
 	while (digit_count--)
