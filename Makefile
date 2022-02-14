@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/13 18:00:22 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/13 22:39:54 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -70,6 +70,10 @@ SOURCE_FILES = \
 	ft_strjoin_and_del.c ft_strjoin_and_del_del.c \
 	\
 	ft_itoa.c ft_i_to_buffer.c \
+	\
+	ft_ltoa.c \
+	\
+	ft_ftoa.c ft_precise_ftoa.c \
 	\
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	\
@@ -146,12 +150,24 @@ EXAMPLE_MAIN = example.c
 EXECUTE_EXAMPLE = ./a.out
 EXAMPLE_GARBAGE = a.out a.out.dSYM
 
-example: $(NAME)
-	$(CC) $(CC_DEBUG_FLAGS) -I $(INCLUDES_PATH) $(EXAMPLE_MAIN) $(NAME)
+example: build_example
 	$(EXECUTE_EXAMPLE)
+
+build_example: $(NAME)
+	$(CC) $(CC_DEBUG_FLAGS) -I $(INCLUDES_PATH) $(EXAMPLE_MAIN) $(NAME)
 
 example_clean: fclean
 	$(REMOVE_RECURSIVE) $(EXAMPLE_GARBAGE)
+
+################################################################################
+# VALGRIND
+################################################################################
+
+VALGRIND = valgrind
+VALGRIND_TARGET = ./a.out
+
+vg: build_example
+	$(VALGRIND) $(VALGRIND_TARGET)
 
 ################################################################################
 # MISC
@@ -178,9 +194,10 @@ gitm:
 ################################################################################
 
 .PHONY: all clean fclean re \
-	example example_clean \
 	test_clean test \
-	norme git gitm
+	example build_example example_clean \
+	vg \
+	norm git gitm
 
 ################################################################################
 # Colors

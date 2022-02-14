@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 18:00:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/13 22:39:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,11 @@ char				*ft_strjoin_and_del_del(char *delete_me,
 
 char				*ft_itoa(int n);
 unsigned int		ft_i_to_buffer(int n, char *buffer);
+
+char				*ft_ltoa(long n);
+
+char				*ft_ftoa(float n);
+char				*ft_precise_ftoa(float n, int precision);
 
 /******************************************************************************\
  * PRINT STRINGS
