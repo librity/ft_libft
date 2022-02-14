@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/13 23:59:23 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/14 00:12:09 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -131,7 +131,7 @@ $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
 clean:
 	$(REMOVE) $(OBJECTS)
 
-fclean: clean test_clean
+fclean: clean
 	$(REMOVE) $(NAME)
 
 re: fclean all
