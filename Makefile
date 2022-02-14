@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/13 22:39:54 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/13 23:59:23 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -74,6 +74,10 @@ SOURCE_FILES = \
 	ft_ltoa.c \
 	\
 	ft_ftoa.c ft_precise_ftoa.c \
+	\
+	ft_dtoa.c ft_precise_dtoa.c \
+	\
+	ft_ldtoa.c ft_precise_ldtoa.c \
 	\
 	ft_putchar_fd.c ft_putstr_fd.c ft_putendl_fd.c ft_putnbr_fd.c \
 	\
