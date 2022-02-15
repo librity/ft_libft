@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/15 12:33:31 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/15 12:36:23 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -44,7 +44,7 @@ initialize:
 
 all: $(NAME)
 
-$(NAME): initialize $(OBJECTS)
+$(NAME): initialize $(OBJECTS) $(HEADER)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS)
 
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
