@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/15 12:40:08 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/15 14:26:17 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,6 +19,7 @@ TESTS_PATH = ./tests
 
 CC = gcc
 CC_FLAGS = -Wall -Wextra -Werror
+CC_STRICT = $(CC) $(CC_FLAGS)
 CC_DEBUG_FLAGS = -g -fsanitize=address
 
 MAKE_EXTERNAL = make -C
@@ -48,7 +49,7 @@ $(NAME): initialize $(HEADER) $(OBJECTS)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS)
 
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
-	$(CC) $(CC_FLAGS) -I $(INCLUDES_PATH) -o $@ -c $<
+	$(CC_STRICT) -I $(INCLUDES_PATH) -c -o $@ $<
 
 clean:
 	$(REMOVE) $(OBJECTS)
