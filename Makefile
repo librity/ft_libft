@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/15 12:36:23 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/15 12:40:08 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -28,7 +28,7 @@ ARCHIVE_AND_INDEX = ar -rcs
 REMOVE = /bin/rm -f
 REMOVE_RECURSIVE = /bin/rm -rf
 
-HEADER_FILE = ft_printf.h
+HEADER_FILE = libft.h
 HEADER = $(addprefix $(INCLUDES_PATH)/,$(HEADER_FILE))
 
 SOURCES = $(wildcard $(SOURCES_PATH)/*.c)
@@ -44,7 +44,7 @@ initialize:
 
 all: $(NAME)
 
-$(NAME): initialize $(OBJECTS) $(HEADER)
+$(NAME): initialize $(HEADER) $(OBJECTS)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS)
 
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
