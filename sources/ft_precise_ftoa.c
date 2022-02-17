@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/17 17:58:44 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:39:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,7 +64,7 @@ static char	*piece_together(char *whole_str, char *decimal_str)
 
 	float_str = ft_strjoin(whole_str, ".");
 	free(whole_str);
-	float_str = ft_strjoin_and_del_del(float_str, decimal_str);
+	float_str = ft_strjoin_free_free(float_str, decimal_str);
 	return (float_str);
 }
 
