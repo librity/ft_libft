@@ -6,13 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 22:13:26 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/17 17:58:32 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
+** WARNING: Buggy implementation (can't handle leading zeros).
 ** Transforms a floating point number n into an allocated string.
 */
 
