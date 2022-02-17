@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:16:27 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:32:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,7 +37,7 @@ static char	*initialize_line_buffer(char *read_buffer, bool *found_linebreak)
 	if (linebreak_position == NULL)
 		return (line_buffer);
 	*found_linebreak = true;
-	line_buffer = ft_strjoin_and_free(line_buffer, read_buffer);
+	line_buffer = ft_strjoin_free(line_buffer, read_buffer);
 	if (line_buffer == NULL)
 		return (NULL);
 	*(ft_strchr(line_buffer, '\n')) = '\0';
@@ -65,7 +65,7 @@ static char	*read_and_join(int fd,
 		if (bytes_read < 0 || bytes_read > SSIZE_MAX)
 			return (free_line_buffer(line_buffer));
 		read_buffer[bytes_read] = '\0';
-		line_buffer = ft_strjoin_and_free(line_buffer, read_buffer);
+		line_buffer = ft_strjoin_free(line_buffer, read_buffer);
 		if (line_buffer == NULL)
 			return (NULL);
 		linebreak_position = ft_strchr(line_buffer, '\n');
