@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:37 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:17:03 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:13:48 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ static void	initialize_control(t_printf *print_control,
 {
 	control->print_me = '%';
 	control->char_count = 1;
-	initialize_flag_control(print_control, &(control->flag_control));
+	pf_initialize_flag_control(print_control, &(control->flag_control));
 }
 
 static void	interpret_flags(t_parse_flags *flag_control)
@@ -26,7 +26,7 @@ static void	interpret_flags(t_parse_flags *flag_control)
 		flag_control->left_padder = ' ';
 }
 
-bool	handled_percent(t_printf *print_control)
+bool	pf_handled_percent(t_printf *print_control)
 {
 	t_handle_percent	control;
 	t_parse_flags		*flag_control;
@@ -35,8 +35,8 @@ bool	handled_percent(t_printf *print_control)
 		return (false);
 	initialize_control(print_control, &control);
 	flag_control = &(control.flag_control);
-	parse_flags(print_control, flag_control);
+	pf_parse_flags(print_control, flag_control);
 	interpret_flags(flag_control);
-	printf_percent(print_control, &control, flag_control);
+	pf_printf_percent(print_control, &control, flag_control);
 	return (true);
 }

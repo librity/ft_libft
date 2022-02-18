@@ -6,13 +6,13 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 21:49:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:17:03 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:12:23 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	initialize_print_control(t_printf *print_control, const char *format)
+void	pf_initialize_print_control(t_printf *print_control, const char *format)
 {
 	print_control->format = format;
 	print_control->chars_printed = 0;
@@ -20,7 +20,7 @@ void	initialize_print_control(t_printf *print_control, const char *format)
 	print_control->conversion = '\0';
 }
 
-void	initialize_flag_control(t_printf *print_control,
+void	pf_initialize_flag_control(t_printf *print_control,
 								t_parse_flags *flag_control)
 {
 	flag_control->flags = (char *)(print_control->format);
@@ -34,7 +34,7 @@ void	initialize_flag_control(t_printf *print_control,
 	flag_control->precision = 0;
 }
 
-void	initialize_wildcard_control(t_printf *print_control,
+void	pf_initialize_wildcard_control(t_printf *print_control,
 									t_parse_flags *flag_control,
 									t_parse_wildcards *wildcard_control)
 {

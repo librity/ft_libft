@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:22:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:13:42 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,7 @@ static void	handle_left(t_printf *print_control,
 	handle_precision(print_control, control, flag_control);
 }
 
-void	printf_u(t_printf *print_control,
+void	pf_printf_u(t_printf *print_control,
 				t_handle_u *control,
 				t_parse_flags *flag_control)
 {

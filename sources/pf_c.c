@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:17:03 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:13:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,7 +26,7 @@ static void	handle_padding(t_printf *print_control,
 		ft_putchar(flag_control->left_padder);
 }
 
-void	printf_c(t_printf *print_control,
+void	pf_printf_c(t_printf *print_control,
 				t_handle_c *control,
 				t_parse_flags *flag_control)
 {

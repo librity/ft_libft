@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:25:09 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:13:44 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,14 +60,14 @@ static void	parse_modifiers(t_parse_flags *control)
 	control->flags = skip_modifier_noise(control->flags);
 }
 
-void	parse_flags(t_printf *print_control, t_parse_flags *control)
+void	pf_parse_flags(t_printf *print_control, t_parse_flags *control)
 {
 	if (print_control->conversion_position == 0)
 	{
 		(print_control->format)++;
 		return ;
 	}
-	parse_wildcars(print_control, control);
+	pf_parse_wildcars(print_control, control);
 	parse_modifiers(control);
 	parse_width(control);
 	parse_precision(control);
