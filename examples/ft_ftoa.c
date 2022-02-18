@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:24:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 23:27:10 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:07:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	test(float number)
 
 	str = ft_ftoa(number);
 	printf("EXPECTED: %f\n", number);
-	printf("RESULT: %s\n", str);
+	printf("RESULT:   %s\n", str);
 	free(str);
 	printf("--------\n");
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/17 18:32:22 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:03:55 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,18 +42,21 @@ static void	whole_to_string(double n, char **whole_str, long long whole)
 static void	decimal_to_string(int precision, char **decimal_str, double decimal)
 {
 	char	*aux;
+	char	leading_zeros;
 
-	if (decimal > 1.0 / (double)ft_pow(10, precision))
+	aux = ft_itoa((int)(decimal * ft_pow(10, precision)));
+	leading_zeros = precision - ft_strlen(aux);
+	if (leading_zeros <= 0)
 	{
-		*decimal_str = ft_itoa((int)(decimal * ft_pow(10, precision)));
+		*decimal_str = aux;
 		return ;
 	}
-	aux = ft_itoa((int)(decimal * ft_pow(10, precision)));
-	while (--precision)
+	while (leading_zeros)
 	{
 		*decimal_str = ft_strjoin("0", aux);
 		free(aux);
 		aux = *decimal_str;
+		--leading_zeros;
 	}
 }
 

@@ -1,22 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ftoa.c                                          :+:      :+:    :+:   */
+/*   ft_print_bits_ul.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:05:23 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/02/16 02:04:03 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/17 23:35:27 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/*
-** Transforms a floating point number n into an allocated string.
-*/
-
-char	*ft_ftoa(float n)
+void	ft_print_bits_ul(unsigned long int x)
 {
-	return (ft_precise_ftoa(n, 6));
+	int	i;
+
+	ft_putchar('|');
+	i = (sizeof(long int) * 8) - 1;
+	while (i >= 0)
+	{
+		if (x & (1u << i))
+			ft_putchar('1');
+		else
+			ft_putchar('0');
+		if (i % 8 == 0)
+			ft_putchar('|');
+		i--;
+	}
+	ft_putchar('\n');
 }

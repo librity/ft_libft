@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:24:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/14 00:02:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 18:08:16 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,8 +20,8 @@ static void	test(long double number)
 	char	*str;
 
 	str = ft_ldtoa(number);
-	printf("EXPECTED: %Le\n", number);
-	printf("RESULT: %s\n", str);
+	printf("EXPECTED: %Lf\n", number);
+	printf("RESULT:   %s\n", str);
 	free(str);
 	printf("--------\n");
 }
