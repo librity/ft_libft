@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:49:30 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 00:17:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -241,6 +241,9 @@ unsigned int		ft_count_digits_hex_ul(unsigned long number);
 
 unsigned int		ft_count_chars_i(int number);
 
+unsigned int		ft_count_chars_d(double number, int precision);
+unsigned int		ft_count_digits_d(double number, int precision);
+
 char				*ft_skip_digits(char *digits);
 char				*ft_skip_number(char *digits);
 
@@ -429,7 +432,6 @@ void				pf_printf_hex(t_printf *print_control,
 typedef struct s_handle_float
 {
 	double			print_me;
-	char			*print_me_str;
 	int				digit_count;
 	int				char_count;
 	bool			is_negative;

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:49:47 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 00:25:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,11 +76,6 @@ static void	handle_left(t_printf *print_control,
 	handle_precision(print_control, control, flag_control);
 }
 
-static void	pf_cleanup(t_handle_float *control)
-{
-	free(control->print_me_str);
-}
-
 void	pf_print_f(t_printf *print_control,
 				t_handle_float *control,
 				t_parse_flags *flag_control)
@@ -90,11 +85,10 @@ void	pf_print_f(t_printf *print_control,
 	{
 		if (flag_control->is_left_justified)
 			handle_padding(print_control, control, flag_control);
-		return (pf_cleanup(control));
+		return ;
 	}
-	ft_putstr(control->print_me_str);
+	ft_putnbr_precise_d(control->print_me, flag_control->precision);
 	(print_control->chars_printed) += control->char_count;
 	if (flag_control->is_left_justified)
 		handle_padding(print_control, control, flag_control);
-	pf_cleanup(control);
 }
