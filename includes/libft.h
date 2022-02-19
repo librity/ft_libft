@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 00:36:52 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:27:38 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -224,8 +224,14 @@ void				ft_putnbr_base_ll(long long number, const char *base);
 void				ft_putnbr_base_ull(unsigned long long number,
 						const char *base);
 
+void				ft_putnbr_precise_f(float n, int precision);
+void				ft_putnbr_f(float number);
+
 void				ft_putnbr_precise_d(double n, int precision);
 void				ft_putnbr_d(double number);
+
+void				ft_putnbr_precise_ld(long double n, int precision);
+void				ft_putnbr_ld(long double number);
 
 void				ft_puthex_uppercase(unsigned int number);
 void				ft_puthex_downcase(unsigned int number);
