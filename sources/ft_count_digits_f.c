@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digits_d.c                                :+:      :+:    :+:   */
+/*   ft_count_digits_f.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 19:42:14 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 19:42:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,7 @@
 ** Transforms a floating point number n into an allocated string.
 */
 
-static void	cast_parts(double number, unsigned long long *whole,
-		double *decimal)
+static void	cast_parts(float number, unsigned long long *whole, float *decimal)
 {
 	*whole = (long long)number;
 	*decimal = (number - *whole);
@@ -25,10 +24,10 @@ static void	cast_parts(double number, unsigned long long *whole,
 		*decimal *= -1;
 }
 
-unsigned int	ft_count_digits_d(double number, int precision)
+unsigned int	ft_count_digits_f(float number, int precision)
 {
 	unsigned long long	whole;
-	double				decimal;
+	float				decimal;
 	unsigned int		digits;
 
 	if (precision < 0.0)

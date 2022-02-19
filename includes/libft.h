@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 18:27:38 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 19:43:33 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -247,8 +247,14 @@ unsigned int		ft_count_digits_hex_ul(unsigned long number);
 
 unsigned int		ft_count_chars_i(int number);
 
+unsigned int		ft_count_chars_f(float number, int precision);
+unsigned int		ft_count_digits_f(float number, int precision);
+
 unsigned int		ft_count_chars_d(double number, int precision);
 unsigned int		ft_count_digits_d(double number, int precision);
+
+unsigned int		ft_count_chars_ld(long double number, int precision);
+unsigned int		ft_count_digits_ld(long double number, int precision);
 
 char				*ft_skip_digits(char *digits);
 char				*ft_skip_number(char *digits);
