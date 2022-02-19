@@ -17,6 +17,7 @@
     "libft.h": "c",
     "ft_count_digits_dc": "c",
     "cmath": "c",
-    "*.tcc": "c"
+    "*.tcc": "c",
+    "cstdlib": "c"
   }
 }

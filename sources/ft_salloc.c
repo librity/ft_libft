@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:57:20 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:30:04 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:00:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@ void	*ft_salloc(size_t size)
 	pointer = malloc(size);
 	if (pointer == NULL && (size > 0))
 	{
-		ft_putstr("ERROR: Unable to allocate required memory.\n");
+		ft_putstr_fd(MALLOC_ERROR_MESSAGE, 2);
 		exit(EXIT_FAILURE);
 	}
 	return (pointer);

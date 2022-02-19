@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 20:02:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:04:03 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,9 +25,7 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (s == NULL)
 		return (NULL);
-	new_string_start = malloc(sizeof(char) * (len + 1));
-	if (new_string_start == NULL)
-		return (NULL);
+	new_string_start = ft_salloc(sizeof(char) * (len + 1));
 	new_string = new_string_start;
 	s_length = ft_strlen(s);
 	s_start = (char *)s;

@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 00:25:12 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 19:50:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 static void	handle_precision(t_printf *print_control,
-								t_handle_float *control,
+								t_handle_f *control,
 								t_parse_flags *flag_control)
 {
 	int	precision;
@@ -31,7 +31,7 @@ static void	handle_precision(t_printf *print_control,
 }
 
 static void	handle_padding(t_printf *print_control,
-							t_handle_float *control,
+							t_handle_f *control,
 							t_parse_flags *flag_control)
 {
 	int	padding;
@@ -59,7 +59,7 @@ static void	handle_padding(t_printf *print_control,
 }
 
 static void	handle_left(t_printf *print_control,
-						t_handle_float *control,
+						t_handle_f *control,
 						t_parse_flags *flag_control)
 {
 	if (flag_control->is_left_padded_with_zeros)
@@ -77,7 +77,7 @@ static void	handle_left(t_printf *print_control,
 }
 
 void	pf_print_f(t_printf *print_control,
-				t_handle_float *control,
+				t_handle_f *control,
 				t_parse_flags *flag_control)
 {
 	handle_left(print_control, control, flag_control);

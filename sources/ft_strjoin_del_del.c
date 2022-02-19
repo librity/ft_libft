@@ -1,28 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strdup.c                                        :+:      :+:    :+:   */
+/*   ft_strjoin_del_del.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:03:16 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/05 01:54:30 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/19 20:09:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/*
-** Creates an allocated string with the same chars of s.
-*/
-
-char	*ft_strdup(const char *s)
+char	*ft_strjoin_del_del(char **delete_me, char **delete_me_too)
 {
-	size_t	original_size;
+	size_t	total_size;
+	size_t	delete_me_size;
 	char	*new_string;
 
-	original_size = ft_strlen(s) + 1;
-	new_string = ft_salloc((original_size) * sizeof(char));
-	ft_memcpy(new_string, s, original_size);
+	delete_me_size = ft_strlen(*delete_me) + 1;
+	total_size = delete_me_size + ft_strlen(*delete_me_too);
+	new_string = ft_salloc(total_size * sizeof(char));
+	ft_strcpy(new_string, *delete_me);
+	ft_strlcat(new_string, *delete_me_too, total_size);
+	ft_strdel(delete_me);
+	ft_strdel(delete_me_too);
 	return (new_string);
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:24:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 15:53:50 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 19:45:47 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static void	test(long double number)
 
 	printf_return = printf("%Lf\n", number);
 	printf("printf_return: %d\n", printf_return);
-	printf_return = ft_printf("%f\n", number);
+	printf_return = ft_printf("%Lf\n", number);
 	printf("printf_return: %d\n", printf_return);
 	printf("-----------------------\n");
 }

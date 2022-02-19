@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 16:42:17 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:03:08 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,9 +72,7 @@ char	**ft_split(char const *s, char c)
 	if (s == NULL)
 		return (NULL);
 	word_count = count_words(s, c);
-	words = malloc(sizeof(char **) * (word_count + 1));
-	if (words == NULL)
-		return (NULL);
+	words = ft_salloc(sizeof(char **) * (word_count + 1));
 	create_words(words, s, c, word_count);
 	return (words);
 }

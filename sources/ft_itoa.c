@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:27:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:02:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,9 +46,7 @@ char	*ft_itoa(int n)
 		number *= -1;
 		is_negative = 1;
 	}
-	string = malloc(sizeof(char) * (digit_count + 1));
-	if (string == NULL)
-		return (NULL);
+	string = ft_salloc(sizeof(char) * (digit_count + 1));
 	write_digits(string, digit_count, number, is_negative);
 	return (string);
 }

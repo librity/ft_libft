@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 19:43:33 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:11:17 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -102,6 +102,8 @@ int					ft_lerp_wsteps_i(int from, int to, int steps, int x);
  * MEMORY
 \******************************************************************************/
 
+# define MALLOC_ERROR_MESSAGE "ERROR: Unable to allocate required memory.\n"
+
 void				*ft_salloc(size_t size);
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
@@ -110,6 +112,7 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
+void				*ft_calloc(size_t nmemb, size_t size);
 
 /******************************************************************************\
  * CHARS
@@ -140,6 +143,7 @@ char				*ft_strcpy(char *dest, char *src);
 void				ft_strdel(char **delete_me);
 char				*ft_strnchr(const char *s, int c, unsigned int limit);
 
+char				*ft_strdup(const char *s);
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
@@ -149,13 +153,6 @@ char				*ft_strnstr(const char *haystack,
 						size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
-int					ft_atoi(const char *number_pointer);
-unsigned int		ft_atoui(const char *number_pointer);
-unsigned int		ft_atoui_strict(const char *number_pointer);
-
-void				*ft_calloc(size_t nmemb, size_t size);
-char				*ft_strdup(const char *s);
-
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s1, char const *set);
 char				**ft_split(char const *s, char c);
@@ -164,20 +161,35 @@ char				*ft_strmapi(char const *s, char (*f)(unsigned int, char));
 char				*ft_strjoin(char const *s1, char const *s2);
 char				*ft_strjoin_free(char *free_me, char const *dont_free_me);
 char				*ft_strjoin_free_free(char *free_me, char *free_me_too);
+char				*ft_strjoin_del(char **delete_me,
+						const char *dont_delete_me);
+char				*ft_strjoin_del_del(char **delete_me, char **delete_me_too);
+
+/******************************************************************************\
+ * STRING TO NUMBER
+\******************************************************************************/
+
+int					ft_atoi(const char *number_pointer);
+unsigned int		ft_atoui(const char *number_pointer);
+unsigned int		ft_atoui_strict(const char *number_pointer);
+
+/******************************************************************************\
+ * NUMBER TO STRING
+\******************************************************************************/
 
 char				*ft_itoa(int n);
 unsigned int		ft_i_to_buffer(int n, char *buffer);
 
 char				*ft_ltoa(long n);
 
-char				*ft_ftoa(float n);
 char				*ft_precise_ftoa(float n, int precision);
+char				*ft_ftoa(float n);
 
 char				*ft_precise_dtoa(double n, int precision);
 char				*ft_dtoa(double n);
 
-char				*ft_ldtoa(long double n);
 char				*ft_precise_ldtoa(long double n, int precision);
+char				*ft_ldtoa(long double n);
 
 /******************************************************************************\
  * PRINT STRINGS
@@ -355,6 +367,10 @@ void				pf_parse_wildcars(t_printf *print_control,
 
 bool				pf_handled_no_conversion(t_printf *print_control);
 
+/******************************************************************************\
+ * FT_PRINTF PERCENT
+\******************************************************************************/
+
 typedef struct s_handle_percent
 {
 	unsigned char	print_me;
@@ -366,6 +382,10 @@ void				pf_print_percent(t_printf *print_control,
 						t_handle_percent *control,
 						t_parse_flags *flag_control);
 
+/******************************************************************************\
+ * FT_PRINTF CHAR
+\******************************************************************************/
+
 typedef struct s_handle_c
 {
 	unsigned char	print_me;
@@ -376,6 +396,10 @@ bool				pf_handled_s(t_printf *print_control);
 void				pf_print_c(t_printf *print_control,
 						t_handle_c *control,
 						t_parse_flags *flag_control);
+
+/******************************************************************************\
+ * FT_PRINTF STRING
+\******************************************************************************/
 
 typedef struct s_handle_s
 {
@@ -389,6 +413,10 @@ bool				pf_handled_c(t_printf *print_control);
 void				pf_print_s(t_printf *print_control,
 						t_handle_s *control,
 						t_parse_flags *flag_control);
+
+/******************************************************************************\
+ * FT_PRINTF INT
+\******************************************************************************/
 
 typedef struct s_handle_int
 {
@@ -404,6 +432,10 @@ void				pf_print_int(t_printf *print_control,
 						t_handle_int *control,
 						t_parse_flags *flag_control);
 
+/******************************************************************************\
+ * FT_PRINTF UNSIGNED INT
+\******************************************************************************/
+
 typedef struct s_handle_u
 {
 	unsigned int	print_me;
@@ -416,6 +448,10 @@ void				pf_print_u(t_printf *print_control,
 						t_handle_u *control,
 						t_parse_flags *flag_control);
 
+/******************************************************************************\
+ * FT_PRINTF POINTERS
+\******************************************************************************/
+
 typedef struct s_handle_p
 {
 	unsigned long	print_me;
@@ -427,6 +463,10 @@ bool				pf_handled_p(t_printf *print_control);
 void				pf_printf_p(t_printf *print_control,
 						t_handle_p *control,
 						t_parse_flags *flag_control);
+
+/******************************************************************************\
+ * FT_PRINTF HEXADECIMAL
+\******************************************************************************/
 
 typedef struct s_handle_hex
 {
@@ -441,7 +481,11 @@ void				pf_printf_hex(t_printf *print_control,
 						t_handle_hex *control,
 						t_parse_flags *flag_control);
 
-typedef struct s_handle_float
+/******************************************************************************\
+ * FT_PRINTF FLOAT DOUBLE
+\******************************************************************************/
+
+typedef struct s_handle_f
 {
 	double			print_me;
 	int				digit_count;
@@ -449,10 +493,28 @@ typedef struct s_handle_float
 	bool			is_negative;
 	bool			is_zero_with_zero_precision;
 	t_parse_flags	flag_control;
-}					t_handle_float;
+}					t_handle_f;
 bool				pf_handled_f(t_printf *print_control);
 void				pf_print_f(t_printf *print_control,
-						t_handle_float *control,
+						t_handle_f *control,
+						t_parse_flags *flag_control);
+
+/******************************************************************************\
+ * FT_PRINTF LONG DOUBLE
+\******************************************************************************/
+
+typedef struct s_handle_lf
+{
+	long double		print_me;
+	int				digit_count;
+	int				char_count;
+	bool			is_negative;
+	bool			is_zero_with_zero_precision;
+	t_parse_flags	flag_control;
+}					t_handle_lf;
+bool				pf_handled_lf(t_printf *print_control);
+void				pf_print_lf(t_printf *print_control,
+						t_handle_lf *control,
 						t_parse_flags *flag_control);
 
 #endif
