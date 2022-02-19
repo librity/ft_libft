@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:43:39 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 23:49:30 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -347,7 +347,7 @@ typedef struct s_handle_percent
 	t_parse_flags	flag_control;
 }					t_handle_percent;
 bool				pf_handled_percent(t_printf *print_control);
-void				pf_printf_percent(t_printf *print_control,
+void				pf_print_percent(t_printf *print_control,
 						t_handle_percent *control,
 						t_parse_flags *flag_control);
 
@@ -358,7 +358,7 @@ typedef struct s_handle_c
 	t_parse_flags	flag_control;
 }					t_handle_c;
 bool				pf_handled_s(t_printf *print_control);
-void				pf_printf_c(t_printf *print_control,
+void				pf_print_c(t_printf *print_control,
 						t_handle_c *control,
 						t_parse_flags *flag_control);
 
@@ -371,7 +371,7 @@ typedef struct s_handle_s
 	t_parse_flags	flag_control;
 }					t_handle_s;
 bool				pf_handled_c(t_printf *print_control);
-void				pf_printf_s(t_printf *print_control,
+void				pf_print_s(t_printf *print_control,
 						t_handle_s *control,
 						t_parse_flags *flag_control);
 
@@ -385,7 +385,7 @@ typedef struct s_handle_int
 	t_parse_flags	flag_control;
 }					t_handle_int;
 bool				pf_handled_int(t_printf *print_control);
-void				pf_printf_int(t_printf *print_control,
+void				pf_print_int(t_printf *print_control,
 						t_handle_int *control,
 						t_parse_flags *flag_control);
 
@@ -397,7 +397,7 @@ typedef struct s_handle_u
 	t_parse_flags	flag_control;
 }					t_handle_u;
 bool				pf_handled_u(t_printf *print_control);
-void				pf_printf_u(t_printf *print_control,
+void				pf_print_u(t_printf *print_control,
 						t_handle_u *control,
 						t_parse_flags *flag_control);
 
@@ -436,8 +436,8 @@ typedef struct s_handle_float
 	bool			is_zero_with_zero_precision;
 	t_parse_flags	flag_control;
 }					t_handle_float;
-bool				pf_handled_float(t_printf *print_control);
-void				pf_printf_float(t_printf *print_control,
+bool				pf_handled_f(t_printf *print_control);
+void				pf_print_f(t_printf *print_control,
 						t_handle_float *control,
 						t_parse_flags *flag_control);
 

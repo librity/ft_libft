@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:13:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 23:47:34 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,6 @@ bool	pf_handled_u(t_printf *print_control)
 	pf_parse_flags(print_control, flag_control);
 	set_print_me(print_control, &control);
 	interpret_flags(flag_control, &control);
-	pf_printf_u(print_control, &control, flag_control);
+	pf_print_u(print_control, &control, flag_control);
 	return (true);
 }
