@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 18:25:13 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:54:03 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,43 +16,45 @@
 ** Transforms a floating point number n into an allocated string.
 */
 
-static void	cast_parts(float n, unsigned long long *whole, float *decimal)
+static void	cast_parts(float n, long long *whole, float *decimal)
 {
 	*whole = (long long)n;
 	*decimal = (n - *whole);
 	if (*decimal < 0)
 		*decimal *= -1;
+	if (*whole < 0)
+		*whole *= -1;
 }
 
-static void	print_whole(float n, unsigned long long whole)
+static void	print_whole(float n, long long whole)
 {
 	if (n < 0.0)
 		ft_putchar('-');
-	ft_putnbr_ull(whole);
+	ft_putnbr_ll(whole);
 }
 
 static void	print_decimal(int precision, float decimal)
 {
-	unsigned long long	shifted;
-	char				leading_zeros;
+	long long	shifted;
+	char		leading_zeros;
 
 	ft_putchar('.');
 	shifted = (decimal * ft_pow(10, precision));
 	leading_zeros = precision - ft_count_digits_ull(shifted);
 	if (leading_zeros <= 0)
-		return (ft_putnbr_ull(shifted));
+		return (ft_putnbr_ll(shifted));
 	while (leading_zeros)
 	{
 		ft_putchar('0');
 		leading_zeros--;
 	}
-	ft_putnbr_ull(shifted);
+	ft_putnbr_ll(shifted);
 }
 
 void	ft_putnbr_precise_f(float n, int precision)
 {
-	unsigned long long	whole;
-	float				decimal;
+	long long	whole;
+	float		decimal;
 
 	if (precision < 0)
 		return ;
