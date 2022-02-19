@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:17:54 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 00:37:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -56,7 +56,7 @@ static char	*read_and_join(int fd,
 							char *line_buffer,
 							bool *found_linebreak)
 {
-	char		*linebreak_position;
+	char	*linebreak_position;
 	long	bytes_read;
 
 	while (*found_linebreak == false)
