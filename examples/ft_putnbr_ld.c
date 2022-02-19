@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_ldtoa.c                                         :+:      :+:    :+:   */
+/*   ft_putnbr_ld.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:24:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 18:41:29 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 18:47:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,13 +17,14 @@
 
 static void	test(long double number)
 {
-	char	*str;
+	int printf_return;
 
-	str = ft_ldtoa(number);
-	printf("EXPECTED: %Lf\n", number);
-	printf("RESULT:   %s\n", str);
-	free(str);
-	printf("--------\n");
+	printf_return = printf("%Lf\n", number);
+	printf("printf_return: %d\n", printf_return);
+	ft_putnbr_ld(number);
+	printf_return = ft_printf("\n");
+	printf("printf_return: %d\n", printf_return);
+	printf("-----------------------\n");
 }
 
 int	main(void)
@@ -47,5 +48,6 @@ int	main(void)
 	test(424242);
 	test(424242424);
 	test(-42.4242);
+
 	return (0);
 }
