@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:18:05 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:49:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:15:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,8 @@ void	pf_vprintf(t_printf *print_control)
 		if (pf_handled_p(print_control))
 			continue ;
 		if (pf_handled_hex(print_control))
+			continue ;
+		if (pf_handled_lf(print_control))
 			continue ;
 		if (pf_handled_f(print_control))
 			continue ;
