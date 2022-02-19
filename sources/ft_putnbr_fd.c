@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:35:54 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:29:39 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 23:17:54 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 
 void	ft_putnbr_fd(int n, int fd)
 {
-	long int	number;
+	long	number;
 
 	number = n;
 	if (number < 0)

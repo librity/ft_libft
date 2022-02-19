@@ -1,19 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pf_int.c                                           :+:      :+:    :+:   */
+/*   pf_float.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:44:26 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/18 23:43:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 static void	handle_precision(t_printf *print_control,
-								t_handle_int *control,
+								t_handle_float *control,
 								t_parse_flags *flag_control)
 {
 	int	precision;
@@ -31,7 +31,7 @@ static void	handle_precision(t_printf *print_control,
 }
 
 static void	handle_padding(t_printf *print_control,
-							t_handle_int *control,
+							t_handle_float *control,
 							t_parse_flags *flag_control)
 {
 	int	padding;
@@ -59,12 +59,12 @@ static void	handle_padding(t_printf *print_control,
 }
 
 static void	handle_left(t_printf *print_control,
-						t_handle_int *control,
+						t_handle_float *control,
 						t_parse_flags *flag_control)
 {
 	if (flag_control->is_left_padded_with_zeros)
 	{
-		ft_aux_handle_minus_sign_l(&(control->print_me));
+		ft_aux_handle_minus_sign_d(&(control->print_me));
 		if (unless(flag_control->is_left_justified))
 			handle_padding(print_control, control, flag_control);
 		handle_precision(print_control, control, flag_control);
@@ -72,12 +72,17 @@ static void	handle_left(t_printf *print_control,
 	}
 	if (unless(flag_control->is_left_justified))
 		handle_padding(print_control, control, flag_control);
-	ft_aux_handle_minus_sign_l(&(control->print_me));
+	ft_aux_handle_minus_sign_d(&(control->print_me));
 	handle_precision(print_control, control, flag_control);
 }
 
-void	pf_printf_int(t_printf *print_control,
-				t_handle_int *control,
+static void	pf_cleanup(t_handle_float *control)
+{
+	free(control->print_me_str);
+}
+
+void	pf_printf_float(t_printf *print_control,
+				t_handle_float *control,
 				t_parse_flags *flag_control)
 {
 	handle_left(print_control, control, flag_control);
@@ -85,10 +90,11 @@ void	pf_printf_int(t_printf *print_control,
 	{
 		if (flag_control->is_left_justified)
 			handle_padding(print_control, control, flag_control);
-		return ;
+		return (pf_cleanup(control));
 	}
-	ft_putnbr_l(control->print_me);
+	ft_putstr(control->print_me_str);
 	(print_control->chars_printed) += control->char_count;
 	if (flag_control->is_left_justified)
 		handle_padding(print_control, control, flag_control);
+	pf_cleanup(control);
 }

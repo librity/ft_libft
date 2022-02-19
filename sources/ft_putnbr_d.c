@@ -1,32 +1,22 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_bits_ull.c                                :+:      :+:    :+:   */
+/*   ft_putnbr_d.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 02:04:03 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:17:54 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/03 03:17:29 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/18 23:35:44 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_print_bits_ull(unsigned long long x)
-{
-	int	i;
+/*
+** Writes ascii representation of number to file descriptor fd.
+*/
 
-	ft_putchar('|');
-	i = (sizeof(long long) * 8) - 1;
-	while (i >= 0)
-	{
-		if (x & (1u << i))
-			ft_putchar('1');
-		else
-			ft_putchar('0');
-		if (i % 8 == 0)
-			ft_putchar('|');
-		i--;
-	}
-	ft_putchar('\n');
+void	ft_putnbr_d(double number)
+{
+	ft_putnbr_precise_d(number, 6);
 }

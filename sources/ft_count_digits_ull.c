@@ -1,22 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_aux_handle_minus_sign_li.c                      :+:      :+:    :+:   */
+/*   ft_count_digits_ull.c                              :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/19 02:31:03 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 20:02:49 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/18 23:24:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-void	ft_aux_handle_minus_sign_li(long int *number_pointer)
+unsigned int	ft_count_digits_ull(unsigned long long number)
 {
-	if (*number_pointer < 0)
+	int	digit_count;
+
+	digit_count = 1;
+	number /= 10;
+	while (number != 0)
 	{
-		ft_putchar('-');
-		*number_pointer *= -1;
+		digit_count++;
+		number /= 10;
 	}
+	return (digit_count);
 }
