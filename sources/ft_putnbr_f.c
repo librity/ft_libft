@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:17:29 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 18:22:11 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:28:21 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,5 +18,5 @@
 
 void	ft_putnbr_f(float number)
 {
-	ft_putnbr_precise_f(number, 6);
+	ft_putnbr_precise_f(number, DEFAULT_PRINT_FLOAT_PRECISION);
 }

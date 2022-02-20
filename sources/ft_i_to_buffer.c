@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:21:33 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:11:38 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-/*
-** Transforms a number n into an allocated string.
-*/
 
 static void	write_digits(char *string,
 							unsigned int char_count,
@@ -31,6 +27,9 @@ static void	write_digits(char *string,
 		string[0] = '-';
 }
 
+/*
+** Parses an int and writes it to a previously-allocated buffer.
+*/
 unsigned int	ft_i_to_buffer(int n, char *buffer)
 {
 	unsigned int	char_count;

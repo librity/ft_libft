@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 21:22:16 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 15:55:20 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:18:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,6 +34,12 @@ static bool	free_and_return(char *free_me, bool is_valid)
 	return (is_valid);
 }
 
+/*
+** Checks if a string is a valid base for a numberig system:
+** - base_length must be greater than 1
+** - base_length must equal string length
+** - base can't have any repeating chars
+*/
 bool	ft_is_valid_base(const char *base, const size_t base_length)
 {
 	size_t	used_position;
