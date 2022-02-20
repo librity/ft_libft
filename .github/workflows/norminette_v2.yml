@@ -1,6 +1,6 @@
 # SOURCE: https://github.com/AdrianWR/libft/blame/master/.github/workflows/norminette.yaml
 
-name: norminette
+name: norminette_v2
 
 on: push
 
