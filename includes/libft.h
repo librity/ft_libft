@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:54:41 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:15:48 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -214,7 +214,7 @@ void				ft_putendl(char *s);
 # define DEFAULT_PRINT_FLOAT_PRECISION 6
 
 # define DECIMAL_BASE "0123456789"
-# define DOWNCASE_HEX_BASE "0123456789abcdef"
+# define LOWERCASE_HEX_BASE "0123456789abcdef"
 # define UPPERCASE_HEX_BASE "0123456789ABCDEF"
 
 bool				ft_is_valid_base(const char *base,
@@ -253,7 +253,7 @@ void				ft_putnbr_precise_ld(long double n, int precision);
 void				ft_putnbr_ld(long double number);
 
 void				ft_puthex_uppercase(unsigned int number);
-void				ft_puthex_downcase(unsigned int number);
+void				ft_puthex_lowercase(unsigned int number);
 
 unsigned int		ft_count_digits(int number);
 unsigned int		ft_count_digits_i(int number);

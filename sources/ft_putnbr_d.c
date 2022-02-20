@@ -6,16 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:17:29 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:28:18 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:21:16 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Writes ascii representation of number to file descriptor fd.
+** Prints a double with a default precision of 6.
 */
-
 void	ft_putnbr_d(double number)
 {
 	ft_putnbr_precise_d(number, DEFAULT_PRINT_FLOAT_PRECISION);

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:16:39 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:20:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ static void	print_number_with_base(unsigned long long number,
 	ft_putchar(base[number % base_length]);
 }
 
+/*
+** Prints an unsigned long long in an arbitrary base.
+*/
 void	ft_putnbr_base_ull(unsigned long long number, const char *base)
 {
 	size_t	base_length;

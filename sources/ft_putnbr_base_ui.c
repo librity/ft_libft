@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 15:18:46 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:19:51 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,6 +21,9 @@ static void	print_number_with_base(unsigned int number,
 	ft_putchar(base[number % base_length]);
 }
 
+/*
+** Prints an unsigned int in an arbitrary base.
+*/
 void	ft_putnbr_base_ui(unsigned int number, const char *base)
 {
 	size_t	base_length;

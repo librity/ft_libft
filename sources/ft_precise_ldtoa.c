@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:04:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:07:14 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-/*
-** Transforms a floating point number n into an allocated string.
-*/
 
 static void	cast_parts(long double n, long long *whole, long double *decimal)
 {
@@ -71,6 +67,9 @@ static char	*piece_together(char *whole_str, char *decimal_str)
 	return (float_str);
 }
 
+/*
+** Parses a long double n into an allocated string with arbitrary precision.
+*/
 char	*ft_precise_ldtoa(long double n, int precision)
 {
 	long long	whole;

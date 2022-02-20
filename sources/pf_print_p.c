@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pf_p.c                                             :+:      :+:    :+:   */
+/*   pf_print_p.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:14:04 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:15:05 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	pf_printf_p(t_printf *print_control,
 			handle_padding(print_control, control, flag_control);
 		return ;
 	}
-	ft_putnbr_base_ul(control->print_me, DOWNCASE_HEX_BASE);
+	ft_putnbr_base_ul(control->print_me, LOWERCASE_HEX_BASE);
 	(print_control->chars_printed) += ft_count_digits_hex_ul(control->print_me);
 	if (flag_control->is_left_justified)
 		handle_padding(print_control, control, flag_control);

@@ -6,16 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:35:54 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:17:54 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:21:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Writes ascii representation of number to file descriptor fd.
+** Writes ascii representation of an int to a file descriptor fd.
 */
-
 void	ft_putnbr_fd(int n, int fd)
 {
 	long	number;

@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 18:54:07 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:25:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-/*
-** Transforms a floating point number n into an allocated string.
-*/
 
 static void	cast_parts(long double n, long long *whole, long double *decimal)
 {
@@ -51,6 +47,9 @@ static void	print_decimal(int precision, long double decimal)
 	ft_putnbr_ll(shifted);
 }
 
+/*
+** Prints a long double n with arbitrary precision.
+*/
 void	ft_putnbr_precise_ld(long double n, int precision)
 {
 	long long	whole;

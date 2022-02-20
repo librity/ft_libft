@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 15:55:46 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 15:55:52 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:14:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,8 +24,8 @@ int	main(void)
 	printf("%d\n", ft_is_valid_base(DECIMAL_BASE, 10));
 	printf("---------------\n");
 
-	printf("%s\n", DOWNCASE_HEX_BASE);
-	printf("%d\n", ft_is_valid_base(DOWNCASE_HEX_BASE, 16));
+	printf("%s\n", LOWERCASE_HEX_BASE);
+	printf("%d\n", ft_is_valid_base(LOWERCASE_HEX_BASE, 16));
 	printf("---------------\n");
 
 	printf("%s\n", UPPERCASE_HEX_BASE);

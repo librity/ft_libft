@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:57:20 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:00:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:28:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Safe malloc: if allocation fails it terminates the program.
+*/
 void	*ft_salloc(size_t size)
 {
 	void	*pointer;

@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 02:04:03 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:17:54 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:08:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Prints the bits of an unsigned long long.
+*/
 void	ft_print_bits_ull(unsigned long long x)
 {
 	int	i;

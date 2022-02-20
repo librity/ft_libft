@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:03:26 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:06:46 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-/*
-** Transforms a floating point number n into an allocated string.
-*/
 
 static void	cast_parts(double n, long long *whole, double *decimal)
 {
@@ -71,7 +67,7 @@ static char	*piece_together(char *whole_str, char *decimal_str)
 }
 
 /*
-** Calculates fibonacci numbers by their index.
+** Parses a double n into an allocated string with arbitrary precision.
 */
 char	*ft_precise_dtoa(double n, int precision)
 {

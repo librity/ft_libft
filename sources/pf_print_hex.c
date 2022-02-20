@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pf_hex.c                                           :+:      :+:    :+:   */
+/*   pf_print_hex.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:14:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:16:18 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -77,7 +77,7 @@ void	pf_printf_hex(t_printf *print_control,
 	if (control->is_uppercase)
 		ft_puthex_uppercase(control->print_me);
 	else
-		ft_puthex_downcase(control->print_me);
+		ft_puthex_lowercase(control->print_me);
 	(print_control->chars_printed) += control->digit_count;
 	if (flag_control->is_left_justified)
 		handle_padding(print_control, control, flag_control);
