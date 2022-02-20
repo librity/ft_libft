@@ -6,38 +6,39 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:07:20 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/20 00:27:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/*
-** Takes in a string and parses its digits characters into an unsigned integer.
-*/
-static void	skip_whitespace_and_sign(const char **number_pointer, int *sign)
+static void	skip_whitespace_and_sign(const char **str, int *sign)
 {
 	*sign = -1;
-	while (ft_is_whitespace(**number_pointer))
-		(*number_pointer)++;
-	if (ft_is_plus_or_minus(**number_pointer))
-		if (*(*number_pointer)++ == '-')
+	while (ft_is_whitespace(**str))
+		(*str)++;
+	if (ft_is_plus_or_minus(**str))
+		if (*(*str)++ == '-')
 			*sign = 1;
 }
 
-unsigned int	ft_atoui_strict(const char *number_pointer)
+/*
+** Takes in a string and parses its chars into an unsigned integer.
+** If parsed number is negative returns 0.
+*/
+unsigned int	ft_atoui_strict(const char *str)
 {
 	int	number;
-	int	sign;
 	int	previous_number;
+	int	sign;
 
-	skip_whitespace_and_sign(&number_pointer, &sign);
+	skip_whitespace_and_sign(&str, &sign);
 	number = 0;
 	previous_number = 0;
-	while (ft_isdigit(*number_pointer))
+	while (ft_isdigit(*str))
 	{
 		number *= 10;
-		number -= (*number_pointer++ - '0');
+		number -= (*str++ - '0');
 		if (previous_number < number)
 		{
 			if (sign < 0)

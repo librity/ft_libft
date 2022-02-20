@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoll.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/20 00:27:51 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/20 00:27:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Takes in a string and parses its chars into an integer.
+** Takes in a string and parses its chars into a long long.
 */
-int	ft_atoi(const char *str)
+long long	ft_atoll(const char *str)
 {
-	int	number;
-	int	previous_number;
-	int	sign;
+	long long	number;
+	long long	previous_number;
+	int			sign;
 
 	number = 0;
 	sign = -1;

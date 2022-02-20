@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/18 18:09:34 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/19 23:25:51 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -73,7 +73,7 @@ test_clean:
 # EXAMPLE
 ################################################################################
 
-EXAMPLE_MAIN = example.c
+EXAMPLE_MAIN = examples/example.c
 EXECUTE_EXAMPLE = ./a.out
 EXAMPLE_GARBAGE = a.out a.out.dSYM
 

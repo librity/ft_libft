@@ -32,17 +32,17 @@
 This was the first project I did at 42 São Paulo:
 an implementation of many `stdlib.h` functions from scratch.
 
-I've used this on all other projects that followed,
-and I learned a lot about memory manipulations,
-string utilities and linked lists.
+I've used this on all other projects that followed.
+I learned about memory manipulations, string utilities and linked lists.
 As a developer I've been using all these functions for years
 in some form or another,
 but I had no idea how they worked until I did this project.
 
-So far it has over 80 functions,
-and the implementations are simple and readable.
-I'm always updating my libft as I do more projects
-and write more useful functions.
+So far it has about 160 usable functions,
+including a heap-less `printf` that handles `float`s and `long double`s.
+The implementations are simple and readable,
+and they all have a documentation comment.
+I'll be adding more functions to it as I progress through 42's many projects.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
@@ -64,8 +64,8 @@ This will generate a `libft.a` archive, which you can compile with
 any of the example files:
 
 ```bash
-$ cp examples/ft_itoa.c example.c
-$ gcc -g -I ./includes example.c libft.a
+$ cp examples/ft_itoa.c examples/example.c
+$ gcc -g -I ./includes examples/example.c libft.a
 $ ./a.out
 ```
 
@@ -80,13 +80,12 @@ ft_putstr("Hello, world!\n");
 
 ## ✅ Tests <a name = "tests"></a>
 
-This project is tested with the
+This project is partly tested with the
 [Unity framework](https://github.com/ThrowTheSwitch/Unity).
-To run all tests, go to the tests directory and run `make`:
+To run all tests, run `make`'s `test` rule:
 
 ```bash
-cd tests
-make
+make tests
 ```
 
 ## 🐙 Github Actions <a name = "github_actions"></a>

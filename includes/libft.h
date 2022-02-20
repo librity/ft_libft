@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 22:15:48 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/20 00:21:16 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -64,8 +64,11 @@ void				ft_div_mod_i(int a, int b, int *div, int *mod);
 
 int					ft_sqrt(int number);
 int					ft_sqrt_i(int number);
+
 int					ft_pow(int number, int power);
 int					ft_pow_i(int number, int power);
+long long			ft_pow_ll(long long number, int power);
+
 int					ft_fibonacci(int index);
 int					ft_factorial(int number);
 
@@ -175,6 +178,16 @@ int					ft_atoi(const char *number_pointer);
 unsigned int		ft_atoui(const char *number_pointer);
 unsigned int		ft_atoui_strict(const char *number_pointer);
 
+long				ft_atol(const char *number_pointer);
+unsigned long		ft_atoul(const char *number_pointer);
+
+long long			ft_atoll(const char *number_pointer);
+unsigned long long	ft_atoull(const char *number_pointer);
+
+float				ft_atof(const char *number_pointer);
+double				ft_atod(const char *number_pointer);
+long double			ft_atold(const char *number_pointer);
+
 /******************************************************************************\
  * NUMBER TO STRING
 \******************************************************************************/
@@ -277,6 +290,8 @@ unsigned int		ft_count_digits_ld(long double number, int precision);
 
 char				*ft_skip_digits(char *digits);
 char				*ft_skip_number(char *digits);
+char				*ft_skip_whitespace(char *digits);
+char				*ft_skip_plus_or_minus(char *digits);
 
 /******************************************************************************\
  * LINKED_LISTS

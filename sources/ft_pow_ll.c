@@ -1,26 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_del.c                                   :+:      :+:    :+:   */
+/*   ft_pow_ll.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/05 01:54:30 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 23:04:54 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2020/12/02 03:40:08 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/20 00:20:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Creates an allocated string joining delete_me with dont_delete_me,
-** then deletes delete_me.
+** Calculates the power of an arbitrary long long.
 */
-char	*ft_strjoin_del(char **delete_me, const char *dont_delete_me)
+long long	ft_pow_ll(long long number, int power)
 {
-	char	*new_string;
+	long long	result;
 
-	new_string = ft_strjoin(*delete_me, dont_delete_me);
-	ft_strdel(delete_me);
-	return (new_string);
+	if (power < 0)
+		return (0);
+	if (power == 0)
+		return (1);
+	result = 1;
+	result = result * number * ft_pow_ll(number, power - 1);
+	return (result);
 }

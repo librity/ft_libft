@@ -1,33 +1,39 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_atoi.c                                          :+:      :+:    :+:   */
+/*   ft_atoul.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/20 00:27:51 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/20 00:27:03 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
-/*
-** Takes in a string and parses its chars into an integer.
-*/
-int	ft_atoi(const char *str)
+static void	skip_whitespace_and_sign(const char **str, int *sign)
 {
-	int	number;
-	int	previous_number;
-	int	sign;
+	*sign = -1;
+	while (ft_is_whitespace(**str))
+		(*str)++;
+	if (ft_is_plus_or_minus(**str))
+		if (*(*str)++ == '-')
+			*sign = 1;
+}
 
+/*
+** Takes in a string and parses its chars into an unsigned long.
+*/
+unsigned long	ft_atoul(const char *str)
+{
+	long	number;
+	long	previous_number;
+	int		sign;
+
+	skip_whitespace_and_sign(&str, &sign);
 	number = 0;
-	sign = -1;
 	previous_number = 0;
-	str = ft_skip_whitespace((char *)str);
-	if (ft_is_plus_or_minus(*str))
-		if (*str++ == '-')
-			sign = 1;
 	while (ft_isdigit(*str))
 	{
 		number *= 10;
@@ -40,5 +46,7 @@ int	ft_atoi(const char *str)
 		}
 		previous_number = number;
 	}
+	if (number * sign < 0)
+		return (number * -1);
 	return (number * sign);
 }
