@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:03:08 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:44:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-/*
-** Splits string s by char c, generating an allocated string array.
-*/
 
 static int	count_words(char const *s, char c)
 {
@@ -58,12 +54,15 @@ static void	create_words(
 			s = skip_equal_chars(pointerator, c);
 		}
 		else
-			*words = ft_substr(s, 0, ft_strlen(s) + 1);
+			*words = ft_substr(s, 0, ft_strsize(s));
 		words++;
 	}
 	*words = NULL;
 }
 
+/*
+** Splits string s by char c, generating an allocated string array.
+*/
 char	**ft_split(char const *s, char c)
 {
 	size_t	word_count;

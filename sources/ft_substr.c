@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:04:03 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:47:52 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Creates allocated string from start to len of s.
 */
-
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_length;

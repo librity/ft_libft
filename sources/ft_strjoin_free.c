@@ -1,28 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strjoin_and_free.c                              :+:      :+:    :+:   */
+/*   ft_strjoin_free.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 01:54:30 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:03:50 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:42:29 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Creates an allocated string joining free_me with dont_free_me,
+** then frees free_me.
+*/
 char	*ft_strjoin_free(char *free_me, char const *dont_free_me)
 {
-	size_t	total_size;
-	size_t	free_me_size;
 	char	*new_string;
 
-	free_me_size = ft_strlen(free_me) + 1;
-	total_size = free_me_size + ft_strlen(dont_free_me);
-	new_string = ft_salloc(total_size * sizeof(char));
-	ft_strcpy(new_string, free_me);
-	ft_strlcat(new_string, dont_free_me, total_size);
+	new_string = ft_strjoin(free_me, dont_free_me);
 	free(free_me);
 	return (new_string);
 }

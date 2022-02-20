@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:26:27 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:35:29 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:47:13 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Removes set from beginning and end of s1.
 */
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	trimmed_end;

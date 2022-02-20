@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 22:56:51 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:31:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:46:46 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Compares strings s1 and s2 char-wise, returning the difference.
 */
-
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	current;

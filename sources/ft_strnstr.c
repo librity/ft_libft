@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 16:25:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:46:52 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Finds the first occurence of needle in haystack up to length.
 */
-
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*haystack_start;
