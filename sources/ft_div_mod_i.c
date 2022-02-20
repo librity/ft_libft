@@ -6,12 +6,16 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 15:36:15 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/04/03 15:59:00 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:09:44 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Writes the results of the division and modulus of ints a and b
+** to div and mod respectively.
+*/
 void	ft_div_mod_i(int a, int b, int *div, int *mod)
 {
 	if (b == 0)

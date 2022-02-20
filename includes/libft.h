@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:26:57 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 20:40:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,12 @@ void				ft_print_bits_ull(unsigned long long x);
  * MATH
 \******************************************************************************/
 
-double				ft_abs_d(double number);
-float				ft_abs_f(float number);
 int					ft_abs_i(int number);
 int					ft_abs(int number);
+
+float				ft_abs_f(float number);
+double				ft_abs_d(double number);
+long double			ft_abs_ld(long double number);
 
 int					ft_min_i(int x, int y);
 int					ft_max_i(int x, int y);

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:03:55 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:03:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -70,6 +70,9 @@ static char	*piece_together(char *whole_str, char *decimal_str)
 	return (float_str);
 }
 
+/*
+** Calculates fibonacci numbers by their index.
+*/
 char	*ft_precise_dtoa(double n, int precision)
 {
 	long long	whole;

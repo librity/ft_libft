@@ -1,21 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_count_digits_i.c                                :+:      :+:    :+:   */
+/*   ft_abs_ld.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:08:56 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/19 21:04:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Counts the number of digits that an int would have if printed.
+** Returns the absolute value of a long double.
 */
-unsigned int	ft_count_digits_i(int number)
+long double	ft_abs_ld(long double number)
 {
-	return (ft_count_digits(number));
+	if (number < 0)
+		return (number * -1);
+	return (number);
 }

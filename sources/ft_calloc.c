@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:02:28 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:07:16 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Allocates (nmemb * size) bytes of memory memory and sets them all to zero.
 */
-
 void	*ft_calloc(size_t nmemb, size_t size)
 {
 	size_t	total_size;

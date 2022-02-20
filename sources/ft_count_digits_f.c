@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 19:42:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:08:06 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
-
-/*
-** Transforms a floating point number n into an allocated string.
-*/
 
 static void	cast_parts(float number, unsigned long long *whole, float *decimal)
 {
@@ -24,6 +20,10 @@ static void	cast_parts(float number, unsigned long long *whole, float *decimal)
 		*decimal *= -1;
 }
 
+/*
+** Counts the number of digits that a float would have
+** if printed with an arbitrary precision.
+*/
 unsigned int	ft_count_digits_f(float number, int precision)
 {
 	unsigned long long	whole;

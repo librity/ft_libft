@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 18:33:54 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:03:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Returns the absolute value of a double.
 */
-
 double	ft_abs_d(double number)
 {
 	if (number < 0)

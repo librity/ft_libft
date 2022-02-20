@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 16:36:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:08:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Counts the number of digits that a hex unsigned int would have if printed.
+*/
 unsigned int	ft_count_digits_hex_ui(unsigned int number)
 {
 	int	digit_count;

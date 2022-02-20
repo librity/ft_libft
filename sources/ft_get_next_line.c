@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 00:37:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:09:41 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -81,6 +81,11 @@ static char	*read_and_join(int fd,
 	return (line_buffer);
 }
 
+/*
+** Reads an entire line from a file indexed by a file descriptor fd,
+** then alocates a string with the contents of that line
+** without the linebreak '\n' and points *line to it.
+*/
 int	ft_get_next_line(int fd, char **line)
 {
 	static char	read_buffer[BUFFER_SIZE + 1];

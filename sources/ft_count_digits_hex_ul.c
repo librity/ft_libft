@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 16:40:37 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:08:57 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Counts the number of digits that a hex unsigned long would have if printed.
+*/
 unsigned int	ft_count_digits_hex_ul(unsigned long number)
 {
 	int	digit_count;
