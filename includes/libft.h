@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/20 00:21:16 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/20 01:18:03 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -184,8 +184,7 @@ unsigned long		ft_atoul(const char *number_pointer);
 long long			ft_atoll(const char *number_pointer);
 unsigned long long	ft_atoull(const char *number_pointer);
 
-float				ft_atof(const char *number_pointer);
-double				ft_atod(const char *number_pointer);
+double				ft_atof(const char *number_pointer);
 long double			ft_atold(const char *number_pointer);
 
 /******************************************************************************\
