@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pf_percent.c                                       :+:      :+:    :+:   */
+/*   pf_print_percent.c                                 :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:47:38 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:59:30 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ static void	handle_padding(t_printf *print_control,
 		ft_putchar(flag_control->left_padder);
 }
 
+/*
+** Prints the formatted conversion %%.
+*/
 void	pf_print_percent(t_printf *print_control,
 					t_handle_percent *control,
 					t_parse_flags *flag_control)

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:34:05 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:55:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,6 +60,9 @@ static void	parse_modifiers(t_parse_flags *control)
 	control->flags = skip_modifier_noise(control->flags);
 }
 
+/*
+** Parse printf's conversion flags.
+*/
 void	pf_parse_flags(t_printf *print_control, t_parse_flags *control)
 {
 	if (print_control->conversion_position == 0)

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 22:15:05 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:59:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,6 +66,9 @@ static void	handle_left(t_printf *print_control,
 	handle_precision(print_control, control, flag_control);
 }
 
+/*
+** Prints the formatted conversion %p.
+*/
 void	pf_printf_p(t_printf *print_control,
 				t_handle_p *control,
 				t_parse_flags *flag_control)

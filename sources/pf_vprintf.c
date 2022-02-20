@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:18:05 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:15:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 23:03:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Decides if a char is a flag.
+*/
 static bool	is_a_flag(char current_char)
 {
 	if (current_char == '.')
@@ -25,6 +28,9 @@ static bool	is_a_flag(char current_char)
 	return (false);
 }
 
+/*
+** Skips flags and finds the next conversion.
+*/
 static void	find_current_conversion_position(t_printf *print_control)
 {
 	int	conversion_position;
@@ -38,6 +44,9 @@ static void	find_current_conversion_position(t_printf *print_control)
 	print_control->conversion = (print_control->format)[conversion_position];
 }
 
+/*
+** Traverses format string while calling the appropiate conversion handlers.
+*/
 void	pf_vprintf(t_printf *print_control)
 {
 	while (*(print_control->format) != '\0')

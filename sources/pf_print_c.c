@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   pf_c.c                                             :+:      :+:    :+:   */
+/*   pf_print_c.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:47:37 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:58:34 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,9 @@ static void	handle_padding(t_printf *print_control,
 		ft_putchar(flag_control->left_padder);
 }
 
+/*
+** Prints the formatted conversion %c.
+*/
 void	pf_print_c(t_printf *print_control,
 				t_handle_c *control,
 				t_parse_flags *flag_control)

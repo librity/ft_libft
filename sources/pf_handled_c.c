@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:00:32 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 23:47:37 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:53:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,9 @@ static void	initialize_control(t_printf *print_control, t_handle_c *control)
 	pf_initialize_flag_control(print_control, &(control->flag_control));
 }
 
+/*
+** Handles printf's %c conversion.
+*/
 bool	pf_handled_c(t_printf *print_control)
 {
 	t_handle_c		control;

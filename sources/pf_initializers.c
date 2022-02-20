@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 21:49:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/18 18:12:23 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:55:19 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Initialize printf's general control.
+*/
 void	pf_initialize_print_control(t_printf *print_control, const char *format)
 {
 	print_control->format = format;
@@ -20,6 +23,9 @@ void	pf_initialize_print_control(t_printf *print_control, const char *format)
 	print_control->conversion = '\0';
 }
 
+/*
+** Initialize printf's flag control.
+*/
 void	pf_initialize_flag_control(t_printf *print_control,
 								t_parse_flags *flag_control)
 {
@@ -34,6 +40,9 @@ void	pf_initialize_flag_control(t_printf *print_control,
 	flag_control->precision = 0;
 }
 
+/*
+** Initialize printf's wildcard control.
+*/
 void	pf_initialize_wildcard_control(t_printf *print_control,
 									t_parse_flags *flag_control,
 									t_parse_wildcards *wildcard_control)

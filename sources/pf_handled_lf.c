@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:36:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:54:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,6 +44,9 @@ static void	interpret_flags(t_parse_flags *flag_control,
 			flag_control->precision);
 }
 
+/*
+** Handles printf's %Lf conversion.
+*/
 bool	pf_handled_lf(t_printf *pf_ctl)
 {
 	t_handle_lf		control;
