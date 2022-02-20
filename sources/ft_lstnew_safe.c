@@ -1,34 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstnew_safe.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 22:02:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/19 21:52:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Compares n bytes after s1 with the n bytes after s2.
-** If any are different it returns the difference.
+** Creates an isolated and allocated node of a linked list or dies trying.
 */
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+t_list	*ft_lstnew_safe(void *content)
 {
-	unsigned char	*first_cast;
-	unsigned char	*second_cast;
+	t_list	*list;
 
-	first_cast = (unsigned char *)s1;
-	second_cast = (unsigned char *)s2;
-	while (n--)
-	{
-		if (*first_cast != *second_cast)
-			return (*first_cast - *second_cast);
-		first_cast++;
-		second_cast++;
-	}
-	return (0);
+	list = (t_list *)ft_salloc(sizeof(t_list));
+	list->content = content;
+	list->next = NULL;
+	return (list);
 }

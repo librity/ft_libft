@@ -6,12 +6,17 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 12:16:46 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/16 01:48:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:01:18 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Maps an int that varies between a range into a target range.
+** If the result lies outside the target
+** it returns the closest limit, min or max.
+*/
 int	ft_map_clamped_i(t_map_i args)
 {
 	int	mapped;

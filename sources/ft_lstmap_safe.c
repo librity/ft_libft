@@ -1,34 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memcmp.c                                        :+:      :+:    :+:   */
+/*   ft_lstmap_safe.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 22:02:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/02/19 21:52:19 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Compares n bytes after s1 with the n bytes after s2.
-** If any are different it returns the difference.
+** Creates a new linked list and runs f on all its contents or dies trying.
 */
-int	ft_memcmp(const void *s1, const void *s2, size_t n)
+t_list	*ft_lstmap_safe(t_list *lst, void *(*f)(void *))
 {
-	unsigned char	*first_cast;
-	unsigned char	*second_cast;
+	t_list	*list_map;
 
-	first_cast = (unsigned char *)s1;
-	second_cast = (unsigned char *)s2;
-	while (n--)
-	{
-		if (*first_cast != *second_cast)
-			return (*first_cast - *second_cast);
-		first_cast++;
-		second_cast++;
-	}
-	return (0);
+	if (lst == NULL)
+		return (NULL);
+	list_map = ft_lstnew_safe(f(lst->content));
+	list_map->next = ft_lstmap_safe(lst->next, f);
+	return (list_map);
 }

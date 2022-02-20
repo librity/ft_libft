@@ -6,17 +6,16 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2021/03/25 20:02:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:45:06 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Creates a new list and runs f on all the contents. If it fails in creating
-** a node it it clears the list with del.
+** Creates a new linked list and runs f on all its contents.
+** If it fails in creating a node it clears the list with del.
 */
-
 t_list	*ft_lstmap(t_list *lst, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*list_map;

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:41:06 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:28:42 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:03:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,6 @@
 /*
 ** Like memcpy but overlap safe.
 */
-
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*source_cast;

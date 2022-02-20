@@ -6,12 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 12:16:46 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 17:54:34 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:59:46 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Maps a double that varies between a range into a target range.
+*/
 double	ft_map_d(t_map_d args)
 {
 	double	mapped;

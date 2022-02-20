@@ -6,21 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 20:02:46 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:47:31 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Creates an isolated node with content allocation.
+** Creates an isolated and allocated node of a linked list.
 */
-
 t_list	*ft_lstnew(void *content)
 {
 	t_list	*list;
 
-	list = (t_list *)ft_salloc(sizeof(t_list));
+	list = (t_list *)malloc(sizeof(t_list));
+	if (list == NULL)
+		return (NULL);
 	list->content = content;
 	list->next = NULL;
 	return (list);

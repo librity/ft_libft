@@ -6,17 +6,16 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:28:17 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:02:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Copies upto to n bytes from src to dest, stopping at c if it finds it.
+** Copies up to to n bytes from src to dest, stopping at c if it finds it.
 ** Not overlap safe.
 */
-
 void	*ft_memccpy(void *dest, const void *src, int c, size_t n)
 {
 	unsigned char	*source_cast;

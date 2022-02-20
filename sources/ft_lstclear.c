@@ -6,17 +6,16 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:27:50 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 21:36:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
 /*
-** Runs de del function on all of the list's contents, frees every node on the
-** list and nulls the start pointer.
+** Runs the del function on all the contents of a linked list,
+** then frees every node on the and sets the first pointer to NULL.
 */
-
 void	ft_lstclear(t_list **lst, void (*del)(void *))
 {
 	t_list	*next;

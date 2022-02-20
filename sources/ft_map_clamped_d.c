@@ -6,12 +6,17 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 12:16:46 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/13 18:01:09 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:00:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <libft.h>
 
+/*
+** Maps a double that varies between a range into a target range.
+** If the result lies outside the target
+** it returns the closest limit, min or max.
+*/
 double	ft_map_clamped_d(t_map_d args)
 {
 	double	mapped;

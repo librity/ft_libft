@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:41:06 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/07 00:28:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/02/19 22:02:55 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,6 @@
 ** Scans first n bytes after s for c. Returns c's position if it finds it.
 ** Returns NULL otherwise.
 */
-
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*string_cast;
