@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/19 23:25:51 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/22 10:47:31 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -56,8 +56,10 @@ fclean: clean
 
 re: fclean all
 
-initialize:
-	$(SAFE_MAKEDIR) $(OBJECTS_PATH)
+initialize: $(OBJECTS_PATH)
+
+$(OBJECTS_PATH):
+	$(SAFE_MAKEDIR) $@
 
 ################################################################################
 # TESTS
