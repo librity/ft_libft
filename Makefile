@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/02/22 10:47:31 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/02/24 15:29:07 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -32,9 +32,10 @@ REMOVE_RECURSIVE = /bin/rm -rf
 HEADER_FILE = libft.h
 HEADER = $(addprefix $(INCLUDES_PATH)/,$(HEADER_FILE))
 
-SOURCES = $(wildcard $(SOURCES_PATH)/*.c)
+SOURCES = $(wildcard $(SOURCES_PATH)/**/*.c) $(wildcard $(SOURCES_PATH)/*.c)
 
-OBJECTS = $(subst $(SOURCES_PATH)/,$(OBJECTS_PATH)/,$(subst .c,.o,$(SOURCES)))
+OBJECTS = $(patsubst $(SOURCES_PATH)/%.c, $(OBJECTS_PATH)/%.o, $(SOURCES))
+OBJECT_DIRECTORIES = $(sort $(dir $(OBJECTS)))
 
 ################################################################################
 # REQUIRED
@@ -48,18 +49,31 @@ $(NAME): initialize $(HEADER) $(OBJECTS)
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
 	$(CC_STRICT) -I $(INCLUDES_PATH) -c -o $@ $<
 
+re: fclean all
+
+################################################################################
+# INITIALIZE
+################################################################################
+
+initialize: make_dirs
+
+make_dirs: $(OBJECTS_PATH) $(OBJECT_DIRECTORIES)
+
+$(OBJECTS_PATH):
+	$(SAFE_MAKEDIR) $@
+
+$(OBJECT_DIRECTORIES):
+	$(SAFE_MAKEDIR) $@
+
+################################################################################
+# CLEAN
+################################################################################
+
 clean:
 	$(REMOVE) $(OBJECTS)
 
 fclean: clean
 	$(REMOVE) $(NAME)
-
-re: fclean all
-
-initialize: $(OBJECTS_PATH)
-
-$(OBJECTS_PATH):
-	$(SAFE_MAKEDIR) $@
 
 ################################################################################
 # TESTS
@@ -122,10 +136,14 @@ gitm:
 # PHONY
 ################################################################################
 
-.PHONY: all clean fclean re initialize \
+.PHONY: all re \
+	initialize make_dirs \
+	clean fclean \
+\
 	test_clean test \
 	example build_example example_clean \
 	vg \
+\
 	norm git gitm
 
 ################################################################################
