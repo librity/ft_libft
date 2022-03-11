@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/24 15:19:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/11 19:58:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,6 +120,13 @@ int					ft_memcmp(const void *s1, const void *s2, size_t n);
 void				*ft_calloc(size_t nmemb, size_t size);
 
 /******************************************************************************\
+ * ARRAYS
+\******************************************************************************/
+
+size_t				ft_arrlen(void **array);
+size_t				ft_arrsize(void **array);
+
+/******************************************************************************\
  * CHARS
 \******************************************************************************/
 
@@ -170,6 +177,8 @@ char				*ft_strjoin_del(char **delete_me,
 						const char *dont_delete_me);
 char				*ft_strjoin_del_del(char **delete_me, char **delete_me_too);
 
+void				ft_free_string_array(char **free_me);
+
 /******************************************************************************\
  * STRING TO NUMBER
 \******************************************************************************/
@@ -217,6 +226,8 @@ void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putstr_up_to(char *s, size_t up_to);
 void				ft_putendl(char *s);
+
+void				ft_putstr_array(char **strings);
 
 /******************************************************************************\
  * PRINT NUMBERS
@@ -319,8 +330,20 @@ int					ft_lstsize(t_list *lst);
 void				ft_lstadd_front(t_list **lst, t_list *new);
 void				ft_lstadd_back(t_list **lst, t_list *new);
 
+void				ft_lst_append(t_list **lst, void *content);
+void				ft_lst_prepend(t_list **lst, void *content);
+
 void				ft_lstdelone(t_list *lst, void (*del)(void *));
 void				ft_lstclear(t_list **lst, void (*del)(void *));
+
+/******************************************************************************\
+ * LISTED MEMORY ALLOCATION
+\******************************************************************************/
+
+void				*ft_lalloc(t_list **lalloc, size_t size);
+void				ft_add_lalloc(t_list **lalloc, void *pointer);
+void				ft_add_lalloc_array(t_list **lalloc, void **pointer);
+void				ft_free_lalloc(t_list **free_me);
 
 /******************************************************************************\
  * FT_GET_NEXT_LINE
