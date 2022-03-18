@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/14 22:13:10 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/18 01:16:19 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -339,6 +339,8 @@ void				ft_lst_prepend(t_list **lst, void *content);
 void				ft_lst_add(t_list **list, void *pointer);
 void				ft_lst_create_append(t_list **list, void *pointer);
 void				ft_lst_create_prepend(t_list **list, void *pointer);
+
+void				ft_lst_free(t_list **free_me);
 
 /******************************************************************************\
  * LISTED MEMORY ALLOCATION
