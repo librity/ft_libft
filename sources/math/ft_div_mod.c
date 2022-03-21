@@ -6,11 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 15:35:32 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:09:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <internals.h>
 
 /*
 ** Writes the results of the division and modulus of ints a and b

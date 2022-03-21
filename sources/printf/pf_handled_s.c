@@ -6,11 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:59 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 22:54:23 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <internals.h>
 
 static void	set_print_me(t_printf *print_control,
 							t_handle_s *control,

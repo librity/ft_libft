@@ -6,11 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 23:02:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 22:46:14 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <internals.h>
 
 /*
 ** Counts how many chars string s has including '\0'.

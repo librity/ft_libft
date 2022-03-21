@@ -6,11 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:21:04 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <internals.h>
 
 static bool	bad_params(int file_descriptor, char **line)
 {

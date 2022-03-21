@@ -6,11 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/19 02:31:03 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/02/19 21:07:18 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <libft.h>
+#include <internals.h>
 
 /*
 ** If a float is negative, prints the minus sign and flips it.
