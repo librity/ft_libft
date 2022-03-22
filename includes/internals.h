@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:49:46 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/22 01:17:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,10 +39,6 @@
 #  define BUFFER_SIZE 100
 # endif
 # define MAX_FILE_DESCRIPTOR RLIMIT_NOFILE
-
-# define GNL_FOUND_LINEBREAK 1
-# define GNL_FOUND_EOF 0
-# define GNL_ERROR -1
 
 /******************************************************************************\
  * FT_PRINTF
