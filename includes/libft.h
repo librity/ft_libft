@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 01:39:27 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/22 14:29:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -360,5 +360,72 @@ int					ft_get_next_line(int fd, char **line);
 \******************************************************************************/
 
 int					ft_printf(const char *format, ...);
+
+/******************************************************************************\
+ * COLORS
+\******************************************************************************/
+
+/* Black, Red, Green, Yellow, Blue, Purple, Cyan, White */
+# define BK "\033[0;30m"
+# define R "\033[0;31m"
+# define G "\033[0;32m"
+# define Y "\033[0;33m"
+# define B "\033[0;34m"
+# define P "\033[0;35m"
+# define C "\033[0;36m"
+# define W "\033[0;37m"
+
+/* Bold */
+# define BKB "\033[1;30m"
+# define RB "\033[1;31m"
+# define GB "\033[1;32m"
+# define YB "\033[1;33m"
+# define BB "\033[1;34m"
+# define PB "\033[1;35m"
+# define CB "\033[1;36m"
+# define WB "\033[1;37m"
+
+/* Reset Color */
+# define RC "\033[0m"
+
+void				ft_black(char *str);
+void				ft_black_endl(char *str);
+void				ft_blackb(char *str);
+void				ft_blackb_endl(char *str);
+
+void				ft_red(char *str);
+void				ft_red_endl(char *str);
+void				ft_redb(char *str);
+void				ft_redb_endl(char *str);
+
+void				ft_green(char *str);
+void				ft_green_endl(char *str);
+void				ft_greenb(char *str);
+void				ft_greenb_endl(char *str);
+
+void				ft_yellow(char *str);
+void				ft_yellow_endl(char *str);
+void				ft_yellowb(char *str);
+void				ft_yellowb_endl(char *str);
+
+void				ft_blue(char *str);
+void				ft_blue_endl(char *str);
+void				ft_blueb(char *str);
+void				ft_blueb_endl(char *str);
+
+void				ft_purple(char *str);
+void				ft_purple_endl(char *str);
+void				ft_purpleb(char *str);
+void				ft_purpleb_endl(char *str);
+
+void				ft_cyan(char *str);
+void				ft_cyan_endl(char *str);
+void				ft_cyanb(char *str);
+void				ft_cyanb_endl(char *str);
+
+void				ft_white(char *str);
+void				ft_white_endl(char *str);
+void				ft_whiteb(char *str);
+void				ft_whiteb_endl(char *str);
 
 #endif
