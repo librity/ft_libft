@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 23:46:58 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 22:12:19 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/22 22:55:11 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 */
 char	*ft_skip_commas(char *str)
 {
-	while (*str = ',')
+	while (*str == ',')
 		str++;
 	return (str);
 }
