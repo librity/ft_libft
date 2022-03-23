@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 21:56:56 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/22 22:12:41 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -298,6 +298,7 @@ char				*ft_skip_number(char *str);
 char				*ft_skip_whitespace(char *str);
 char				*ft_skip_plus_or_minus(char *str);
 char				*ft_skip_float(char *str);
+char				*ft_skip_commas(char *str);
 
 /******************************************************************************\
  * LINKED_LISTS
