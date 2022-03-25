@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 22:23:29 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/25 12:27:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -158,8 +158,7 @@ size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
 char				*ft_strrchr(const char *s, int c);
-char				*ft_strnstr(const char *haystack,
-						const char *needle,
+char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 
@@ -178,6 +177,7 @@ char				*ft_strjoin_del_del(char **delete_me, char **delete_me_too);
 void				ft_free_string_array(char **free_me);
 
 bool				ft_starts_with(char *string, char *prefix);
+bool				ft_streq(char *s1, char *s2);
 
 /******************************************************************************\
  * STRING TO NUMBER
