@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/25 12:27:40 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/03/25 13:35:58 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -363,6 +363,7 @@ void				ft_free_lalloc(t_list **free_me);
 # define GNL_ERROR -1
 
 int					ft_get_next_line(int fd, char **line);
+int					ft_gnl(int fd, char **line);
 
 /******************************************************************************\
  * FT_PRINTF
