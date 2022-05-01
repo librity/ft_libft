@@ -29,20 +29,20 @@
 
 ## 🧐 About <a name = "about"></a>
 
-This was the first project I did at 42 São Paulo:
+This was my first project at 42 São Paulo:
 an implementation of many `stdlib.h` functions from scratch.
 
-I've used this on all other projects that followed.
+I've used it on most projects so far.
 I learned about memory manipulations, string utilities and linked lists.
-As a developer I've been using all these functions for years
-in some form or another,
-but I had no idea how they worked until I did this project.
+As a developer I've been using these functions for years
+in some form or another, yet I had no idea how they really work.
+Figuring them out was an initiation of sorts.
 
-So far it has about 160 usable functions,
+It has over 160 functions so far,
 including a heap-less `printf` that handles `float`s and `long double`s.
-The implementations are simple and readable,
-and they all have a documentation comment.
-I'll be adding more functions to it as I progress through 42's many projects.
+All functions have a documentation comment, and most have an example main.
+I prioritize modularity and readability:
+small functions with catchy names that do one thing well.
 
 ## 🏁 Getting Started <a name = "getting_started"></a>
 
