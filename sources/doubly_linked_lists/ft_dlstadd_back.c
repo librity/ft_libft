@@ -1,32 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_dlstadd_back.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/19 20:09:55 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on all the contents of a linked list,
-** then frees every node on the and sets the first pointer to NULL.
+** Appends a node to the end of a linked list.
 */
-void	ft_lstclear(t_list **list, void (*del)(void *))
+void	ft_dlstadd_back(t_dlist **list, t_dlist *new)
 {
-	t_list	*next;
+	t_dlist	*last;
 
 	if (list == NULL)
 		return ;
-	while (*list != NULL)
+	if (*list == NULL)
 	{
-		next = (*list)->next;
-		ft_lstdelone(*list, del);
-		*list = next;
+		*list = new;
+		return ;
 	}
-	list = NULL;
+	last = ft_dlstlast(*list);
+	last->next = new;
+	new->prev = last;
+	new->next = NULL;
 }

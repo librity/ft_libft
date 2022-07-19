@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_dlstmap_safe.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/19 19:45:14 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on all the contents of a linked list,
-** then frees every node on the and sets the first pointer to NULL.
+** Creates a new linked list and runs f on all its contents or dies trying.
 */
-void	ft_lstclear(t_list **list, void (*del)(void *))
+t_dlist	*ft_dlstmap_safe(t_dlist *list, void *(*f)(void *))
 {
-	t_list	*next;
+	t_dlist	*list_map;
 
 	if (list == NULL)
-		return ;
-	while (*list != NULL)
-	{
-		next = (*list)->next;
-		ft_lstdelone(*list, del);
-		*list = next;
-	}
-	list = NULL;
+		return (NULL);
+	list_map = ft_dlstnew_safe(f(list->content));
+	list_map->next = ft_dlstmap_safe(list->next, f);
+	return (list_map);
 }

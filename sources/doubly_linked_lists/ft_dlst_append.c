@@ -1,32 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_dlst_append.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/07/19 19:43:25 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/19 19:45:22 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on all the contents of a linked list,
-** then frees every node on the and sets the first pointer to NULL.
+** Creates a node and appends it to the end of a linked list.
 */
-void	ft_lstclear(t_list **list, void (*del)(void *))
+void	ft_dlst_append(t_dlist **list, void *content)
 {
-	t_list	*next;
+	t_dlist	*new;
 
-	if (list == NULL)
+	if (list == NULL || *list == NULL)
 		return ;
-	while (*list != NULL)
-	{
-		next = (*list)->next;
-		ft_lstdelone(*list, del);
-		*list = next;
-	}
-	list = NULL;
+	new = ft_dlstnew_safe(content);
+	ft_dlstadd_back(list, new);
 }

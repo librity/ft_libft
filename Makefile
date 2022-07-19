@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/03/26 15:28:09 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/07/19 20:12:51 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -53,12 +53,10 @@ $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
 re: fclean all
 
 ################################################################################
-# INITIALIZE
+# DIRS
 ################################################################################
 
-initialize: make_dirs
-
-make_dirs: $(OBJECTS_PATH) $(OBJECT_DIRECTORIES)
+dirs: $(OBJECTS_PATH) $(OBJECT_DIRECTORIES)
 
 $(OBJECTS_PATH):
 	$(SAFE_MAKEDIR) $@ && touch "$@/.keep"
@@ -143,7 +141,7 @@ dump_sources:
 ################################################################################
 
 .PHONY: all re \
-	initialize make_dirs \
+	dirs \
 	clean fclean \
 \
 	test_clean test \

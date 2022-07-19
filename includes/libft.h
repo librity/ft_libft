@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/25 13:35:58 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/19 19:34:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -308,7 +308,7 @@ char				*ft_skip_float_commas(char *str);
 char				*ft_skip_float_whitespace(char *str);
 
 /******************************************************************************\
- * LINKED_LISTS
+ * LINKED LISTS
 \******************************************************************************/
 
 typedef struct s_list
@@ -320,30 +320,69 @@ typedef struct s_list
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnew_safe(void *content);
 
-t_list				*ft_lstmap(t_list *lst,
+t_list				*ft_lstmap(t_list *list,
 						void *(*f)(void *),
 						void (*del)(void *));
-t_list				*ft_lstmap_safe(t_list *lst, void *(*f)(void *));
-void				ft_lstiter(t_list *lst, void (*f)(void *));
+t_list				*ft_lstmap_safe(t_list *list, void *(*f)(void *));
+void				ft_lstiter(t_list *list, void (*f)(void *));
 
-t_list				*ft_lstlast(t_list *lst);
+t_list				*ft_lstlast(t_list *list);
 
-int					ft_lstsize(t_list *lst);
+int					ft_lstsize(t_list *list);
 
-void				ft_lstadd_front(t_list **lst, t_list *new);
-void				ft_lstadd_back(t_list **lst, t_list *new);
+void				ft_lstadd_front(t_list **list, t_list *new);
+void				ft_lstadd_back(t_list **list, t_list *new);
 
-void				ft_lstdelone(t_list *lst, void (*del)(void *));
-void				ft_lstclear(t_list **lst, void (*del)(void *));
+void				ft_lstdelone(t_list *list, void (*del)(void *));
+void				ft_lstclear(t_list **list, void (*del)(void *));
 
-void				ft_lst_append(t_list **lst, void *content);
-void				ft_lst_prepend(t_list **lst, void *content);
+void				ft_lst_append(t_list **list, void *content);
+void				ft_lst_prepend(t_list **list, void *content);
 
 void				ft_lst_add(t_list **list, void *pointer);
 void				ft_lst_create_append(t_list **list, void *pointer);
 void				ft_lst_create_prepend(t_list **list, void *pointer);
 
 void				ft_lst_free(t_list **free_me);
+
+/******************************************************************************\
+ * DOUBLY LINKED LISTS
+\******************************************************************************/
+
+typedef struct s_dlist
+{
+	void			*content;
+	struct s_dlist	*prev;
+	struct s_dlist	*next;
+}					t_dlist;
+
+t_dlist				*ft_dlstnew(void *content);
+t_dlist				*ft_dlstnew_safe(void *content);
+
+t_dlist				*ft_dlstmap(t_dlist *list,
+						void *(*f)(void *),
+						void (*del)(void *));
+t_dlist				*ft_dlstmap_safe(t_dlist *list, void *(*f)(void *));
+void				ft_dlstiter(t_dlist *list, void (*f)(void *));
+
+t_dlist				*ft_dlstlast(t_dlist *list);
+
+int					ft_dlstsize(t_dlist *list);
+
+void				ft_dlstadd_front(t_dlist **list, t_dlist *new);
+void				ft_dlstadd_back(t_dlist **list, t_dlist *new);
+
+void				ft_dlstdelone(t_dlist *list, void (*del)(void *));
+void				ft_dlstclear(t_dlist **list, void (*del)(void *));
+
+void				ft_dlst_append(t_dlist **list, void *content);
+void				ft_dlst_prepend(t_dlist **list, void *content);
+
+void				ft_dlst_add(t_dlist **list, void *pointer);
+void				ft_dlst_create_append(t_dlist **list, void *pointer);
+void				ft_dlst_create_prepend(t_dlist **list, void *pointer);
+
+void				ft_dlst_free(t_dlist **free_me);
 
 /******************************************************************************\
  * LISTED MEMORY ALLOCATION

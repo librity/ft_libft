@@ -1,32 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_dlstsize.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 15:29:43 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/19 19:46:19 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on all the contents of a linked list,
-** then frees every node on the and sets the first pointer to NULL.
+** Counts how many nodes are in a linked list.
 */
-void	ft_lstclear(t_list **list, void (*del)(void *))
+int	ft_dlstsize(t_dlist *list)
 {
-	t_list	*next;
+	int	list_size;
 
 	if (list == NULL)
-		return ;
-	while (*list != NULL)
+		return (0);
+	list_size = 1;
+	while (list->next != NULL)
 	{
-		next = (*list)->next;
-		ft_lstdelone(*list, del);
-		*list = next;
+		list_size++;
+		list = list->next;
 	}
-	list = NULL;
+	return (list_size);
 }

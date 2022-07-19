@@ -1,32 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_dlstlast.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 15:48:24 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/19 19:45:15 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on all the contents of a linked list,
-** then frees every node on the and sets the first pointer to NULL.
+** Return last node of a linked list.
 */
-void	ft_lstclear(t_list **list, void (*del)(void *))
+t_dlist	*ft_dlstlast(t_dlist *list)
 {
-	t_list	*next;
-
-	if (list == NULL)
-		return ;
-	while (*list != NULL)
-	{
-		next = (*list)->next;
-		ft_lstdelone(*list, del);
-		*list = next;
-	}
-	list = NULL;
+	if (list == NULL || list->next == NULL)
+		return (list);
+	return (ft_dlstlast(list->next));
 }

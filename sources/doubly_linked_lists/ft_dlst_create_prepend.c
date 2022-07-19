@@ -1,32 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lstclear.c                                      :+:      :+:    :+:   */
+/*   ft_dlst_create_prepend.c                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 17:12:52 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:59 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/19 19:45:20 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on all the contents of a linked list,
-** then frees every node on the and sets the first pointer to NULL.
+** If not initialized, creates list with allocates pointer.
+** If initialized, prepends allocated pointer to list.
 */
-void	ft_lstclear(t_list **list, void (*del)(void *))
+void	ft_dlst_create_prepend(t_dlist **list, void *pointer)
 {
-	t_list	*next;
-
-	if (list == NULL)
-		return ;
-	while (*list != NULL)
+	if (*list == NULL)
 	{
-		next = (*list)->next;
-		ft_lstdelone(*list, del);
-		*list = next;
+		*list = ft_dlstnew_safe(pointer);
+		return ;
 	}
-	list = NULL;
+	ft_dlst_prepend(list, pointer);
 }

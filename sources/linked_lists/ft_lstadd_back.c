@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/19 19:38:51 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 /*
 ** Appends a node to the end of a linked list.
 */
-void	ft_lstadd_back(t_list **lst, t_list *new)
+void	ft_lstadd_back(t_list **list, t_list *new)
 {
-	if (lst == NULL)
+	if (list == NULL)
 		return ;
-	if (*lst == NULL)
+	if (*list == NULL)
 	{
-		*lst = new;
+		*list = new;
 		return ;
 	}
-	ft_lstlast(*lst)->next = new;
+	ft_lstlast(*list)->next = new;
 }
