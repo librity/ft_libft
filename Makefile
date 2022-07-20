@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/07/19 20:12:51 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/07/20 18:58:49 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -18,9 +18,16 @@ INCLUDES_PATH = ./includes
 TESTS_PATH = ./tests
 
 CC = gcc
-CC_FLAGS = -Wall -Wextra -Werror
-CC_STRICT = $(CC) $(CC_FLAGS)
-CC_DEBUG_FLAGS = -g -fsanitize=address
+CC_STRICT = $(CC) \
+	$(CCF_STRICT)
+CC_FULL = $(CC_STRICT) \
+	$(CCF_DEBUG) \
+	$(CCF_OPTIMIZATION)
+
+CCF_STRICT = -Wall -Wextra -Werror
+CCF_OPTIMIZATION = -O3
+CCF_DEBUG = -g -fsanitize=leak
+CCF_INCLUDES = -I $(INCLUDES_PATH)
 
 MAKE_EXTERNAL = make -C
 SAFE_MAKEDIR = mkdir -p
@@ -48,7 +55,7 @@ $(NAME): $(HEADER) $(OBJECTS)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS)
 
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
-	$(CC_STRICT) -I $(INCLUDES_PATH) -c -o $@ $<
+	$(CC_FULL) $(CCF_INCLUDES) -c -o $@ $<
 
 re: fclean all
 
@@ -96,7 +103,7 @@ example: build_example
 	$(EXECUTE_EXAMPLE)
 
 build_example: $(NAME)
-	$(CC) $(CC_DEBUG_FLAGS) -I $(INCLUDES_PATH) $(EXAMPLE_MAIN) $(NAME)
+	$(CC_FULL) $(CCF_INCLUDES) $(EXAMPLE_MAIN) $(NAME)
 
 example_clean: fclean
 	$(REMOVE_RECURSIVE) $(EXAMPLE_GARBAGE)
@@ -105,11 +112,35 @@ example_clean: fclean
 # VALGRIND
 ################################################################################
 
-VALGRIND = valgrind
-VALGRIND_TARGET = ./a.out
+CC_VG = $(CC) \
+	$(CCF_STRICT)
 
-vg: build_example
-	$(VALGRIND) $(VALGRIND_TARGET)
+VG = valgrind
+VG_FLAGS = --leak-check=full --show-leak-kinds=all --trace-children=yes
+VG_LOG = valgrind_leaks.log
+VG_LOG_FLAGS = --log-file=$(VG_LOG) \
+	--leak-check=full \
+	--show-leak-kinds=all \
+	--trace-children=yes \
+	--track-origins=yes \
+	--verbose
+
+VG_TARGET = ./a.out
+
+vg: vg_build
+	$(VG) $(VG_FLAGS) $(VG_TARGET)
+
+vglog: vg_build
+	$(VG) $(VG_LOG_FLAGS) $(VG_TARGET)
+
+vg_build: $(NAME)
+	$(CC_VG) \
+		$(CCF_INCLUDES) \
+		$(EXAMPLE_MAIN) \
+		$(NAME)
+
+vglog_clean: fclean
+	$(REMOVE) $(VG_LOG)
 
 ################################################################################
 # MISC
@@ -146,7 +177,7 @@ dump_sources:
 \
 	test_clean test \
 	example build_example example_clean \
-	vg \
+	vg vglog vg_build vglog_clean \
 \
 	norm git gitm dump_sources
 

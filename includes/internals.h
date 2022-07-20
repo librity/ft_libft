@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 01:17:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/20 18:55:11 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,6 +30,12 @@
 # define DECIMAL_BASE "0123456789"
 # define LOWERCASE_HEX_BASE "0123456789abcdef"
 # define UPPERCASE_HEX_BASE "0123456789ABCDEF"
+
+/******************************************************************************\
+ * PRINT STRINGS
+\******************************************************************************/
+
+# define WRITE_ERROR_MESSAGE "ERROR: Unable to write byte to file descriptor.\n"
 
 /******************************************************************************\
  * FT_GET_NEXT_LINE
