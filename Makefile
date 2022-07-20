@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/07/20 18:58:49 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/07/20 19:44:54 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -19,15 +19,17 @@ TESTS_PATH = ./tests
 
 CC = gcc
 CC_STRICT = $(CC) \
+	$(CCF_INCLUDES) \
 	$(CCF_STRICT)
-CC_FULL = $(CC_STRICT) \
-	$(CCF_DEBUG) \
-	$(CCF_OPTIMIZATION)
 
+CC_FULL = $(CC_STRICT) \
+	$(CCF_OPTIMIZATION) \
+	$(CCF_DEBUG)
+
+CCF_INCLUDES = -I $(INCLUDES_PATH)
 CCF_STRICT = -Wall -Wextra -Werror
 CCF_OPTIMIZATION = -O3
 CCF_DEBUG = -g -fsanitize=leak
-CCF_INCLUDES = -I $(INCLUDES_PATH)
 
 MAKE_EXTERNAL = make -C
 SAFE_MAKEDIR = mkdir -p
@@ -55,7 +57,7 @@ $(NAME): $(HEADER) $(OBJECTS)
 	$(ARCHIVE_AND_INDEX) $(NAME) $(OBJECTS)
 
 $(OBJECTS_PATH)/%.o: $(SOURCES_PATH)/%.c
-	$(CC_FULL) $(CCF_INCLUDES) -c -o $@ $<
+	$(CC_FULL) -c -o $@ $<
 
 re: fclean all
 
@@ -103,7 +105,7 @@ example: build_example
 	$(EXECUTE_EXAMPLE)
 
 build_example: $(NAME)
-	$(CC_FULL) $(CCF_INCLUDES) $(EXAMPLE_MAIN) $(NAME)
+	$(CC_FULL) $(EXAMPLE_MAIN) $(NAME)
 
 example_clean: fclean
 	$(REMOVE_RECURSIVE) $(EXAMPLE_GARBAGE)
@@ -113,6 +115,7 @@ example_clean: fclean
 ################################################################################
 
 CC_VG = $(CC) \
+	$(CCF_INCLUDES) \
 	$(CCF_STRICT)
 
 VG = valgrind
@@ -135,7 +138,6 @@ vglog: vg_build
 
 vg_build: $(NAME)
 	$(CC_VG) \
-		$(CCF_INCLUDES) \
 		$(EXAMPLE_MAIN) \
 		$(NAME)
 
