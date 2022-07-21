@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lalloc.c                                        :+:      :+:    :+:   */
+/*   ft_dlst_nadd_back.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 15:07:51 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/21 14:09:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Safely allocates memory and adds it to the lalloc.
+** Adds a node to the end of a doubly linked list.
 */
-void	*ft_lalloc(t_list **lalloc, size_t size)
+void	ft_dlst_nadd_back(t_dlist **list, t_dlist *new)
 {
-	void	*pointer;
-
-	pointer = ft_salloc(size);
-	ft_add_lalloc(lalloc, pointer);
-	return (pointer);
+	ft_dlstadd_back(list, new);
 }

@@ -6,17 +6,16 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:11:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** If not initialized, creates lalloc with allocates pointer.
-** If initialized, appends allocated pointer to lalloc.
+** Initializes lalloc (if necessary) and adds the allocated address to the list.
 */
-void	ft_add_lalloc(t_list **lalloc, void *pointer)
+void	ft_add_lalloc(t_list **lalloc, void *allocated_address)
 {
-	ft_lst_create_append(lalloc, pointer);
+	ft_lst_cadd_front(lalloc, allocated_address);
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:06:12 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 15:14:30 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -320,7 +320,7 @@ typedef struct s_list
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnew_safe(void *content);
 
-void				ft_lst_init(t_list **list, void *pointer);
+void				ft_lst_init(t_list **list, void *content);
 
 t_list				*ft_lstmap(t_list *list,
 						void *(*f)(void *),
@@ -336,7 +336,10 @@ t_list				*ft_lstlast(t_list *list);
 int					ft_lstsize(t_list *list);
 
 void				ft_lstadd_front(t_list **list, t_list *new);
+void				ft_lst_nadd_front(t_list **list, t_list *new);
+
 void				ft_lstadd_back(t_list **list, t_list *new);
+void				ft_lst_nadd_back(t_list **list, t_list *new);
 
 void				ft_lstdelone(t_list *list, void (*del)(void *));
 void				ft_lstclear(t_list **list, void (*del)(void *));
@@ -344,9 +347,12 @@ void				ft_lstclear(t_list **list, void (*del)(void *));
 void				ft_lst_append(t_list **list, void *content);
 void				ft_lst_prepend(t_list **list, void *content);
 
-void				ft_lst_add(t_list **list, void *pointer);
-void				ft_lst_create_append(t_list **list, void *pointer);
-void				ft_lst_create_prepend(t_list **list, void *pointer);
+void				ft_lst_add(t_list **list, void *content);
+void				ft_lst_addf(t_list **list, void *content);
+void				ft_lst_cadd_front(t_list **list, void *content);
+
+void				ft_lst_addb(t_list **list, void *content);
+void				ft_lst_cadd_back(t_list **list, void *content);
 
 void				ft_lst_free(t_list **free_me);
 
@@ -364,7 +370,7 @@ typedef struct s_dlist
 t_dlist				*ft_dlstnew(void *content);
 t_dlist				*ft_dlstnew_safe(void *content);
 
-void				ft_dlst_init(t_dlist **list, void *pointer);
+void				ft_dlst_init(t_dlist **list, void *content);
 
 t_dlist				*ft_dlstmap(t_dlist *list,
 						void *(*f)(void *),
@@ -380,7 +386,10 @@ t_dlist				*ft_dlstlast(t_dlist *list);
 int					ft_dlstsize(t_dlist *list);
 
 void				ft_dlstadd_front(t_dlist **list, t_dlist *new);
+void				ft_dlst_nadd_front(t_dlist **list, t_dlist *new);
+
 void				ft_dlstadd_back(t_dlist **list, t_dlist *new);
+void				ft_dlst_nadd_back(t_dlist **list, t_dlist *new);
 
 void				ft_dlstdelone(t_dlist *list, void (*del)(void *));
 void				ft_dlstclear(t_dlist **list, void (*del)(void *));
@@ -388,9 +397,12 @@ void				ft_dlstclear(t_dlist **list, void (*del)(void *));
 void				ft_dlst_append(t_dlist **list, void *content);
 void				ft_dlst_prepend(t_dlist **list, void *content);
 
-void				ft_dlst_add(t_dlist **list, void *pointer);
-void				ft_dlst_create_append(t_dlist **list, void *pointer);
-void				ft_dlst_create_prepend(t_dlist **list, void *pointer);
+void				ft_dlst_add(t_dlist **list, void *content);
+void				ft_dlst_addf(t_dlist **list, void *content);
+void				ft_dlst_cadd_front(t_dlist **list, void *content);
+
+void				ft_dlst_addb(t_dlist **list, void *content);
+void				ft_dlst_cadd_back(t_dlist **list, void *content);
 
 void				ft_dlst_free(t_dlist **free_me);
 
@@ -399,8 +411,9 @@ void				ft_dlst_free(t_dlist **free_me);
 \******************************************************************************/
 
 void				*ft_lalloc(t_list **lalloc, size_t size);
-void				ft_add_lalloc(t_list **lalloc, void *pointer);
-void				ft_add_lalloc_array(t_list **lalloc, void **pointer);
+void				ft_add_lalloc(t_list **lalloc, void *allocated_address);
+void				ft_add_lalloc_array(t_list **lalloc,
+						void **allocated_array);
 void				ft_free_lalloc(t_list **free_me);
 
 /******************************************************************************\

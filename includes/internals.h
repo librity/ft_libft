@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:04:29 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 14:56:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -47,7 +47,8 @@
  * DOUBLY LINKED LIST
 \******************************************************************************/
 
-# define DLIST_INIT_ERROR_MESSAGE "ERROR: Initializing non-empty doubly linked list.\n"
+# define DLIST_INIT_ERROR_MESSAGE "ERROR: \
+Initializing non-empty doubly linked list.\n"
 
 /******************************************************************************\
  * FT_GET_NEXT_LINE
