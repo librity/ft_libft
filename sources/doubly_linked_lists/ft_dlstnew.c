@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:45:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:28:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an isolated and allocated node of a linked list.
+** Creates an isolated and allocated node of a doubly linked list.
 */
 t_dlist	*ft_dlstnew(void *content)
 {

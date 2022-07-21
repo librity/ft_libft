@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_add.c                                      :+:      :+:    :+:   */
+/*   ft_lst_init.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 19:43:25 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:21:49 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/21 13:16:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new node wih the pointer.
-** If the doubly linked list is initialized, appends the node to the list.
-** If uninitialized, sets the node as first on the list.
+** Initializes a linked list or dies trying.
 */
-void	ft_dlst_add(t_dlist **list, void *pointer)
+void	ft_lst_init(t_list **list, void *pointer)
 {
-	ft_dlst_create_append(list, pointer);
+	if (*list != NULL)
+	{
+		ft_putstr_fd(LIST_INIT_ERROR_MESSAGE, 2);
+		exit(EXIT_FAILURE);
+	}
+	*list = ft_lstnew_safe(pointer);
 }

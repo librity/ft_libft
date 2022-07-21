@@ -6,22 +6,20 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:16:20 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** If not initialized, creates list with allocates pointer.
-** If initialized, prepends allocated pointer to list.
+** Creates a new node wih the pointer.
+** If the linked list is initialized, prepends the node to the list.
+** If uninitialized, sets the node as first on the list.
 */
 void	ft_lst_create_prepend(t_list **list, void *pointer)
 {
 	if (*list == NULL)
-	{
-		*list = ft_lstnew_safe(pointer);
-		return ;
-	}
+		return (ft_lst_init(list, pointer));
 	ft_lst_prepend(list, pointer);
 }

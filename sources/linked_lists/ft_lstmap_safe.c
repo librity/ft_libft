@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:39:26 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:20:06 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new linked list and runs f on all its contents or dies trying.
+** Creates a new linked list and runs f on each content or dies trying.
 */
 t_list	*ft_lstmap_safe(t_list *list, void *(*f)(void *))
 {

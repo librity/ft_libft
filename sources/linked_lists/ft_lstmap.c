@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:39:30 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:20:20 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new linked list and runs f on all its contents.
+** Creates a new linked list and runs f on each content.
 ** If it fails in creating a node it clears the list with del.
 */
 t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *))

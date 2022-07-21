@@ -6,14 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:36:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a node and appends it to the end of a linked list.
+** Creates a node and appends it to the end of
+** an initialized linked list.
 */
 void	ft_lst_append(t_list **list, void *content)
 {

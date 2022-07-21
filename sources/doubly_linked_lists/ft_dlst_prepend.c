@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:45:19 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:46:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a node and appends it to the beginning of a linked list.
+** Creates a node and prepends it to the beginning of a doubly linked list.
 */
 void	ft_dlst_prepend(t_dlist **list, void *content)
 {

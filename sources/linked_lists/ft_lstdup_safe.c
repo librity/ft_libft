@@ -1,23 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_add.c                                      :+:      :+:    :+:   */
+/*   ft_lstdup_safe.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/19 19:43:25 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:21:49 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/21 13:31:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
-/*
-** Creates a new node wih the pointer.
-** If the doubly linked list is initialized, appends the node to the list.
-** If uninitialized, sets the node as first on the list.
-*/
-void	ft_dlst_add(t_dlist **list, void *pointer)
+static void	*return_unchanged(void *content)
 {
-	ft_dlst_create_append(list, pointer);
+	return (content);
+}
+
+/*
+** Creates a copy of the linked list or dies trying.
+*/
+t_list	*ft_lstdup_safe(t_list *list)
+{
+	return (ft_lstmap_safe(list, return_unchanged));
 }

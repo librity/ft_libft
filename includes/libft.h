@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:34:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 13:06:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -320,11 +320,16 @@ typedef struct s_list
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnew_safe(void *content);
 
+void				ft_lst_init(t_list **list, void *pointer);
+
 t_list				*ft_lstmap(t_list *list,
 						void *(*f)(void *),
 						void (*del)(void *));
 t_list				*ft_lstmap_safe(t_list *list, void *(*f)(void *));
 void				ft_lstiter(t_list *list, void (*f)(void *));
+
+t_list				*ft_lstdup(t_list *list, void (*del)(void *));
+t_list				*ft_lstdup_safe(t_list *list);
 
 t_list				*ft_lstlast(t_list *list);
 
@@ -359,11 +364,16 @@ typedef struct s_dlist
 t_dlist				*ft_dlstnew(void *content);
 t_dlist				*ft_dlstnew_safe(void *content);
 
+void				ft_dlst_init(t_dlist **list, void *pointer);
+
 t_dlist				*ft_dlstmap(t_dlist *list,
 						void *(*f)(void *),
 						void (*del)(void *));
 t_dlist				*ft_dlstmap_safe(t_dlist *list, void *(*f)(void *));
 void				ft_dlstiter(t_dlist *list, void (*f)(void *));
+
+t_dlist				*ft_dlstdup(t_dlist *list, void (*del)(void *));
+t_dlist				*ft_dlstdup_safe(t_dlist *list);
 
 t_dlist				*ft_dlstlast(t_dlist *list);
 
