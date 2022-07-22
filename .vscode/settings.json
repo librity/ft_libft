@@ -18,6 +18,7 @@
     "ft_count_digits_dc": "c",
     "cmath": "c",
     "*.tcc": "c",
-    "cstdlib": "c"
+    "cstdlib": "c",
+    "internals.h": "c"
   }
 }

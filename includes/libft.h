@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 15:14:30 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 22:22:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,6 +19,12 @@
 # include <stdlib.h>
 # include <sys/resource.h>
 # include <unistd.h>
+
+/******************************************************************************\
+ * ERRORS
+\******************************************************************************/
+
+void				ft_die(void *error_message);
 
 /******************************************************************************\
  * BOOLEANS
@@ -320,7 +326,11 @@ typedef struct s_list
 t_list				*ft_lstnew(void *content);
 t_list				*ft_lstnew_safe(void *content);
 
+void				ft_lst_trim(t_list *node);
+void				ft_lst_trim_next(t_list *node);
+
 void				ft_lst_init(t_list **list, void *content);
+void				ft_lst_init_safe(t_list **list, void *content);
 
 t_list				*ft_lstmap(t_list *list,
 						void *(*f)(void *),
@@ -354,6 +364,8 @@ void				ft_lst_cadd_front(t_list **list, void *content);
 void				ft_lst_addb(t_list **list, void *content);
 void				ft_lst_cadd_back(t_list **list, void *content);
 
+t_list				*ft_lst_pluck_first(t_list **list);
+
 void				ft_lst_free(t_list **free_me);
 
 /******************************************************************************\
@@ -370,7 +382,12 @@ typedef struct s_dlist
 t_dlist				*ft_dlstnew(void *content);
 t_dlist				*ft_dlstnew_safe(void *content);
 
+void				ft_dlst_trim(t_dlist *node);
+void				ft_dlst_trim_next(t_dlist *node);
+void				ft_dlst_trim_prev(t_dlist *node);
+
 void				ft_dlst_init(t_dlist **list, void *content);
+void				ft_dlst_init_safe(t_dlist **list, void *content);
 
 t_dlist				*ft_dlstmap(t_dlist *list,
 						void *(*f)(void *),
@@ -403,6 +420,9 @@ void				ft_dlst_cadd_front(t_dlist **list, void *content);
 
 void				ft_dlst_addb(t_dlist **list, void *content);
 void				ft_dlst_cadd_back(t_dlist **list, void *content);
+
+t_dlist				*ft_dlst_pluck_first(t_dlist **list);
+t_dlist				*ft_dlst_pluck_last(t_dlist **list);
 
 void				ft_dlst_free(t_dlist **free_me);
 

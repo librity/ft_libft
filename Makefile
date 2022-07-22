@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/07/20 19:44:54 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/07/21 21:33:44 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -68,10 +68,10 @@ re: fclean all
 dirs: $(OBJECTS_PATH) $(OBJECT_DIRECTORIES)
 
 $(OBJECTS_PATH):
-	$(SAFE_MAKEDIR) $@ && touch "$@/.keep"
+	$(SAFE_MAKEDIR) $@ && touch "$@.keep"
 
 $(OBJECT_DIRECTORIES):
-	$(SAFE_MAKEDIR) $@ && touch "$@/.keep"
+	$(SAFE_MAKEDIR) $@ && touch "$@.keep"
 
 ################################################################################
 # CLEAN

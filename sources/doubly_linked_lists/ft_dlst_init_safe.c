@@ -1,28 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
+/*   ft_dlst_init_safe.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 21:17:58 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/21 15:45:13 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an isolated and allocated node of a doubly linked list.
+** Initializes a doubly linked list or dies trying.
 */
-t_dlist	*ft_dlstnew(void *content)
+void	ft_dlst_init_safe(t_dlist **list, void *content)
 {
-	t_dlist	*list;
-
-	list = (t_dlist *)malloc(sizeof(t_dlist));
 	if (list == NULL)
-		return (NULL);
-	list->content = content;
-	ft_dlst_trim(list);
-	return (list);
+		ft_die(DLIST_INIT_REFERENCE_ERR);
+	if (*list != NULL)
+		ft_die(DLIST_INIT_NONEMPTY_ERR);
+	ft_dlst_init(list, content);
 }

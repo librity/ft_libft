@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 14:56:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 20:43:05 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * MEMORY
 \******************************************************************************/
 
-# define MALLOC_ERROR_MESSAGE "ERROR: Unable to allocate required memory.\n"
+# define SALLOC_ERR "ERROR: Unable to allocate required memory.\n"
 
 /******************************************************************************\
  * PRINT NUMBERS
@@ -35,19 +35,24 @@
  * PRINT STRINGS
 \******************************************************************************/
 
-# define WRITE_ERROR_MESSAGE "ERROR: Unable to write byte to file descriptor.\n"
+# define WRITE_ERR "ERROR: Unable to write byte to file descriptor.\n"
 
 /******************************************************************************\
  * LINKED LIST
 \******************************************************************************/
 
-# define LIST_INIT_ERROR_MESSAGE "ERROR: Initializing non-empty linked list.\n"
+# define LIST_INIT_REFERENCE_ERR "ERROR: \
+Initializing linked list with NULL reference.\n"
+# define LIST_INIT_NONEMPTY_ERR "ERROR: \
+Initializing non-empty linked list.\n"
 
 /******************************************************************************\
  * DOUBLY LINKED LIST
 \******************************************************************************/
 
-# define DLIST_INIT_ERROR_MESSAGE "ERROR: \
+# define DLIST_INIT_REFERENCE_ERR "ERROR: \
+Initializing doubly linked list with NULL reference.\n"
+# define DLIST_INIT_NONEMPTY_ERR "ERROR: \
 Initializing non-empty doubly linked list.\n"
 
 /******************************************************************************\

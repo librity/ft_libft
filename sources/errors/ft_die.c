@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstnew.c                                       :+:      :+:    :+:   */
+/*   ft_die.c                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 21:17:58 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/07/21 15:42:15 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/21 15:43:21 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
-/*
-** Creates an isolated and allocated node of a doubly linked list.
-*/
-t_dlist	*ft_dlstnew(void *content)
+void	ft_die(void *error_message)
 {
-	t_dlist	*list;
-
-	list = (t_dlist *)malloc(sizeof(t_dlist));
-	if (list == NULL)
-		return (NULL);
-	list->content = content;
-	ft_dlst_trim(list);
-	return (list);
+	ft_putstr_fd(error_message, 2);
+	exit(EXIT_FAILURE);
 }
