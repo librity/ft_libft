@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 22:22:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/21 23:30:31 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -417,9 +417,13 @@ void				ft_dlst_prepend(t_dlist **list, void *content);
 void				ft_dlst_add(t_dlist **list, void *content);
 void				ft_dlst_addf(t_dlist **list, void *content);
 void				ft_dlst_cadd_front(t_dlist **list, void *content);
+void				ft_dlst_cadd_front_lalloc(t_list **lalloc,
+						t_dlist **list, void *content);
 
 void				ft_dlst_addb(t_dlist **list, void *content);
 void				ft_dlst_cadd_back(t_dlist **list, void *content);
+void				ft_dlst_cadd_back_lalloc(t_list **lalloc,
+						t_dlist **list, void *content);
 
 t_dlist				*ft_dlst_pluck_first(t_dlist **list);
 t_dlist				*ft_dlst_pluck_last(t_dlist **list);
