@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 23:30:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/22 14:45:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -234,6 +234,8 @@ void				ft_putstr_up_to(char *s, size_t up_to);
 void				ft_putendl(char *s);
 
 void				ft_putstr_array(char **strings);
+
+void				ft_endl(void);
 
 /******************************************************************************\
  * PRINT NUMBERS
