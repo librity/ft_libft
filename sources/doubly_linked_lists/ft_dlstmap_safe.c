@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:28:22 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/22 22:01:16 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,6 +23,7 @@ t_dlist	*ft_dlstmap_safe(t_dlist *list, void *(*f)(void *))
 		return (NULL);
 	list_map = ft_dlstnew_safe(f(list->content));
 	list_map->next = ft_dlstmap_safe(list->next, f);
-	list_map->next->prev = list_map;
+	if (list_map->next != NULL)
+		list_map->next->prev = list_map;
 	return (list_map);
 }
