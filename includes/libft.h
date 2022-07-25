@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/22 14:45:00 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/25 20:20:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -108,6 +108,13 @@ double				ft_lerp_wsteps_d(double from, double to, double steps,
 
 int					ft_lerp_i(int from, int to, int x);
 int					ft_lerp_wsteps_i(int from, int to, int steps, int x);
+
+/******************************************************************************\
+ * RANDOM
+\******************************************************************************/
+
+unsigned int		ft_prand(void);
+unsigned int		ft_prand_range(unsigned int start, unsigned int end);
 
 /******************************************************************************\
  * MEMORY
