@@ -1,25 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstdelone.c                                    :+:      :+:    :+:   */
+/*   ft_printf.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/26 15:02:34 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/03 03:16:34 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/26 16:19:08 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on the contents of a node of a doubly linked list,
-** then frees it.
+** Prints ints, floats and strings according to a format string.
 */
-void	ft_dlstdelone(t_dlist *node, void (*del)(void *))
+int	ft_printf(const char *format, ...)
 {
-	if (node == NULL)
-		return ;
-	del(node->content);
-	free(node);
+	t_printf	print_control;
+
+	pf_initialize_print_control(&print_control, format);
+	va_start(print_control.elements, format);
+	pf_vprintf(&print_control);
+	va_end(print_control.elements);
+	return (print_control.chars_printed);
 }

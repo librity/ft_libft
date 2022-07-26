@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:48:24 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:28:10 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/26 15:03:34 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,9 +15,9 @@
 /*
 ** Return last node of a doubly linked list.
 */
-t_dlist	*ft_dlstlast(t_dlist *list)
+t_dlist	*ft_dlstlast(t_dlist *node)
 {
-	if (list == NULL || list->next == NULL)
-		return (list);
-	return (ft_dlstlast(list->next));
+	if (node == NULL || node->next == NULL)
+		return (node);
+	return (ft_dlstlast(node->next));
 }

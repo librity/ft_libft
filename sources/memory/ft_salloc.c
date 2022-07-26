@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:57:20 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 20:42:56 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/26 15:43:16 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Safe malloc: if allocation fails it terminates the program.
+** Safe malloc: if allocation fails it terminates the program with an error.
 */
 void	*ft_salloc(size_t size)
 {

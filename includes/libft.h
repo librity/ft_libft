@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/25 20:20:01 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/26 17:52:21 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -388,6 +388,11 @@ typedef struct s_dlist
 	struct s_dlist	*next;
 }					t_dlist;
 
+bool				ft_dlst_is_null(t_dlist **list);
+bool				ft_dlst_is_empty(t_dlist **list);
+
+bool				ft_dlst_index_out_of_bounds(t_dlist **list, int index);
+
 t_dlist				*ft_dlstnew(void *content);
 t_dlist				*ft_dlstnew_safe(void *content);
 
@@ -398,18 +403,21 @@ void				ft_dlst_trim_prev(t_dlist *node);
 void				ft_dlst_init(t_dlist **list, void *content);
 void				ft_dlst_init_safe(t_dlist **list, void *content);
 
-t_dlist				*ft_dlstmap(t_dlist *list,
+t_dlist				*ft_dlstmap(t_dlist *node,
 						void *(*f)(void *),
 						void (*del)(void *));
-t_dlist				*ft_dlstmap_safe(t_dlist *list, void *(*f)(void *));
-void				ft_dlstiter(t_dlist *list, void (*f)(void *));
+t_dlist				*ft_dlstmap_safe(t_dlist *node, void *(*f)(void *));
+void				ft_dlstiter(t_dlist *node, void (*f)(void *));
 
-t_dlist				*ft_dlstdup(t_dlist *list, void (*del)(void *));
-t_dlist				*ft_dlstdup_safe(t_dlist *list);
+t_dlist				*ft_dlstdup(t_dlist *node, void (*del)(void *));
+t_dlist				*ft_dlstdup_safe(t_dlist *node);
 
-t_dlist				*ft_dlstlast(t_dlist *list);
+t_dlist				*ft_dlstlast(t_dlist *node);
+t_dlist				*ft_dlst_get(t_dlist **list, int index);
+t_dlist				*ft_dlst_get_safe(t_dlist **list, int index);
 
-int					ft_dlstsize(t_dlist *list);
+int					ft_dlstsize(t_dlist *node);
+int					ft_dlst_max_index(t_dlist *node);
 
 void				ft_dlstadd_front(t_dlist **list, t_dlist *new);
 void				ft_dlst_nadd_front(t_dlist **list, t_dlist *new);
@@ -417,7 +425,7 @@ void				ft_dlst_nadd_front(t_dlist **list, t_dlist *new);
 void				ft_dlstadd_back(t_dlist **list, t_dlist *new);
 void				ft_dlst_nadd_back(t_dlist **list, t_dlist *new);
 
-void				ft_dlstdelone(t_dlist *list, void (*del)(void *));
+void				ft_dlstdelone(t_dlist *node, void (*del)(void *));
 void				ft_dlstclear(t_dlist **list, void (*del)(void *));
 
 void				ft_dlst_append(t_dlist **list, void *content);
@@ -434,6 +442,8 @@ void				ft_dlst_cadd_back(t_dlist **list, void *content);
 void				ft_dlst_cadd_back_lalloc(t_list **lalloc,
 						t_dlist **list, void *content);
 
+t_dlist				*ft_dlst_pluck(t_dlist **list, int index);
+t_dlist				*ft_dlst_pluck_safe(t_dlist **list, int index);
 t_dlist				*ft_dlst_pluck_first(t_dlist **list);
 t_dlist				*ft_dlst_pluck_last(t_dlist **list);
 
@@ -465,6 +475,7 @@ int					ft_gnl(int fd, char **line);
 \******************************************************************************/
 
 int					ft_printf(const char *format, ...);
+void				ft_debug(const char *format, ...);
 
 /******************************************************************************\
  * COLORS

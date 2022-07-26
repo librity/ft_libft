@@ -1,25 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlstdelone.c                                    :+:      :+:    :+:   */
+/*   ft_dlst_is_null.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/26 15:02:34 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/07/26 13:03:09 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/26 14:51:47 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Runs the del function on the contents of a node of a doubly linked list,
-** then frees it.
+** Checks if the doubly linked list is NULL.
 */
-void	ft_dlstdelone(t_dlist *node, void (*del)(void *))
+bool	ft_dlst_is_null(t_dlist **list)
 {
-	if (node == NULL)
-		return ;
-	del(node->content);
-	free(node);
+	return (list == NULL);
 }

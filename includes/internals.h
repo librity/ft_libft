@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 20:43:05 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/26 16:26:04 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -55,6 +55,11 @@ Initializing doubly linked list with NULL reference.\n"
 # define DLIST_INIT_NONEMPTY_ERR "ERROR: \
 Initializing non-empty doubly linked list.\n"
 
+# define DLIST_GET_SAFE_LIST_ERR "ERROR: \
+Getting node from empty or uninitialized doubly linked linked.\n"
+# define DLIST_GET_SAFE_INDEX_ERR "ERROR: \
+Getting node with out-of-bounds index from doubly linked list.\n"
+
 /******************************************************************************\
  * FT_GET_NEXT_LINE
 \******************************************************************************/
@@ -73,6 +78,7 @@ Initializing non-empty doubly linked list.\n"
 # endif
 
 # define NULL_STRING "(null)"
+# define DEBUG_SUFFIX "DEBUG: "
 
 typedef struct s_printf
 {
