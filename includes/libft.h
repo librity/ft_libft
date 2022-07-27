@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/26 17:52:21 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/27 17:54:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -387,6 +387,8 @@ typedef struct s_dlist
 	struct s_dlist	*prev;
 	struct s_dlist	*next;
 }					t_dlist;
+
+# define DLIST_BAD_INDEX_CODE -1
 
 bool				ft_dlst_is_null(t_dlist **list);
 bool				ft_dlst_is_empty(t_dlist **list);
