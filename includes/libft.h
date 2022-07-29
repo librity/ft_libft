@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 18:59:22 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:36:14 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -136,6 +136,8 @@ void				*ft_calloc(size_t nmemb, size_t size);
  * ARRAYS
 \******************************************************************************/
 
+# define ARRAY_BAD_INDEX_CODE -1
+
 size_t				ft_arrlen(void **array);
 size_t				ft_arrsize(void **array);
 void				ft_free_arr(void **free_me);
@@ -237,6 +239,8 @@ char				*ft_dtoa(double n);
 
 char				*ft_precise_ldtoa(long double n, int precision);
 char				*ft_ldtoa(long double n);
+
+bool				ft_str_is_int(char *str);
 
 /******************************************************************************\
  * PRINT STRINGS
