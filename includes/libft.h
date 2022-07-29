@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 19:36:14 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:50:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,8 +138,8 @@ void				*ft_calloc(size_t nmemb, size_t size);
 
 # define ARRAY_BAD_INDEX_CODE -1
 
-size_t				ft_arrlen(void **array);
-size_t				ft_arrsize(void **array);
+size_t				ft_arr_len(void **array);
+size_t				ft_arr_size(void **array);
 void				ft_free_arr(void **free_me);
 
 /******************************************************************************\
@@ -199,6 +199,9 @@ bool				ft_is_empty_str(char *str);
 /******************************************************************************\
  * STRING ARRAYS
 \******************************************************************************/
+
+size_t				ft_strarr_len(char **strings);
+size_t				ft_strarr_size(char **strings);
 
 void				ft_free_strarr(char **free_me);
 void				ft_put_strarr(char **strings);

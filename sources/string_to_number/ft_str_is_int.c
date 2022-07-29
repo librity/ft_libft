@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 23:09:49 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 19:36:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 19:43:08 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,9 @@ static bool	is_valid_string(char *str)
 	return (true);
 }
 
+/*
+** Returns true if the string represents a valid int.
+*/
 bool	ft_str_is_int(char *str)
 {
 	long	number;
