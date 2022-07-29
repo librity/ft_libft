@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_gnl.c                                           :+:      :+:    :+:   */
+/*   ft_is_empty_string.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/25 13:36:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 00:47:48 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/29 00:15:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Reads an entire line from a file indexed by a file descriptor fd,
-** then alocates a string with the contents of that line
-** without the linebreak '\n' and points *line to it.
-**
-** Returns 1 if successfull, 0 if it reached the end of the file
-** and -1 if an error occurred.
+** Returns true if string contains only whitespace.
 */
-int	ft_gnl(int fd, char **line)
+bool	ft_is_empty_string(char *str)
 {
-	return (ft_get_next_line(fd, line));
+	while (ft_is_whitespace(*str))
+		str++;
+	if (*str == '\0')
+		return (true);
+	return (false);
 }

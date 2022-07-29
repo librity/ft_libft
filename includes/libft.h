@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/27 17:54:28 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 00:15:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -191,6 +191,7 @@ void				ft_free_string_array(char **free_me);
 
 bool				ft_starts_with(char *string, char *prefix);
 bool				ft_streq(char *s1, char *s2);
+bool				ft_is_empty_string(char *str);
 
 /******************************************************************************\
  * STRING TO NUMBER
