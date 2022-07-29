@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 19:50:39 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 20:21:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -244,6 +244,7 @@ char				*ft_precise_ldtoa(long double n, int precision);
 char				*ft_ldtoa(long double n);
 
 bool				ft_str_is_int(char *str);
+bool				ft_str_is_uint(char *str);
 
 /******************************************************************************\
  * PRINT STRINGS
