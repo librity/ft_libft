@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/27 15:44:32 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 01:11:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,7 @@
  * MEMORY
 \******************************************************************************/
 
-# define SALLOC_ERR "ERROR: Unable to allocate required memory.\n"
+# define SALLOC_ERR "Unable to allocate required memory.\n"
 
 /******************************************************************************\
  * PRINT NUMBERS
@@ -35,30 +35,28 @@
  * PRINT STRINGS
 \******************************************************************************/
 
-# define WRITE_ERR "ERROR: Unable to write byte to file descriptor.\n"
+# define WRITE_ERR "Unable to write byte to file descriptor.\n"
 
 /******************************************************************************\
  * LINKED LIST
 \******************************************************************************/
 
-# define LIST_INIT_REFERENCE_ERR "ERROR: \
-Initializing linked list with NULL reference.\n"
-# define LIST_INIT_NONEMPTY_ERR "ERROR: \
-Initializing non-empty linked list.\n"
+# define LIST_INIT_REFERENCE_ERR "Initializing linked list \
+with NULL reference.\n"
+# define LIST_INIT_NONEMPTY_ERR "Initializing non-empty linked list.\n"
 
 /******************************************************************************\
  * DOUBLY LINKED LIST
 \******************************************************************************/
 
-# define DLIST_INIT_REFERENCE_ERR "ERROR: \
-Initializing doubly linked list with NULL reference.\n"
-# define DLIST_INIT_NONEMPTY_ERR "ERROR: \
-Initializing non-empty doubly linked list.\n"
+# define DLIST_INIT_REFERENCE_ERR "Initializing doubly linked list \
+with NULL reference.\n"
+# define DLIST_INIT_NONEMPTY_ERR "Initializing non-empty doubly linked list.\n"
 
-# define DLIST_GET_SAFE_LIST_ERR "ERROR: \
-Getting node from empty or uninitialized doubly linked linked.\n"
-# define DLIST_GET_SAFE_INDEX_ERR "ERROR: \
-Getting node with out-of-bounds index from doubly linked list.\n"
+# define DLIST_GET_SAFE_LIST_ERR "Getting node from empty or uninitialized \
+doubly linked linked.\n"
+# define DLIST_GET_SAFE_INDEX_ERR "Getting node with out-of-bounds index \
+from doubly linked list.\n"
 
 /******************************************************************************\
  * FT_GET_NEXT_LINE
