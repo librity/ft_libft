@@ -1,26 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_string_array.c                             :+:      :+:    :+:   */
+/*   ft_is_empty_string.c                               :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 23:50:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/29 18:52:42 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Frees a NULL-terminated array of strings.
+** Returns true if string contains only whitespace.
 */
-void	ft_free_string_array(char **free_me)
+bool	ft_is_empty_str(char *str)
 {
-	char	**free_me_too;
-
-	free_me_too = free_me;
-	while (*free_me)
-		free(*free_me++);
-	free(free_me_too);
+	while (ft_is_whitespace(*str))
+		str++;
+	if (*str == '\0')
+		return (true);
+	return (false);
 }

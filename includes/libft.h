@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 01:09:47 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 18:59:22 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -138,6 +138,7 @@ void				*ft_calloc(size_t nmemb, size_t size);
 
 size_t				ft_arrlen(void **array);
 size_t				ft_arrsize(void **array);
+void				ft_free_arr(void **free_me);
 
 /******************************************************************************\
  * CHARS
@@ -189,11 +190,18 @@ char				*ft_strjoin_del(char **delete_me,
 						const char *dont_delete_me);
 char				*ft_strjoin_del_del(char **delete_me, char **delete_me_too);
 
-void				ft_free_string_array(char **free_me);
-
 bool				ft_starts_with(char *string, char *prefix);
 bool				ft_streq(char *s1, char *s2);
-bool				ft_is_empty_string(char *str);
+bool				ft_is_empty_str(char *str);
+
+/******************************************************************************\
+ * STRING ARRAYS
+\******************************************************************************/
+
+void				ft_free_strarr(char **free_me);
+void				ft_put_strarr(char **strings);
+
+bool				ft_str_in_strarr(char **haystack, char *needle);
 
 /******************************************************************************\
  * STRING TO NUMBER
@@ -242,8 +250,6 @@ void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putstr_up_to(char *s, size_t up_to);
 void				ft_putendl(char *s);
-
-void				ft_putstr_array(char **strings);
 
 void				ft_endl(void);
 

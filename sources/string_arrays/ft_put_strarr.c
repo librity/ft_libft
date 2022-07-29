@@ -1,25 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_is_empty_string.c                               :+:      :+:    :+:   */
+/*   ft_put_strarr.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 00:15:53 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/03/01 17:15:15 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/29 18:54:58 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns true if string contains only whitespace.
+** Prints an array of strings to standard out.
 */
-bool	ft_is_empty_string(char *str)
+void	ft_put_strarr(char **strings)
 {
-	while (ft_is_whitespace(*str))
-		str++;
-	if (*str == '\0')
-		return (true);
-	return (false);
+	while (*strings)
+	{
+		ft_putchar('	');
+		ft_putendl(*strings++);
+	}
 }
