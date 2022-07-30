@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 20:21:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/29 22:19:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -258,6 +258,7 @@ void				ft_putchar(char c);
 void				ft_putstr(char *s);
 void				ft_putstr_up_to(char *s, size_t up_to);
 void				ft_putendl(char *s);
+void				ft_puts(char *s);
 
 void				ft_endl(void);
 
