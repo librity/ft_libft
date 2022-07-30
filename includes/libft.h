@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 22:19:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/30 15:18:48 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -172,6 +172,7 @@ void				ft_strdel(char **delete_me);
 char				*ft_strnchr(const char *s, int c, unsigned int limit);
 
 char				*ft_strdup(const char *s);
+
 size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 char				*ft_strchr(const char *s, int c);
@@ -454,11 +455,19 @@ void				ft_dlst_prepend(t_dlist **list, void *content);
 void				ft_dlst_add(t_dlist **list, void *content);
 void				ft_dlst_addf(t_dlist **list, void *content);
 void				ft_dlst_cadd_front(t_dlist **list, void *content);
+
+void				ft_dlst_add_lalloc(t_list **lalloc,
+						t_dlist **list, void *content);
+void				ft_dlst_addf_lalloc(t_list **lalloc,
+						t_dlist **list, void *content);
 void				ft_dlst_cadd_front_lalloc(t_list **lalloc,
 						t_dlist **list, void *content);
 
 void				ft_dlst_addb(t_dlist **list, void *content);
 void				ft_dlst_cadd_back(t_dlist **list, void *content);
+
+void				ft_dlst_addb_lalloc(t_list **lalloc,
+						t_dlist **list, void *content);
 void				ft_dlst_cadd_back_lalloc(t_list **lalloc,
 						t_dlist **list, void *content);
 
@@ -479,6 +488,8 @@ void				ft_add_lalloc_array(t_list **lalloc,
 						void **allocated_array);
 void				ft_free_lalloc(t_list **free_me);
 
+char				*ft_strdup_lalloc(t_list **lalloc, const char *s);
+
 /******************************************************************************\
  * FT_GET_NEXT_LINE
 \******************************************************************************/
@@ -496,6 +507,12 @@ int					ft_gnl(int fd, char **line);
 
 int					ft_printf(const char *format, ...);
 void				ft_debug(const char *format, ...);
+
+/******************************************************************************\
+ * SHELL
+\******************************************************************************/
+
+void				ft_clear(void);
 
 /******************************************************************************\
  * COLORS
