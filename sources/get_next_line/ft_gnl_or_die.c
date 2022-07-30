@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_debug.c                                         :+:      :+:    :+:   */
+/*   ft_gnl_or_die.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2021/03/03 03:16:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/30 18:10:36 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/03/25 13:36:08 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/07/30 18:20:38 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Behaves exactly like printf but with a "DEBUG: " suffix and an endline.
+** Reads an entire line from a file indexed by a file descriptor fd,
+** then alocates a string with the contents of that line
+** without the linebreak '\n' and points *line to it.
+**
+** Returns 1 if successfull and 0 if it reached the end of the file;
 */
-void	ft_debug(const char *format, ...)
+int	ft_gnl_or_die(int fd, char **line)
 {
-	t_printf	print_control;
+	int	status;
 
-	ft_yellowb(DEBUG_SUFFIX);
-	pf_initialize_print_control(&print_control, format);
-	va_start(print_control.elements, format);
-	pf_vprintf(&print_control);
-	va_end(print_control.elements);
-	ft_endl();
+	status = ft_get_next_line(fd, line);
+	if (status == GNL_ERROR)
+		ft_die(GNL_ERROR_MESSAGE);
+	return (status);
 }

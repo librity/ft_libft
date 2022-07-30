@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/30 15:17:20 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/30 18:20:18 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -79,6 +79,8 @@ from doubly linked list.\n"
 #  define BUFFER_SIZE 100
 # endif
 # define MAX_FILE_DESCRIPTOR RLIMIT_NOFILE
+
+# define GNL_ERROR_MESSAGE "Unable to read next line of required file\n"
 
 /******************************************************************************\
  * FT_PRINTF
