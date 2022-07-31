@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/30 18:20:18 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/07/31 13:11:30 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,7 +91,7 @@ from doubly linked list.\n"
 # endif
 
 # define NULL_STRING "(null)"
-# define DEBUG_SUFFIX "DEBUG: "
+# define DEBUG_SUFFIX "DEBUG:\t"
 
 typedef struct s_printf
 {
