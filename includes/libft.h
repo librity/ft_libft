@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/30 18:20:51 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/01 16:41:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -507,7 +507,9 @@ int					ft_gnl_or_die(int fd, char **line);
 \******************************************************************************/
 
 int					ft_printf(const char *format, ...);
+
 void				ft_debug(const char *format, ...);
+void				ft_bdebug(bool debug, const char *format, ...);
 
 /******************************************************************************\
  * SHELL
