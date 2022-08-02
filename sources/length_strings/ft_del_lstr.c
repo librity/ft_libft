@@ -1,26 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_in_strarr.c                                 :+:      :+:    :+:   */
+/*   ft_del_lstr.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 23:50:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/02 16:49:06 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2021/03/04 22:56:16 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/08/02 16:14:58 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns true if needle is in NULL-terminated haystack.
+** Frees a length string and sets its pointer to NULL.
 */
-bool	ft_str_in_strarr(char **haystack, char *needle)
+void	ft_del_lstr(t_lstr **delete_me)
 {
-	char	*result;
-
-	result = ft_find_in_strarr(haystack, needle);
-	if (result == NULL)
-		return (false);
-	return (true);
+	ft_del((void **)delete_me);
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/02 11:27:05 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/02 16:48:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -120,7 +120,16 @@ unsigned int		ft_prand_range(unsigned int start, unsigned int end);
  * MEMORY
 \******************************************************************************/
 
+void				ft_del(void **delete_me);
+
 void				*ft_salloc(size_t size);
+
+void				*ft_calloc(size_t nmemb, size_t size);
+void				*ft_scalloc(size_t nmemb, size_t size);
+
+void				*ft_realloc(void *pointer, size_t size);
+void				*ft_srealloc(void *pointer, size_t size);
+
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
 void				*ft_memcpy(void *dest, const void *src, size_t n);
@@ -128,7 +137,6 @@ void				*ft_memccpy(void *dest, const void *src, int c, size_t n);
 void				*ft_memmove(void *dest, const void *src, size_t n);
 void				*ft_memchr(const void *s, int c, size_t n);
 int					ft_memcmp(const void *s1, const void *s2, size_t n);
-void				*ft_calloc(size_t nmemb, size_t size);
 
 /******************************************************************************\
  * ARRAYS
@@ -206,6 +214,7 @@ void				ft_free_strarr(char **free_me);
 void				ft_put_strarr(char **strings);
 
 bool				ft_str_in_strarr(char **haystack, char *needle);
+char				*ft_find_in_strarr(char **haystack, char *needle);
 
 /******************************************************************************\
  * STRING TO NUMBER
@@ -340,6 +349,22 @@ char				*ft_skip_float_commas(char *str);
 char				*ft_skip_float_whitespace(char *str);
 
 /******************************************************************************\
+ * LENGTH STRINGS
+\******************************************************************************/
+
+typedef struct s_lstr
+{
+	char			*ptr;
+	size_t			len;
+}					t_lstr;
+
+void				ft_init_lstr(t_lstr *lstr);
+void				ft_free_lstr(t_lstr *free_me);
+void				ft_del_lstr(t_lstr **delete_me);
+
+void				ft_join_lstr_str(t_lstr *lstr, char *str, size_t str_size);
+
+/******************************************************************************\
  * LINKED LISTS
 \******************************************************************************/
 
@@ -455,19 +480,24 @@ void				ft_dlst_addf(t_dlist **list, void *content);
 void				ft_dlst_cadd_front(t_dlist **list, void *content);
 
 void				ft_dlst_add_lalloc(t_list **lalloc,
-						t_dlist **list, void *content);
+						t_dlist **list,
+						void *content);
 void				ft_dlst_addf_lalloc(t_list **lalloc,
-						t_dlist **list, void *content);
+						t_dlist **list,
+						void *content);
 void				ft_dlst_cadd_front_lalloc(t_list **lalloc,
-						t_dlist **list, void *content);
+						t_dlist **list,
+						void *content);
 
 void				ft_dlst_addb(t_dlist **list, void *content);
 void				ft_dlst_cadd_back(t_dlist **list, void *content);
 
 void				ft_dlst_addb_lalloc(t_list **lalloc,
-						t_dlist **list, void *content);
+						t_dlist **list,
+						void *content);
 void				ft_dlst_cadd_back_lalloc(t_list **lalloc,
-						t_dlist **list, void *content);
+						t_dlist **list,
+						void *content);
 
 t_dlist				*ft_dlst_pluck(t_dlist **list, int index);
 t_dlist				*ft_dlst_pluck_safe(t_dlist **list, int index);

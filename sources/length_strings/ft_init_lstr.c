@@ -1,26 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_str_in_strarr.c                                 :+:      :+:    :+:   */
+/*   ft_init_lstr.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 23:50:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/02 16:49:06 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2022/08/02 15:46:55 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/08/02 15:48:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns true if needle is in NULL-terminated haystack.
+** Initialize a length string of lenght 0.
 */
-bool	ft_str_in_strarr(char **haystack, char *needle)
+void	ft_init_lstr(t_lstr *lstr)
 {
-	char	*result;
-
-	result = ft_find_in_strarr(haystack, needle);
-	if (result == NULL)
-		return (false);
-	return (true);
+	lstr->len = 0;
+	lstr->ptr = ft_salloc(lstr->len + 1);
+	lstr->ptr[0] = '\0';
 }

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/02 15:39:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,9 @@ void	*ft_calloc(size_t nmemb, size_t size)
 	void	*allocated;
 
 	total_size = nmemb * size;
-	allocated = ft_salloc(total_size);
+	allocated = malloc(total_size);
+	if (allocated == NULL)
+		return (NULL);
 	ft_bzero(allocated, total_size);
 	return (allocated);
 }
