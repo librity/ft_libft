@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/05 02:20:22 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/05 03:07:58 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -202,6 +202,9 @@ char				*ft_strjoin_free_free(char *free_me, char *free_me_too);
 char				*ft_strjoin_del(char **delete_me,
 						const char *dont_delete_me);
 char				*ft_strjoin_del_del(char **delete_me, char **delete_me_too);
+
+char				*ft_join_size_size(char *s1, size_t s1_size, char *s2,
+						size_t s2_size);
 
 bool				ft_starts_with(char *string, char *prefix);
 bool				ft_streq(char *s1, char *s2);
