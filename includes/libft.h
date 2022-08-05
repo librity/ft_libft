@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/04 23:04:08 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/05 02:20:22 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -129,8 +129,10 @@ void				*ft_salloc(size_t size);
 void				*ft_calloc(size_t nmemb, size_t size);
 void				*ft_scalloc(size_t nmemb, size_t size);
 
-void				*ft_realloc(void *pointer, size_t size);
-void				*ft_srealloc(void *pointer, size_t size);
+void				*ft_realloc(void *pointer, size_t old_size,
+						size_t new_size);
+void				*ft_srealloc(void *pointer, size_t old_size,
+						size_t new_size);
 
 void				*ft_memset(void *s, int c, size_t n);
 void				ft_bzero(void *s, size_t n);
