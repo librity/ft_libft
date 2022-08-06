@@ -8,17 +8,5 @@
 
   "[c]": {
     "editor.defaultFormatter": "keyhr.42-c-format"
-  },
-  "files.associations": {
-    "*.gohtml": "html",
-    "limits.h": "c",
-    "stdlib.h": "c",
-    "resource.h": "c",
-    "libft.h": "c",
-    "ft_count_digits_dc": "c",
-    "cmath": "c",
-    "*.tcc": "c",
-    "cstdlib": "c",
-    "internals.h": "c"
   }
 }
