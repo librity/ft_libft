@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/23 17:02:16 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/23 17:17:04 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -106,7 +106,7 @@ typedef struct s_printf
 
 typedef struct s_parse_flags
 {
-	char			parsed_flags[ARG_MAX];
+	char			parsed_flags[FT_ARG_MAX];
 	char			*flags;
 	bool			has_wildcards;
 	bool			is_left_padded_with_zeros;
