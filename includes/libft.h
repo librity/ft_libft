@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/05 03:07:58 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/23 14:32:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,6 +42,10 @@ void				ft_print_bits_ui(unsigned int x);
 void				ft_print_bits_ul(unsigned long x);
 void				ft_print_bits_ull(unsigned long long x);
 
+void				ft_print_bits_uc(unsigned char c);
+void				ft_print_bits_c(char c);
+
+void				ft_inspect_cstr(char *str);
 void				ft_hexdump(char *tag, void *address_vp, size_t size);
 
 /******************************************************************************\
