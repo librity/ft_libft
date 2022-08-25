@@ -1,21 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_print_bits_i.c                                  :+:      :+:    :+:   */
+/*   ft_rotate_right_ui32.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 02:04:03 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 11:50:42 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
-/*
-** Prints the bits of an int.
-*/
-void	ft_print_bits_i(int x)
+/**
+ * @brief Rotates an unsigned 32-bit word to the right.
+ *
+ * @param word The word to be rotated.
+ * @param rotations The number of rotations.
+ * @return int The rotated word.
+ */
+u_int32_t	ft_rotate_right_ui32(u_int32_t word, u_int32_t rotations)
 {
-	ft_print_bits_ui(x);
+	const int	total_bits = 32;
+
+	return (
+		(word >> rotations)
+		| (word << (total_bits - rotations))
+	);
 }
