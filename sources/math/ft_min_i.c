@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 22:32:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns the smallest of two ints.
+**
 */
+
+/**
+ * @brief Returns the smallest of two ints.
+ *
+ * @param x The first number.
+ * @param y The second number.
+ * @return int The smallest of the two.
+ */
 int	ft_min_i(int x, int y)
 {
 	if (x < y)

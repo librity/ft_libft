@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 21:50:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:45:55 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Extracts and returns the trimmed last node of a doubly linked list.
+**
 */
+
+/**
+ * @brief Extracts and returns the trimmed last node of a doubly linked list.
+ *
+ * @param list The doubly linked list.
+ * @return t_dlist* The trimmed node or NULL.
+ */
 t_dlist	*ft_dlst_pluck_last(t_dlist **list)
 {
 	t_dlist	*last;

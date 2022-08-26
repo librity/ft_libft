@@ -6,16 +6,25 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:20:20 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:38:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new linked list and runs f on each content.
-** If it fails in creating a node it clears the list with del.
+**
 */
+
+/**
+ * @brief Creates a new linked list and runs f on each content.
+ * If it fails in creating a node it clears the list with del.
+ *
+ * @param list The linked list.
+ * @param f The callback that runs on each node of the list.
+ * @param del The callback that runs on every node.
+ * @return t_list* The first node of the mapped list or NULL.
+ */
 t_list	*ft_lstmap(t_list *list, void *(*f)(void *), void (*del)(void *))
 {
 	t_list	*list_map;

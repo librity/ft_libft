@@ -6,16 +6,25 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:41:06 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:07:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Scans first n bytes after s for c. Returns c's position if it finds it.
-** Returns NULL otherwise.
+**
 */
+
+/**
+ * @brief Scans first n bytes after s for c. Returns c's position if it finds it.
+ * Returns NULL otherwise.
+ *
+ * @param s The initial address.
+ * @param c The char being searched.
+ * @param n The number of bytes searched.
+ * @return void* The address where it found c or NULL.
+ */
 void	*ft_memchr(const void *s, int c, size_t n)
 {
 	unsigned char	*string_cast;

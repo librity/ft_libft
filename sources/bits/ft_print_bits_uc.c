@@ -6,12 +6,17 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:29:07 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/23 14:29:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 12:33:01 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
+/**
+ * @brief Prints the bits of an unsigned char.
+ *
+ * @param c The char to be printed
+ */
 void	ft_print_bits_uc(unsigned char c)
 {
 	int	i;

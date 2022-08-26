@@ -6,16 +6,26 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:57:20 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/05 02:19:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:15:34 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new allocation of size bytes
-** and copies to it the contents of pointer up to size.
+**
 */
+
+/**
+ * @brief Creates a new allocation of size bytes
+ * and copies to it the contents of pointer up to size.
+ * Also frees the old pointer.
+ *
+ * @param pointer The address to be reallocated.
+ * @param old_size Its size.
+ * @param new_size The new size.
+ * @return void* The addres of the allocated memory.
+ */
 void	*ft_realloc(void *pointer, size_t old_size, size_t new_size)
 {
 	void	*resize;

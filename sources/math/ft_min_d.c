@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 22:32:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns the smallest of two doubles.
+**
 */
+
+/**
+ * @brief Returns the smallest of two doubles.
+ *
+ * @param x The first number.
+ * @param y The second number.
+ * @return double The smallest of the two.
+ */
 double	ft_min_d(double x, double y)
 {
 	if (x < y)

@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 15:07:51 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 20:03:33 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Safely allocates memory and adds it to the lalloc.
+**
 */
+
+/**
+ * @brief Safely allocates memory and adds it to the lalloc.
+ *
+ * @param lalloc A linked list with the pointers of all allocated variables.
+ * @param size The number of bytes to be allocated.
+ * @return void* The addres of the allocated memory.
+ */
 void	*ft_lalloc(t_list **lalloc, size_t size)
 {
 	void	*pointer;

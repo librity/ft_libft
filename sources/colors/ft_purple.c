@@ -6,15 +6,21 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 14:27:55 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 16:46:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Writes str to standard out in purple.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in purple.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_purple(char *str)
 {
 	ft_putstr(P);
@@ -23,8 +29,14 @@ void	ft_purple(char *str)
 }
 
 /*
-** Writes str to standard out in purple followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in purple followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_purple_endl(char *str)
 {
 	ft_putstr(P);
@@ -33,8 +45,14 @@ void	ft_purple_endl(char *str)
 }
 
 /*
-** Writes str to standard out in bold purple.
+**
 */
+
+/**
+ * @brief  Prints a string to standard out in bold purple.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_purpleb(char *str)
 {
 	ft_putstr(PB);
@@ -43,8 +61,14 @@ void	ft_purpleb(char *str)
 }
 
 /*
-** Writes str to standard out in bold purple followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold purple followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_purpleb_endl(char *str)
 {
 	ft_putstr(PB);

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:59:11 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -82,13 +82,21 @@ static char	*read_and_join(int fd,
 }
 
 /*
-** Reads an entire line from a file indexed by a file descriptor fd,
-** then alocates a string with the contents of that line
-** without the linebreak '\n' and points *line to it.
 **
-** Returns 1 if successfull, 0 if it reached the end of the file
-** and -1 if an error occurred.
 */
+
+/**
+ * @brief Reads an entire line from a file indexed by a file descriptor fd,
+ * then alocates a string with the contents of that line
+ * without the linebreak '\n' and points *line to it.
+ *
+ * Returns 1 if successfull, 0 if it reached the end of the file
+ * and -1 if an error occurred.
+ *
+ * @param fd The file descriptor to read from.
+ * @param line The line pointer address.
+ * @return int The exit status.
+ */
 int	ft_get_next_line(int fd, char **line)
 {
 	static char	read_buffer[BUFFER_SIZE + 1];

@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 03:52:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:58:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Calculates fibonacci numbers by their index.
+**
 */
+
+/**
+ * @brief Calculates Fibonacci numbers by their index.
+ *
+ * @param index The index in the Fibonacci sequence.
+ * @return int Its corresponding number.
+ */
 int	ft_fibonacci(int index)
 {
 	int	fibonacci;

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/23 14:29:07 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/23 14:31:48 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 20:09:12 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,11 @@ static void	_print_bits_uc(unsigned char c)
 	}
 }
 
+/**
+ * @brief Prints the bits of each char of a C-string.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_inspect_cstr(char *str)
 {
 	while (*str != '\0')

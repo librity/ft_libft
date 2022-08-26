@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 17:50:09 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/26 15:03:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:35:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Trasverses every node of a doubly linked list and runs f on each content.
+**
 */
+
+/**
+ * @brief Trasverses every node of a doubly linked list and runs f on each content.
+ *
+ * @param node The first node of the doubly linked list.
+ * @param f The callback that runs on each node of the list.
+ */
 void	ft_dlstiter(t_dlist *node, void (*f)(void *))
 {
 	if (node == NULL)

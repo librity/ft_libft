@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:25:27 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,15 @@ static void	write_digits(char *string,
 }
 
 /*
-** Parses a int n into an allocated string.
+**
 */
+
+/**
+ * @brief Parses a int n into an allocated string.
+ *
+ * @param n The int to be parsed.
+ * @return char* Its string representation.
+ */
 char	*ft_itoa(int n)
 {
 	unsigned int	digit_count;

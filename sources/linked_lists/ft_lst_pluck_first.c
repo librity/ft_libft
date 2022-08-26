@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 22:21:30 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:32:22 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Extracts and returns the trimmed first node of a linked list.
+**
 */
+
+/**
+ * @brief Extracts and returns the trimmed first node of a linked list.
+ *
+ * @param list The linked list.
+ * @return t_dlist* The trimmed node or NULL.
+ */
 t_list	*ft_lst_pluck_first(t_list **list)
 {
 	t_list	*first;

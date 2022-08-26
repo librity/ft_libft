@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 17:50:09 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:19:31 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:37:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Trasverses every node of a linked list and runs f on each content.
+**
 */
+
+/**
+ * @brief Trasverses every node of a linked list and runs f on each content.
+ *
+ * @param list The linked list.
+ * @param f The callback that runs on each node of the list.
+ */
 void	ft_lstiter(t_list *list, void (*f)(void *))
 {
 	if (list == NULL)

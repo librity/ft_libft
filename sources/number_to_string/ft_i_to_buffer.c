@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:28:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,16 @@ static void	write_digits(char *string,
 }
 
 /*
-** Parses an int and writes it to a previously-allocated buffer.
+**
 */
+
+/**
+ * @brief Parses an int and writes it to a previously-allocated buffer.
+ *
+ * @param n The int to be parsed.
+ * @param buffer The buffer's address.
+ * @return unsigned int The number of characters written.
+ */
 unsigned int	ft_i_to_buffer(int n, char *buffer)
 {
 	unsigned int	char_count;

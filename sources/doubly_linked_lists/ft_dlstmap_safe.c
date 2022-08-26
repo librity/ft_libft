@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/26 15:03:40 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:35:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new doubly linked list and runs f on each content or dies trying.
+**
 */
+
+/**
+ * @brief Creates a new doubly linked list and runs f on each content or dies trying.
+ *
+ * @param node The first node of the doubly linked list.
+ * @param f The callback that runs on each node of the list.
+ * @return t_dlist* The first node of the mapped list.
+ */
 t_dlist	*ft_dlstmap_safe(t_dlist *node, void *(*f)(void *))
 {
 	t_dlist	*list_map;

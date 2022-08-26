@@ -6,15 +6,21 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 14:26:16 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 16:43:29 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Writes str to standard out in blue.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in blue.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_blue(char *str)
 {
 	ft_putstr(B);
@@ -23,8 +29,14 @@ void	ft_blue(char *str)
 }
 
 /*
-** Writes str to standard out in blue followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in blue followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_blue_endl(char *str)
 {
 	ft_putstr(B);
@@ -33,8 +45,14 @@ void	ft_blue_endl(char *str)
 }
 
 /*
-** Writes str to standard out in bold blue.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold blue.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_blueb(char *str)
 {
 	ft_putstr(BB);
@@ -43,8 +61,14 @@ void	ft_blueb(char *str)
 }
 
 /*
-** Writes str to standard out in bold blue followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold blue followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_blueb_endl(char *str)
 {
 	ft_putstr(BB);

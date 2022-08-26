@@ -1,28 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_free_arr.c                                      :+:      :+:    :+:   */
+/*   ft_lerp_precise_d.c                                :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/03/01 23:50:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 12:29:28 by lpaulo-m         ###   ########.fr       */
+/*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
+/*   Updated: 2022/08/25 22:17:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
-/**
- * @brief Frees a NULL-terminated array.
- *
- * @param free_me The array to be freed.
- */
-void	ft_free_arr(void **free_me)
-{
-	void	**free_me_too;
+/*
+**
+*/
 
-	free_me_too = free_me;
-	while (*free_me)
-		free(*free_me++);
-	free(free_me_too);
+/**
+ * @brief Linearly interpolates a double x precisely.
+ *
+ * @param from Minimum know value of y.
+ * @param to Maximum know value of y.
+ * @param x The number to be linearly interpolated.
+ * @return double y at x assuming a linear relation between from and to.
+ */
+double	ft_lerp_precise_d(double from, double to, double x)
+{
+	return ((1 - x) * from + x * to);
 }

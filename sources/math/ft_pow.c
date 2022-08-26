@@ -6,16 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 03:40:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 22:38:03 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Calculates the power of an arbitrary int.
+**
 */
-int	ft_pow(int number, int power)
+
+/**
+ * @brief Calculates the power of an arbitrary int.
+ *
+ * @param base The number to be exponentiated.
+ * @param exponent The number of times the base will be multiplied with itself.
+ * @return int The power.
+ */
+int	ft_pow(int base, int exponent)
 {
-	return (ft_pow_i(number, power));
+	return (ft_pow_i(base, exponent));
 }

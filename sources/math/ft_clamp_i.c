@@ -6,16 +6,25 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:50:06 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns x if it's value lies between min and max.
-** Otherwise, it returns the closest min or max closest to x.
+**
 */
+
+/**
+ * @brief Returns x if it's value lies between min and max.
+ * Otherwise, it returns the closest min or max closest to x.
+ *
+ * @param x The number to be clamped.
+ * @param min The clamp minimum.
+ * @param max The clamp maximum.
+ * @return int The clamped value between min and max.
+ */
 int	ft_clamp_i(int x, int min, int max)
 {
 	if (x < min)

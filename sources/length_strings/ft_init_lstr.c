@@ -6,15 +6,21 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 15:46:55 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/02 15:48:01 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 20:06:13 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Initialize a length string of lenght 0.
+**
 */
+
+/**
+ * @brief Initialize a length string of lenght 0.
+ *
+ * @param lstr The length string to be initialized.
+ */
 void	ft_init_lstr(t_lstr *lstr)
 {
 	lstr->len = 0;

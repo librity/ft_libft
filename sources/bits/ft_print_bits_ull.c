@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 02:04:03 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 12:34:42 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,13 @@
 /*
 ** Prints the bits of an unsigned long long.
 */
-void	ft_print_bits_ull(unsigned long long x)
+
+/**
+ * @brief Prints the bits of an unsigned long long.
+ *
+ * @param ull The unsigned long long to be printed.
+ */
+void	ft_print_bits_ull(unsigned long long ull)
 {
 	int	i;
 
@@ -23,7 +29,7 @@ void	ft_print_bits_ull(unsigned long long x)
 	i = (sizeof(long long) * 8) - 1;
 	while (i >= 0)
 	{
-		if (x & (1u << i))
+		if (ull & (1u << i))
 			ft_putchar('1');
 		else
 			ft_putchar('0');

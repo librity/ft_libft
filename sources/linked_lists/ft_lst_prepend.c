@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/19 19:38:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:29:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a node and appends it to the beginning of a linked list.
+**
 */
+
+/**
+ * @brief Creates a node and appends it to the beginning of a linked list.
+ *
+ * @param list The linked list.
+ * @param content The content of the new node.
+ */
 void	ft_lst_prepend(t_list **list, void *content)
 {
 	t_list	*new;

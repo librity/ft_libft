@@ -6,16 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 19:43:25 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:36:01 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:12:04 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a node and appends it to the end of
-** an initialized doubly linked list.
+**
 */
+
+/**
+ * @brief Creates a node and appends it to the end of
+ * an initialized doubly linked list.
+ *
+ * @param list The doubly linked list.
+ * @param content The content of the new node.
+ */
 void	ft_dlst_append(t_dlist **list, void *content)
 {
 	t_dlist	*new;

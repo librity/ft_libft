@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:05:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Copies the n bytes after src to dest. Not overlap safe.
+**
 */
+
+/**
+ * @brief Copies the n bytes after src to dest. Not overlap safe.
+ *
+ * @param dest The destination address.
+ * @param src The source address.
+ * @param n Number of bytes to copy.
+ * @return void* The address after it stopped copying.
+ */
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {
 	unsigned char	*source_cast;

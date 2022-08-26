@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 04:18:06 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 23:45:18 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Calculates the square root of an int.
+**
 */
+
+/**
+ * @brief Calculates the square root of an int.
+ *
+ * @param number The number to be rooted.
+ * @return int Its square root.
+ */
 int	ft_sqrt(int number)
 {
 	return (ft_sqrt_i(number));

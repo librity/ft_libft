@@ -6,15 +6,21 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 14:29:09 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 16:47:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Writes str to standard out in white.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in white.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_white(char *str)
 {
 	ft_putstr(W);
@@ -23,8 +29,14 @@ void	ft_white(char *str)
 }
 
 /*
-** Writes str to standard out in white followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in white followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_white_endl(char *str)
 {
 	ft_putstr(W);
@@ -33,8 +45,14 @@ void	ft_white_endl(char *str)
 }
 
 /*
-** Writes str to standard out in bold white.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold white.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_whiteb(char *str)
 {
 	ft_putstr(WB);
@@ -43,8 +61,14 @@ void	ft_whiteb(char *str)
 }
 
 /*
-** Writes str to standard out in bold white followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold white followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_whiteb_endl(char *str)
 {
 	ft_putstr(WB);

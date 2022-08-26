@@ -6,16 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 16:30:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Checks if c is an uppercase ASCII letter.
+**
 */
-bool	ft_isupper(int c)
+
+/**
+ * @brief Checks if character is an uppercase ASCII letter.
+ *
+ * @param character The char to be checked.
+ * @return true Character is an uppercase ASCII letter.
+ * @return false Character is not an uppercase ASCII letter.
+ */
+bool	ft_isupper(char character)
 {
-	return (c >= 'A' && c <= 'Z');
+	return (character >= 'A' && character <= 'Z');
 }

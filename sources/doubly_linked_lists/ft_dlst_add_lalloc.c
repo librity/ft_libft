@@ -6,17 +6,25 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/19 19:43:25 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/30 15:06:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:12:04 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a new node wih the content.
-** If the doubly linked list is initialized, appends the node to the list.
-** If uninitialized, sets the node as first on the list.
+**
 */
+
+/**
+ * @brief Creates a new node wih the content.
+ * If the doubly linked list is initialized, appends the node to the list.
+ * If uninitialized, sets the node as first on the list.
+ *
+ * @param lalloc A linked list with the pointers of all allocated variables.
+ * @param list The doubly linked list.
+ * @param content The content of the new node.
+ */
 void	ft_dlst_add_lalloc(t_list **lalloc,
 			t_dlist **list, void *content)
 {

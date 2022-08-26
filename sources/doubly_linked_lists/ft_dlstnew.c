@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 21:17:58 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:54:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an isolated and allocated node of a doubly linked list.
+**
 */
+
+/**
+ * @brief Creates an isolated and allocated node of a doubly linked list.
+ *
+ * @param content The content of the new node.
+ * @return t_dlist* The new node.
+ */
 t_dlist	*ft_dlstnew(void *content)
 {
 	t_dlist	*list;

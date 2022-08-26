@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 13:46:10 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:12:04 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates a node and prepends it to the beginning of a doubly linked list.
+**
 */
+
+/**
+ * @brief Creates a node and prepends it to the beginning
+ * of a doubly linked list.
+ *
+ * @param list The doubly linked list.
+ * @param content The content of the new node.
+ */
 void	ft_dlst_prepend(t_dlist **list, void *content)
 {
 	t_dlist	*new;

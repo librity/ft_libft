@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:29:46 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,8 +67,16 @@ static char	*piece_together(char *whole_str, char *decimal_str)
 }
 
 /*
-** Parses a float n into an allocated string with arbitrary precision.
+**
 */
+
+/**
+ * @brief Parses a float n into an allocated string with arbitrary precision.
+ *
+ * @param n The float to be parsed.
+ * @param precision The precision.
+ * @return char* Its string representation.
+ */
 char	*ft_precise_ftoa(float n, int precision)
 {
 	long	whole;

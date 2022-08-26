@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/12/02 03:25:54 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:57:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Calculates the factorial of an int.
+**
 */
+
+/**
+ * @brief Calculates the factorial of an int.
+ *
+ * @param number The number to be factorialized.
+ * @return int Its factorial.
+ */
 int	ft_factorial(int number)
 {
 	int	factorial;

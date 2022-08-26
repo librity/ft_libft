@@ -6,15 +6,21 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 14:25:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 16:48:21 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Writes str to standard out in yellow.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in yellow.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_yellow(char *str)
 {
 	ft_putstr(Y);
@@ -23,8 +29,14 @@ void	ft_yellow(char *str)
 }
 
 /*
-** Writes str to standard out in yellow followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in yellow followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_yellow_endl(char *str)
 {
 	ft_putstr(Y);
@@ -33,8 +45,14 @@ void	ft_yellow_endl(char *str)
 }
 
 /*
-** Writes str to standard out in bold yellow.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold yellow.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_yellowb(char *str)
 {
 	ft_putstr(YB);
@@ -43,8 +61,14 @@ void	ft_yellowb(char *str)
 }
 
 /*
-** Writes str to standard out in bold yellow followed by an endline.
+**
 */
+
+/**
+ * @brief Prints a string to standard out in bold yellow followed by an endline.
+ *
+ * @param str The string to be printed.
+ */
 void	ft_yellowb_endl(char *str)
 {
 	ft_putstr(YB);

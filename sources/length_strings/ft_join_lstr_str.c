@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 15:46:55 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/05 02:21:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 20:12:32 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Apends a NULL-terminated string to a length string.
+**
 */
+
+/**
+ * @brief Apends a C-string to a length string.
+ *
+ * @param lstr The length string to be appended to.
+ * @param str The C-string to be appended.
+ * @param str_size The size of the C-string.
+ */
 void	ft_join_lstr_str(t_lstr *lstr, char *str, size_t str_size)
 {
 	size_t	new_length;

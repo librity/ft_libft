@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 21:48:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns the absolute value of a long double.
+**
 */
+
+/**
+ * @brief Returns the absolute value of a long double.
+ *
+ * @param number The number.
+ * @return long double Its absolute value.
+ */
 long double	ft_abs_ld(long double number)
 {
 	if (number < 0)

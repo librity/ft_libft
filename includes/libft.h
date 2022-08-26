@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 11:48:37 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 22:34:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,11 +45,11 @@ bool				unless(bool condition);
  * BITS
 \******************************************************************************/
 
-void				ft_print_bits(int x);
-void				ft_print_bits_i(int x);
-void				ft_print_bits_ui(unsigned int x);
-void				ft_print_bits_ul(unsigned long x);
-void				ft_print_bits_ull(unsigned long long x);
+void				ft_print_bits(int i);
+void				ft_print_bits_i(int i);
+void				ft_print_bits_ui(unsigned int ui);
+void				ft_print_bits_ul(unsigned long ul);
+void				ft_print_bits_ull(unsigned long long ull);
 
 void				ft_print_bits_uc(unsigned char c);
 void				ft_print_bits_c(char c);
@@ -86,26 +86,28 @@ int					ft_clamp_i(int x, int min, int max);
 void				ft_swap(int *a, int *b);
 void				ft_swap_i(int *a, int *b);
 
-void				ft_div_mod(int a, int b, int *div, int *mod);
-void				ft_div_mod_i(int a, int b, int *div, int *mod);
+void				ft_div_mod(int dividend, int divisor,
+						int *result, int *remainder);
+void				ft_div_mod_i(int dividend, int divisor,
+						int *result, int *remainder);
 
 int					ft_sqrt(int number);
 int					ft_sqrt_i(int number);
 
-int					ft_pow(int number, int power);
-int					ft_pow_i(int number, int power);
-long long			ft_pow_ll(long long number, int power);
+int					ft_pow(int base, int exponent);
+int					ft_pow_i(int base, int exponent);
+long long			ft_pow_ll(long long base, int exponent);
 
 int					ft_fibonacci(int index);
 int					ft_factorial(int number);
 
 typedef struct s_map_i
 {
-	int				mapped;
-	int				start1;
-	int				stop1;
-	int				start2;
-	int				stop2;
+	int				x;
+	int				from_1;
+	int				to_1;
+	int				from_2;
+	int				to_2;
 }					t_map_i;
 
 int					ft_map_clamped_i(t_map_i args);
@@ -113,21 +115,23 @@ int					ft_map_i(t_map_i args);
 
 typedef struct s_map_d
 {
-	double			mapped;
-	double			start1;
-	double			stop1;
-	double			start2;
-	double			stop2;
+	double			x;
+	double			from_1;
+	double			to_1;
+	double			from_2;
+	double			to_2;
 }					t_map_d;
 
 double				ft_map_d(t_map_d args);
 double				ft_map_clamped_d(t_map_d args);
 
 double				ft_lerp_d(double from, double to, double x);
+double				ft_lerp_precise_d(double from, double to, double x);
 double				ft_lerp_wsteps_d(double from, double to, double steps,
 						double x);
 
 int					ft_lerp_i(int from, int to, int x);
+int					ft_lerp_precise_i(int from, int to, int x);
 int					ft_lerp_wsteps_i(int from, int to, int steps, int x);
 
 /******************************************************************************\
@@ -175,19 +179,20 @@ void				ft_free_arr(void **free_me);
  * CHARS
 \******************************************************************************/
 
-bool				ft_isdigit(int c);
+bool				ft_isascii(char character);
+bool				ft_isdigit(char character);
+bool				ft_isupper(char character);
+bool				ft_islower(char character);
+bool				ft_isalpha(char character);
+bool				ft_isalnum(char character);
+bool				ft_isprint(char character);
+
 bool				ft_is_whitespace(char character);
 bool				ft_is_plus_or_minus(char character);
 bool				ft_is_decimal_char(char character);
-bool				ft_isupper(int c);
-bool				ft_islower(int c);
-bool				ft_isalpha(int c);
-bool				ft_isalnum(int c);
-bool				ft_isascii(int c);
-bool				ft_isprint(int c);
 
-int					ft_toupper(int c);
-int					ft_tolower(int c);
+char				ft_toupper(char character);
+char				ft_tolower(char character);
 
 /******************************************************************************\
  * STRINGS

@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/05 00:41:06 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:06:30 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Like memcpy but overlap safe.
+**
 */
+
+/**
+ * @brief Copies the n bytes after src to dest. Overlap safe.
+ *
+ * @param dest The destination address.
+ * @param src The source address.
+ * @param n Number of bytes to copy.
+ * @return void* The address after it stopped copying.
+ */
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	unsigned char	*source_cast;
