@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 18:52:24 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,10 +46,6 @@ static void	print_decimal(int precision, double decimal)
 	}
 	ft_putnbr_ll(shifted);
 }
-
-/*
-**
-*/
 
 /**
  * @brief Prints a double n with arbitrary precision.

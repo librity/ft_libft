@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 13:46:42 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 22:32:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Returns the smallest of two ints.

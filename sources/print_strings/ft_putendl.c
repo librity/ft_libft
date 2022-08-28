@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:35:37 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:10:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Writes string s to standard out followed by an endline.

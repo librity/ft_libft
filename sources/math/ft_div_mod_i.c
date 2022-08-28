@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/03 15:36:15 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 23:25:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Divides two ints with remainder.
