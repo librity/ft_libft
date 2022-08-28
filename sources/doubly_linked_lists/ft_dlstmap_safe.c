@@ -6,14 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:31:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Creates a new doubly linked list and runs f on each content or dies trying.
+ * @brief Creates a new doubly linked list
+ * and runs f on each content or dies trying.
  *
  * @param node The first node of the doubly linked list.
  * @param f The callback that runs on each node of the list.

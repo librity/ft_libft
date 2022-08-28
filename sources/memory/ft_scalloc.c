@@ -6,14 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:28:29 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Allocates (nmemb * size) bytes of memory memory and sets them all to zero.
+ * @brief Allocates (nmemb * size) bytes of memory memory
+ * and sets them all to zero.
  * If allocation fails it terminates the program with an error.
  *
  * @param nmemb Byte size of each element.

@@ -6,14 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:57:20 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:28:41 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Safe malloc: if allocation fails it terminates the program with an error.
+ * @brief Safe malloc:
+ * if allocation fails it terminates the program with an error.
  *
  * @param size The number of bytes to be allocated.
  * @return void* The addres of the allocated memory.
