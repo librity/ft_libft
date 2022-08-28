@@ -18,7 +18,8 @@
 
 </div>
 
-<p align="center"> A partial implementation of stdlib.
+<p align="center"> A reasonably-complete implementation of <code>stdlib.h</code>,
+and much much more.
   <br>
 </p>
 
@@ -30,6 +31,7 @@
 - [Getting Started](#getting_started)
 - [Usage](#usage)
 - [Tests](#tests)
+- [To Do](#todo)
 - [Github Actions](#github_actions)
 - [42 São Paulo](#ft_sp)
 
@@ -94,6 +96,48 @@ To run all tests, run `make`'s `test` rule:
 ```bash
 make tests
 ```
+
+## ✅ To Do <a name = "todo"></a>
+
+- [ ] [Implement missing `stdlib.h` functions](https://cplusplus.com/reference/cstdlib/)
+  - [x] `atof()`
+  - [x] `atoi()`
+  - [x] `atol()`
+  - [x] `atoll()`
+  - [ ] `strtod()`
+  - [ ] `strtof()`
+  - [ ] `strtol()`
+  - [ ] `strtold()`
+  - [ ] `strtoll()`
+  - [ ] `strtoul()`
+  - [ ] `strtoull()`
+  - [ ] `rand()`
+  - [ ] `srand()`
+  - [x] `calloc()`
+  - [ ] `free()`
+  - [ ] `malloc()`
+  - [ ] `realloc()`
+  - [ ] `abort()`
+  - [ ] `atexit()`
+  - [ ] `at_quick_exit()`
+  - [ ] `exit()`
+  - [ ] `getenv()`
+  - [ ] `quick_exit()`
+  - [ ] `system()`
+  - [ ] `_Exit()`
+  - [ ] `bsearch()`
+  - [ ] `qsort()`
+  - [x] `abs()`
+  - [ ] `div()`
+  - [ ] `labs()`
+  - [ ] `ldiv()`
+  - [ ] `llabs()`
+  - [ ] `lldiv()`
+  - [ ] `mblen()`
+  - [ ] `mbtowc()`
+  - [ ] `wctomb()`
+  - [ ] `mbstowcs()`
+  - [ ] `wcstombs()`
 
 ## 🐙 Github Actions <a name = "github_actions"></a>
 
