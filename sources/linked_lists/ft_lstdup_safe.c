@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 18:02:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 21:36:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,10 +16,6 @@ static void	*return_unchanged(void *content)
 {
 	return (content);
 }
-
-/*
-**
-*/
 
 /**
  * @brief Creates a copy of the linked list or dies trying.

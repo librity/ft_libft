@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 23:09:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 20:54:56 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Returns an allocated string with each char modified by f.

@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 21:29:53 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Creates a node and appends it to the end of

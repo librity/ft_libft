@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:48:24 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 21:38:07 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Return last node of a linked list.

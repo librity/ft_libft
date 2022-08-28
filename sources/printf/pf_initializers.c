@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 21:49:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:28:59 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Initialize printf's general control.
@@ -29,10 +25,6 @@ void	pf_initialize_print_control(t_printf *print_control, const char *format)
 	print_control->conversion_position = 0;
 	print_control->conversion = '\0';
 }
-
-/*
-**
-*/
 
 /**
  * @brief Initialize printf's flag control.
@@ -53,10 +45,6 @@ void	pf_initialize_flag_control(t_printf *print_control,
 	flag_control->has_precision = false;
 	flag_control->precision = 0;
 }
-
-/*
-**
-*/
 
 /**
  * @brief Initialize printf's wildcard control.

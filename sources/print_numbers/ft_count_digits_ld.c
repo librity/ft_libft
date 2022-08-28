@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 18:33:15 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,10 +20,6 @@ static void	cast_parts(long double number, unsigned long long *whole,
 	if (*decimal < 0)
 		*decimal *= -1;
 }
-
-/*
-**
-*/
 
 /**
  * @brief Counts the number of digits that a long double would have

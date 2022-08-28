@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:06:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Writes char c to file descriptor fd.

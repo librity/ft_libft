@@ -6,15 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:18:05 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:25:53 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-/*
-**
-*/
 
 /**
  * @brief Decides if a char is a flag.
@@ -36,10 +32,6 @@ static bool	is_a_flag(char current_char)
 	return (false);
 }
 
-/*
-**
-*/
-
 /**
  * @brief Skips flags and finds the next conversion.
  *
@@ -57,10 +49,6 @@ static void	find_current_conversion_position(t_printf *print_control)
 	print_control->conversion_position = conversion_position;
 	print_control->conversion = (print_control->format)[conversion_position];
 }
-
-/*
-**
-*/
 
 /**
  * @brief Traverses format string

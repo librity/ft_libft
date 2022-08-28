@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 21:22:16 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 18:47:51 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,10 +33,6 @@ static bool	free_and_return(char *free_me, bool is_valid)
 	free(free_me);
 	return (is_valid);
 }
-
-/*
-**
-*/
 
 /**
  * @brief Checks if a string is a valid base for a numberig system:

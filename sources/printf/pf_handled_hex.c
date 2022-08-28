@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:25:53 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,10 +34,6 @@ static void	interpret_flags(t_parse_flags *flag_control, t_handle_hex *control)
 		if (flag_control->precision == 0 && control->print_me == 0)
 			control->is_zero_with_zero_precision = true;
 }
-
-/*
-**
-*/
 
 /**
  * @brief Handles printf's %x and %X conversions.

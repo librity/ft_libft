@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:50:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -59,10 +59,6 @@ static void	create_words(
 	}
 	*words = NULL;
 }
-
-/*
-**
-*/
 
 /**
  * @brief Splits string s by char c, generating an allocated string array.

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:42:53 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,10 +21,6 @@ static void	skip_whitespace_and_sign(const char **str, int *sign)
 		if (*(*str)++ == '-')
 			*sign = 1;
 }
-
-/*
-**
-*/
 
 /**
  * @brief Takes in a string and parses its chars into an unsigned long long.
