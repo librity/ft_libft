@@ -2,13 +2,19 @@
 
 <div align="center">
 
-[![Norminette v3](https://github.com/librity/ft_libft/actions/workflows/norminette_v3.yml/badge.svg)](https://github.com/librity/ft_libft/actions/workflows/norminette_v3.yml)
 ![42 São Paulo](https://img.shields.io/badge/42-SP-1E2952)
 ![License](https://img.shields.io/github/license/librity/ft_libft?color=yellow)
 ![Code size in bytes](https://img.shields.io/github/languages/code-size/librity/ft_libft?color=blue)
 ![Lines of code](https://img.shields.io/tokei/lines/github/librity/ft_libft?color=blueviolet)
 ![Top language](https://img.shields.io/github/languages/top/librity/ft_libft?color=ff69b4)
 ![Last commit](https://img.shields.io/github/last-commit/librity/ft_libft?color=orange)
+
+</div>
+
+<div align="center">
+
+[![Build](https://github.com/librity/ft_libft/actions/workflows/build.yml/badge.svg)](https://github.com/librity/ft_libft/actions/workflows/build.yml)
+[![Norminette v3](https://github.com/librity/ft_libft/actions/workflows/norminette_v3.yml/badge.svg)](https://github.com/librity/ft_libft/actions/workflows/norminette_v3.yml)
 
 </div>
 
