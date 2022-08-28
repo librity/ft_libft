@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 19:08:49 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 23:31:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -60,8 +60,10 @@ void				ft_hexdump(char *tag, void *address_vp, size_t size);
 int					ft_rotate_left_i(int word, int rotations);
 int					ft_rotate_right_i(int word, int rotations);
 
-u_int32_t			ft_rotate_left_ui32(u_int32_t word, u_int32_t rotations);
-u_int32_t			ft_rotate_right_ui32(u_int32_t word, u_int32_t rotations);
+uint32_t			ft_rotate_left_ui32(uint32_t word, uint32_t rotations);
+uint32_t			ft_rotate_right_ui32(uint32_t word, uint32_t rotations);
+
+uint32_t			ft_switch_endianess_i32(uint32_t old);
 
 /******************************************************************************\
  * MATH
