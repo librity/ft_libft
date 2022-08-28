@@ -6,11 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:42:11 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
+
+/*
+**
+*/
 
 /**
  * @brief Takes in a string and parses its chars into a long.

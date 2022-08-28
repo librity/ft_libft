@@ -6,11 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:28:21 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
+
+/*
+**
+*/
 
 /**
  * @brief Returns true if string contains only whitespace.

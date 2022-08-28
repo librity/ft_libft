@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:29:14 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,10 @@ static void	write_digits(char *string,
 	if (is_negative)
 		string[0] = '-';
 }
+
+/*
+**
+*/
 
 /**
  * @brief Parses a long n into an allocated string.

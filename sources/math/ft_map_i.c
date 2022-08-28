@@ -6,11 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/13 12:16:46 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 22:31:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
+
+/*
+**
+*/
 
 /**
  * @brief Maps an int that varies between a range into target range.

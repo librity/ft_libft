@@ -6,11 +6,15 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:57:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/25 19:45:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
+
+/*
+**
+*/
 
 /**
  * @brief Adds a node to the end of a doubly linked list.

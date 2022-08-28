@@ -6,11 +6,61 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:18:05 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:03:25 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:25:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
+
+/*
+**
+*/
+
+/**
+ * @brief Decides if a char is a flag.
+ *
+ * @param current_char
+ * @return true If it printed the conversion.
+ * @return false If it didn't print the conversion.
+ */
+static bool	is_a_flag(char current_char)
+{
+	if (current_char == '.')
+		return (true);
+	if (current_char == '-')
+		return (true);
+	if (current_char == '*')
+		return (true);
+	if (ft_isdigit(current_char))
+		return (true);
+	return (false);
+}
+
+/*
+**
+*/
+
+/**
+ * @brief Skips flags and finds the next conversion.
+ *
+ * @param print_control The main control struct.
+ */
+static void	find_current_conversion_position(t_printf *print_control)
+{
+	int	conversion_position;
+
+	(print_control->format)++;
+	conversion_position = 0;
+	while (is_a_flag((print_control->format)[conversion_position]) &&
+			(print_control->format)[conversion_position] != '\0')
+		conversion_position++;
+	print_control->conversion_position = conversion_position;
+	print_control->conversion = (print_control->format)[conversion_position];
+}
+
+/*
+**
+*/
 
 /**
  * @brief Traverses format string
