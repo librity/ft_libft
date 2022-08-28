@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:55:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns first occurence of char c in string up to limit or NULL.
+**
 */
+
+/**
+ * @brief Returns first occurence of char c in string up to limit or NULL.
+ *
+ * @param s The C-string to be searched.
+ * @param c	The char to search.
+ * @param limit The number of bytes to search.
+ * @return char* The first location of the char or NULL.
+ */
 char	*ft_strnchr(const char *s, int c, unsigned int limit)
 {
 	unsigned int	current;

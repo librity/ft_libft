@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:28:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,15 @@ static bool	handled_default(t_parse_flags *flag_control,
 }
 
 /*
-** Parse printf's wildcards.
+**
 */
+
+/**
+ * @brief Parse printf's wildcards.
+ *
+ * @param print_control The main control struct.
+ * @param flag_control The flags control struct.
+ */
 void	pf_parse_wildcars(t_printf *print_control,
 					t_parse_flags *flag_control)
 {

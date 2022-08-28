@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:22 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 18:33:15 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Counts the number of digits that a hex unsigned long would have if printed.
+**
 */
+
+/**
+ * @brief Counts the number of digits
+ * that a hex unsigned long would have if printed.
+ *
+ * @param number The number to be counted.
+ * @return unsigned int The number of chars.
+ */
 unsigned int	ft_count_digits_hex_ul(unsigned long number)
 {
 	int	digit_count;

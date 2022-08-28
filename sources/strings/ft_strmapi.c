@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 23:09:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:54:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Returns an allocated string with each char modified by f.
+**
 */
+
+/**
+ * @brief Returns an allocated string with each char modified by f.
+ *
+ * @param s The C-string to be mapped.
+ * @param f The callback that runs on char of the list.
+ * @return char* The new mapped string.
+ */
 char	*ft_strmapi(char const *s, char (*f)(unsigned int, char))
 {
 	char	*map_start;

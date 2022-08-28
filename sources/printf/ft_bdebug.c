@@ -6,16 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/01 16:41:50 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:20:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Behaves exactly like printf but with a "DEBUG: " suffix and an endline.
-** Only executes if debug is true.
+**
 */
+
+/**
+ * @brief Behaves exactly like printf but with a "DEBUG: " suffix and an endline.
+ * Only executes if debug is true.
+ *
+ * @param debug The debug boolean.
+ * @param format The printf format with conversions and flags.
+ * @param ... The variables to be inserted in the format string.
+ */
 void	ft_bdebug(bool debug, const char *format, ...)
 {
 	t_printf	print_control;

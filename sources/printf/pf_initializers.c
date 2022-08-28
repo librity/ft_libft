@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 21:49:36 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:28:59 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Initialize printf's general control.
+**
 */
+
+/**
+ * @brief Initialize printf's general control.
+ *
+ * @param print_control The main control struct.
+ * @param format The printf format with conversions and flags.
+ */
 void	pf_initialize_print_control(t_printf *print_control, const char *format)
 {
 	print_control->format = format;
@@ -24,8 +31,15 @@ void	pf_initialize_print_control(t_printf *print_control, const char *format)
 }
 
 /*
-** Initialize printf's flag control.
+**
 */
+
+/**
+ * @brief Initialize printf's flag control.
+ *
+ * @param print_control The main control struct.
+ * @param flag_control The flags control struct.
+ */
 void	pf_initialize_flag_control(t_printf *print_control,
 								t_parse_flags *flag_control)
 {
@@ -41,8 +55,16 @@ void	pf_initialize_flag_control(t_printf *print_control,
 }
 
 /*
-** Initialize printf's wildcard control.
+**
 */
+
+/**
+ * @brief Initialize printf's wildcard control.
+ *
+ * @param print_control The main control struct.
+ * @param flag_control The flags control struct.
+ * @param wildcard_control The wildcards control struct.
+ */
 void	pf_initialize_wildcard_control(t_printf *print_control,
 									t_parse_flags *flag_control,
 									t_parse_wildcards *wildcard_control)

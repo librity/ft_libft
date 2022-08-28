@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 18:52:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -48,8 +48,15 @@ static void	print_decimal(int precision, float decimal)
 }
 
 /*
-** Prints a float n with arbitrary precision.
+**
 */
+
+/**
+ * @brief Prints a float n with arbitrary precision.
+ *
+ * @param number The number to be printed.
+ * @param precision The floating point number precision.
+ */
 void	ft_putnbr_precise_f(float n, int precision)
 {
 	long long	whole;

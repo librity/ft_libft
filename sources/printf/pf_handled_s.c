@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:59 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:25:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -38,8 +38,16 @@ static void	initialize_control(t_printf *print_control, t_handle_s *control)
 }
 
 /*
-** Handles printf's %s conversion.
+**
 */
+
+/**
+ * @brief Handles printf's %s conversion.
+ *
+ * @param print_control The main control struct.
+ * @return true If it printed the conversion.
+ * @return false If it didn't print the conversion.
+ */
 bool	pf_handled_s(t_printf *print_control)
 {
 	t_handle_s		control;

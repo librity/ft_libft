@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/27 02:46:24 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:52:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Copy first size chars from src to dst. Not overlap safe.
+**
 */
+
+/**
+ * @brief Copy first size chars from src to dst. Not overlap safe.
+ *
+ * @param dst The destination address.
+ * @param src The source address.
+ * @param size The number of bytes from src to copy.
+ * @return size_t The length of src.
+ */
 size_t	ft_strlcpy(char *dst, const char *src, size_t size)
 {
 	char			current_char;

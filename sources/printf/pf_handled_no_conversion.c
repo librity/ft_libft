@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:18:48 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:25:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Handles printf's empty conversion.
+**
 */
+
+/**
+ * @brief Handles printf's empty conversion.
+ *
+ * @param print_control The main control struct.
+ * @return true If it printed the conversion.
+ * @return false If it didn't print the conversion.
+ */
 bool	pf_handled_no_conversion(t_printf *print_control)
 {
 	if (*(print_control->format) == '%')

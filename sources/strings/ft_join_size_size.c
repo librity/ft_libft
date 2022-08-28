@@ -6,16 +6,26 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 15:46:55 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/05 03:07:38 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:49:27 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** WARNING: NOT TESTED!
-** Apends two non NULL-terminated strings in a newly-allocated string.
+**
 */
+
+/**
+ * @brief WARNING: NOT TESTED!
+ * Apends two non C-string in a newly-allocated string.
+ *
+ * @param s1 The first C-string.
+ * @param s1_size The first C-string's size.
+ * @param s2 The second C-string.
+ * @param s2_size The second C-string's size.
+ * @return char* The allocated joined string.
+ */
 char	*ft_join_size_size(char *s1, size_t s1_size, char *s2, size_t s2_size)
 {
 	char	*new;

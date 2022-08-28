@@ -38,9 +38,10 @@ As a developer I've been using these functions for years
 in some form or another, yet I had no idea how they really work.
 Figuring them out was an initiation of sorts.
 
-It has over 160 functions so far,
+It has over 300 functions so far,
 including a heap-less `printf` that handles `float`s and `long double`s.
-All functions have a documentation comment, and most have an example main.
+All functions have a doxygen-style documentation comment,
+and most have an example main.
 I prioritize modularity and readability:
 small functions with catchy names that do one thing well.
 

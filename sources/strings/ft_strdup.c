@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:45:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an allocated string with the same chars of s.
+**
 */
+
+/**
+ * @brief Creates an allocated string with the same chars of s.
+ *
+ * @param s The C-string to be duplicated.
+ * @return char* The cloned C-string.
+ */
 char	*ft_strdup(const char *s)
 {
 	size_t	original_size;

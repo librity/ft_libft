@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 23:46:58 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 21:56:06 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:03:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Skips '+' and '-', then skips digits, periods, digits.
+**
 */
+
+/**
+ * @brief Skips '+' and '-', then skips digits, periods, digits.
+ *
+ * @param str The C-string to be skipped.
+ * @return char* Pointer after the skipped chars.
+ */
 char	*ft_skip_float(char *str)
 {
 	while (ft_is_plus_or_minus(*str))

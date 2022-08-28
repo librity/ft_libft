@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:42:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,8 +23,15 @@ static void	skip_whitespace_and_sign(const char **str, int *sign)
 }
 
 /*
-** Takes in a string and parses its chars into an unsigned long.
+**
 */
+
+/**
+ * @brief Takes in a string and parses its chars into an unsigned long.
+ *
+ * @param str The number string to be parsed.
+ * @return unsigned long The parsend number.
+ */
 unsigned long	ft_atoul(const char *str)
 {
 	long	number;

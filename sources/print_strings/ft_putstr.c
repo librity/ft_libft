@@ -6,19 +6,25 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:10:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Prints a string to standard out.
+**
 */
-void	ft_putstr(char *s)
+
+/**
+ * @brief Prints a string to standard out.
+ *
+ * @param str The C-string to be printed.
+ */
+void	ft_putstr(char *str)
 {
-	if (s == NULL)
+	if (str == NULL)
 		return ;
-	while (*s)
-		ft_putchar(*s++);
+	while (*str)
+		ft_putchar(*str++);
 }

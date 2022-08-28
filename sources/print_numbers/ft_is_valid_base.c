@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/04 21:22:16 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 18:47:51 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,11 +35,21 @@ static bool	free_and_return(char *free_me, bool is_valid)
 }
 
 /*
-** Checks if a string is a valid base for a numberig system:
-** - base_length must be greater than 1
-** - base_length must equal string length
-** - base can't have any repeating chars
+**
 */
+
+/**
+ * @brief Checks if a string is a valid base for a numberig system:
+ *
+ * @param base A string with the characters that represent a number
+ * in a counting system.
+ *   - Can't have any repeating chars.
+ * @param base_length The number of different characters.
+ *   - Must be greater than 1.
+ *   - Must equal string length.
+ * @return true The base is valid.
+ * @return false The base isn't valid.
+ */
 bool	ft_is_valid_base(const char *base, const size_t base_length)
 {
 	size_t	used_position;

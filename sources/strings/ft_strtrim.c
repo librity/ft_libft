@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:26:27 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:00:06 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Removes set from beginning and end of s1.
+**
 */
+
+/**
+ * @brief Removes set from beginning and end of s1.
+ *
+ * @param s1 The C-string to be trimmed.
+ * @param set The C-string to trim.
+ * @return char* The allocated string without set.
+ */
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	trimmed_end;

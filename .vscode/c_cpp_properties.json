@@ -4,7 +4,6 @@
       "name": "Linux",
       "includePath": [
         "${workspaceFolder}/includes",
-        "${workspaceFolder}/libs/libft/includes",
         "~/.local/include"
       ],
       "defines": [],

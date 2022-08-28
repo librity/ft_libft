@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:31:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,8 +27,16 @@ static void	handle_padding(t_printf *print_control,
 }
 
 /*
-** Prints the formatted conversion %%.
+**
 */
+
+/**
+ * @brief Prints the formatted conversion %%.
+ *
+ * @param print_control The main control struct.
+ * @param control The conversion control struct.
+ * @param flag_control The flags control struct.
+ */
 void	pf_print_percent(t_printf *print_control,
 					t_handle_percent *control,
 					t_parse_flags *flag_control)

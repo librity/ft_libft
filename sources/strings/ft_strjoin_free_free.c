@@ -6,16 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 01:54:30 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:48:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an allocated string joining free_me with free_me_too,
-** then frees free_me and free_me_too.
+**
 */
+
+/**
+ * @brief Creates an allocated string joining free_me with free_me_too,
+ * then frees free_me and free_me_too.
+ *
+ * @param free_me  The first C-string to be joined and freed.
+ * @param free_me_too  The second C-string to be joined and freed.
+ * @return char* The joined C-string.
+ */
 char	*ft_strjoin_free_free(char *free_me, char *free_me_too)
 {
 	char	*new_string;

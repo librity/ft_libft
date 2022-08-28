@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 21:02:06 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates allocated string from start to len of s.
+**
 */
+
+/**
+ * @brief Creates allocated string from start to len of s.
+ *
+ * @param s The C-string to be broken.
+ * @param start The first byte of the substring.
+ * @param len The length of the substring.
+ * @return char* The allocated substring or NULL.
+ */
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	size_t	s_length;

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/21 23:09:49 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/29 19:43:08 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:43:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,8 +28,16 @@ static bool	is_valid_string(char *str)
 }
 
 /*
-** Returns true if the string represents a valid int.
+**
 */
+
+/**
+ * @brief Returns true if the string represents a valid int.
+ *
+ * @param str The number string to be checked.
+ * @return true If number string is a valid int.
+ * @return false If number string is not a valid int.
+ */
 bool	ft_str_is_int(char *str)
 {
 	long	number;

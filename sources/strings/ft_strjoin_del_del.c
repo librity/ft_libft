@@ -6,16 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 01:54:30 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:47:14 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an allocated string joining delete_me with dont_delete_me,
-** then deletes delete_me and delete_me_too.
+**
 */
+
+/**
+ * @brief Creates an allocated string joining delete_me with dont_delete_me,
+ * then deletes delete_me and delete_me_too.
+ *
+ * @param delete_me The first C-string to be joined and deleted.
+ * @param delete_me_too The second C-string to be joined and deleted.
+ * @return char* The joined C-string.
+ */
 char	*ft_strjoin_del_del(char **delete_me, char **delete_me_too)
 {
 	char	*new_string;

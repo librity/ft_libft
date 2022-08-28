@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/23 17:17:04 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/26 00:35:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -292,5 +292,16 @@ bool				pf_handled_lf(t_printf *print_control);
 void				pf_print_lf(t_printf *print_control,
 						t_handle_lf *control,
 						t_parse_flags *flag_control);
+
+/******************************************************************************\
+ * FT_PRINTF MINUS SIGN
+\******************************************************************************/
+
+void				pf_handle_minus_sign_l(long *number_pointer);
+void				pf_handle_minus_sign_ll(long long *number_pointer);
+
+void				pf_handle_minus_sign_f(float *number_pointer);
+void				pf_handle_minus_sign_d(double *number_pointer);
+void				pf_handle_minus_sign_ld(long double *number_pointer);
 
 #endif

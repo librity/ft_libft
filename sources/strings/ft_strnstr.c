@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:58:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Finds the first occurence of needle in haystack up to length.
+**
 */
+
+/**
+ * @brief Finds the first occurence of needle in haystack up to length.
+ *
+ * @param haystack The C-string to be searched.
+ * @param needle The C-string to be search.
+ * @param len The number of bytes to search.
+ * @return char* The first occurence of needle in haystack or NULL.
+ */
 char	*ft_strnstr(const char *haystack, const char *needle, size_t len)
 {
 	char	*haystack_start;

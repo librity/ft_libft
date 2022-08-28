@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/05 23:46:58 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/22 22:55:11 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:03:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Skips ','.
+**
 */
+
+/**
+ * @brief Advances a char pointer until it stops pointing at an ASCII comma ','.
+ *
+ * @param str The C-string to be skipped.
+ * @return char* Pointer after the skipped chars.
+ */
 char	*ft_skip_commas(char *str)
 {
 	while (*str == ',')

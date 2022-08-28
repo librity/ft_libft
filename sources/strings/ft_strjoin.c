@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:48:46 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Creates an allocated string joining s1 with s2.
+**
 */
+
+/**
+ * @brief Creates an allocated string joining s1 with s2.
+ *
+ * @param s1  The first C-string to be joined.
+ * @param s2  The second C-string to be joined.
+ * @return char* The joined C-string.
+ */
 char	*ft_strjoin(char const *s1, char const *s2)
 {
 	size_t	total_size;

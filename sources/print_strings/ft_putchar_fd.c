@@ -6,15 +6,22 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/21 15:51:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:06:45 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Writes char c to file descriptor fd.
+**
 */
+
+/**
+ * @brief Writes char c to file descriptor fd.
+ *
+ * @param c The char to be written.
+ * @param fd The file descriptor to write to.
+ */
 void	ft_putchar_fd(char c, int fd)
 {
 	ssize_t	write_return;

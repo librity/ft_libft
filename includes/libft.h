@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/25 22:34:07 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:08:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -290,14 +290,14 @@ bool				ft_str_is_uint(char *str);
 \******************************************************************************/
 
 void				ft_putchar_fd(char c, int fd);
-void				ft_putstr_fd(char *s, int fd);
-void				ft_putendl_fd(char *s, int fd);
+void				ft_putstr_fd(char *str, int fd);
+void				ft_putendl_fd(char *str, int fd);
 
 void				ft_putchar(char c);
-void				ft_putstr(char *s);
-void				ft_putstr_up_to(char *s, size_t up_to);
-void				ft_putendl(char *s);
-void				ft_puts(char *s);
+void				ft_putstr(char *str);
+void				ft_putstr_up_to(char *str, size_t up_to);
+void				ft_putendl(char *str);
+void				ft_puts(char *str);
 
 void				ft_endl(void);
 
@@ -307,16 +307,10 @@ void				ft_endl(void);
 
 bool				ft_is_valid_base(const char *base,
 						const size_t base_length);
-void				ft_aux_handle_minus_sign_l(long *number_pointer);
-void				ft_aux_handle_minus_sign_ll(long long *number_pointer);
 
-void				ft_aux_handle_minus_sign_f(float *number_pointer);
-void				ft_aux_handle_minus_sign_d(double *number_pointer);
-void				ft_aux_handle_minus_sign_ld(long double *number_pointer);
+void				ft_putnbr_fd(int number, int fd);
 
-void				ft_putnbr_fd(int n, int fd);
-
-void				ft_putnbr(int n);
+void				ft_putnbr(int number);
 void				ft_putnbr_i(int number);
 void				ft_putnbr_ui(unsigned int number);
 void				ft_putnbr_l(long number);
@@ -333,13 +327,13 @@ void				ft_putnbr_base_ll(long long number, const char *base);
 void				ft_putnbr_base_ull(unsigned long long number,
 						const char *base);
 
-void				ft_putnbr_precise_f(float n, int precision);
+void				ft_putnbr_precise_f(float number, int precision);
 void				ft_putnbr_f(float number);
 
-void				ft_putnbr_precise_d(double n, int precision);
+void				ft_putnbr_precise_d(double number, int precision);
 void				ft_putnbr_d(double number);
 
-void				ft_putnbr_precise_ld(long double n, int precision);
+void				ft_putnbr_precise_ld(long double number, int precision);
 void				ft_putnbr_ld(long double number);
 
 void				ft_puthex_uppercase(unsigned int number);

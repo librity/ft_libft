@@ -6,19 +6,26 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:10:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Writes string s to file descriptor fd without null terminator.
+**
 */
-void	ft_putstr_fd(char *s, int fd)
+
+/**
+ * @brief Writes string s to file descriptor fd without null terminator.
+ *
+ * @param str The C-string to be printed.
+ * @param fd The file descriptor to write to.
+ */
+void	ft_putstr_fd(char *str, int fd)
 {
-	if (s == NULL)
+	if (str == NULL)
 		return ;
-	while (*s)
-		ft_putchar_fd(*s++, fd);
+	while (*str)
+		ft_putchar_fd(*str++, fd);
 }

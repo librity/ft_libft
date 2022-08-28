@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 22:56:51 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 20:56:41 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Compares strings s1 and s2 char-wise, returning the difference.
+**
 */
+
+/**
+ * @brief Compares strings s1 and s2 char-wise, returning the difference.
+ *
+ * @param s1 The first C-string.
+ * @param s2 The second C-string.
+ * @param n The number of bytes to compare.
+ * @return int The Difference between the chars or zero.
+ */
 int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
 	size_t	current;

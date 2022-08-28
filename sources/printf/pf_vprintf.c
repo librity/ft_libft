@@ -6,15 +6,23 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:18:05 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:25:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Decides if a char is a flag.
+**
 */
+
+/**
+ * @brief Decides if a char is a flag.
+ *
+ * @param current_char
+ * @return true If it printed the conversion.
+ * @return false If it didn't print the conversion.
+ */
 static bool	is_a_flag(char current_char)
 {
 	if (current_char == '.')
@@ -29,8 +37,14 @@ static bool	is_a_flag(char current_char)
 }
 
 /*
-** Skips flags and finds the next conversion.
+**
 */
+
+/**
+ * @brief Skips flags and finds the next conversion.
+ *
+ * @param print_control The main control struct.
+ */
 static void	find_current_conversion_position(t_printf *print_control)
 {
 	int	conversion_position;
@@ -45,8 +59,15 @@ static void	find_current_conversion_position(t_printf *print_control)
 }
 
 /*
-** Traverses format string while calling the appropiate conversion handlers.
+**
 */
+
+/**
+ * @brief Traverses format string
+ * while calling the appropiate conversion handlers.
+ *
+ * @param print_control The main control struct.
+ */
 void	pf_vprintf(t_printf *print_control)
 {
 	while (*(print_control->format) != '\0')

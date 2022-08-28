@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/06 18:38:56 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/03/21 16:51:35 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:50:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -61,8 +61,16 @@ static void	create_words(
 }
 
 /*
-** Splits string s by char c, generating an allocated string array.
+**
 */
+
+/**
+ * @brief Splits string s by char c, generating an allocated string array.
+ *
+ * @param s The C-string to be split.
+ * @param c The char to split it by.
+ * @return char** The NULL-terminated C-string array with all the words.
+ */
 char	**ft_split(char const *s, char c)
 {
 	size_t	word_count;

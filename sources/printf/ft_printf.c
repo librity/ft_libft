@@ -6,15 +6,24 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 03:16:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/07/26 16:19:08 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/27 19:22:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /*
-** Prints ints, floats and strings according to a format string.
+**
 */
+
+/**
+ * @brief Prints ints, floats and strings according to a format string.
+ *
+ * @param format The printf format with conversions and flags.
+ * @param ... The variables to be inserted in the format string.
+ * @return int If negative, an error occured.
+ * If positive, the number of chars printed.
+ */
 int	ft_printf(const char *format, ...)
 {
 	t_printf	print_control;
