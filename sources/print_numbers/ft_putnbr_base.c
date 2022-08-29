@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 07:42:34 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/28 22:42:53 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,7 +36,7 @@ void	ft_putnbr_base(int number, char *base)
 	int	base_length;
 
 	base_length = ft_strlen(base);
-	if (unless(ft_is_valid_base(base, base_length)))
+	if (!ft_is_valid_base(base, base_length))
 		return ;
 	print_number_with_base(number, base_length, base);
 }

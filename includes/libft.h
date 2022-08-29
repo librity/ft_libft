@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/28 01:27:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/28 23:51:58 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -270,8 +270,19 @@ long double			ft_atold(const char *number_pointer);
  * NUMBER TO STRING
 \******************************************************************************/
 
+unsigned int		ft_uc_to_buffer_base(unsigned char number, char *base,
+						char *buffer);
+unsigned int		ft_uc_to_buffer_lchex(unsigned char number, char *buffer);
+
 char				*ft_itoa(int n);
 unsigned int		ft_i_to_buffer(int n, char *buffer);
+
+char				*ft_uitoa(unsigned int number);
+unsigned int		ft_ui_to_buffer(unsigned int number, char *buffer);
+unsigned int		ft_ui_to_buffer_base(unsigned int number, char *base,
+						char *buffer);
+unsigned int		ft_ui_to_buffer_lchex(unsigned int number,
+						char *buffer);
 
 char				*ft_ltoa(long n);
 
@@ -351,6 +362,7 @@ unsigned int		ft_count_digits_hex_ui(unsigned int number);
 unsigned int		ft_count_digits_hex_ul(unsigned long number);
 
 unsigned int		ft_count_chars_i(int number);
+unsigned int		ft_count_chars_ui(unsigned int number);
 
 unsigned int		ft_count_chars_f(float number, int precision);
 unsigned int		ft_count_digits_f(float number, int precision);

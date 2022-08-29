@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/26 00:35:09 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/28 23:49:09 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@
  * MEMORY
 \******************************************************************************/
 
-# define SALLOC_ERR "Unable to allocate required memory.\n"
+# define SALLOC_ERR "Unable to allocate required memory."
 
 /******************************************************************************\
  * SHELL
@@ -39,9 +39,13 @@
 
 # define DEFAULT_PRINT_FLOAT_PRECISION 6
 
+# define CHAR_PRINT_DIGITS 2
+
 # define DECIMAL_BASE "0123456789"
 # define LOWERCASE_HEX_BASE "0123456789abcdef"
 # define UPPERCASE_HEX_BASE "0123456789ABCDEF"
+
+# define BASE_ERR "Bad number base."
 
 /******************************************************************************\
  * NUMBER TO STRING
@@ -54,28 +58,28 @@
  * PRINT STRINGS
 \******************************************************************************/
 
-# define WRITE_ERR "Unable to write byte to file descriptor.\n"
+# define WRITE_ERR "Unable to write byte to file descriptor."
 
 /******************************************************************************\
  * LINKED LIST
 \******************************************************************************/
 
 # define LIST_INIT_REFERENCE_ERR "Initializing linked list \
-with NULL reference.\n"
-# define LIST_INIT_NONEMPTY_ERR "Initializing non-empty linked list.\n"
+with NULL reference."
+# define LIST_INIT_NONEMPTY_ERR "Initializing non-empty linked list."
 
 /******************************************************************************\
  * DOUBLY LINKED LIST
 \******************************************************************************/
 
 # define DLIST_INIT_REFERENCE_ERR "Initializing doubly linked list \
-with NULL reference.\n"
-# define DLIST_INIT_NONEMPTY_ERR "Initializing non-empty doubly linked list.\n"
+with NULL reference."
+# define DLIST_INIT_NONEMPTY_ERR "Initializing non-empty doubly linked list."
 
 # define DLIST_GET_SAFE_LIST_ERR "Getting node from empty or uninitialized \
-doubly linked linked.\n"
+doubly linked linked."
 # define DLIST_GET_SAFE_INDEX_ERR "Getting node with out-of-bounds index \
-from doubly linked list.\n"
+from doubly linked list."
 
 /******************************************************************************\
  * FT_GET_NEXT_LINE
@@ -86,7 +90,7 @@ from doubly linked list.\n"
 # endif
 # define MAX_FILE_DESCRIPTOR RLIMIT_NOFILE
 
-# define GNL_ERROR_MESSAGE "Unable to read next line of required file\n"
+# define GNL_ERROR_MESSAGE "Unable to read next line of required file"
 
 /******************************************************************************\
  * FT_PRINTF
