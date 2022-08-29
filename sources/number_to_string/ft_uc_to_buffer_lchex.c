@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/28 23:53:45 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/29 15:28:11 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,5 +23,13 @@
  */
 unsigned int	ft_uc_to_buffer_lchex(unsigned char number, char *buffer)
 {
-	return (ft_uc_to_buffer_base(number, LOWERCASE_HEX_BASE, buffer));
+	int	i;
+
+	i = UC_LOWERCASE_HEX_SIZE;
+	while (i--)
+	{
+		buffer[i] = LOWERCASE_HEX_BASE[number % 16];
+		number /= 16;
+	}
+	return (UC_LOWERCASE_HEX_SIZE);
 }

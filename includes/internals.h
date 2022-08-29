@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/28 23:49:09 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/29 15:24:55 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -39,7 +39,8 @@
 
 # define DEFAULT_PRINT_FLOAT_PRECISION 6
 
-# define CHAR_PRINT_DIGITS 2
+# define UC_LOWERCASE_HEX_SIZE 2
+# define UI_LOWERCASE_HEX_SIZE 8
 
 # define DECIMAL_BASE "0123456789"
 # define LOWERCASE_HEX_BASE "0123456789abcdef"

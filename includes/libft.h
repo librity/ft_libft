@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/28 23:51:58 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/29 13:45:40 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -63,7 +63,8 @@ int					ft_rotate_right_i(int word, int rotations);
 uint32_t			ft_rotate_left_ui32(uint32_t word, uint32_t rotations);
 uint32_t			ft_rotate_right_ui32(uint32_t word, uint32_t rotations);
 
-uint32_t			ft_switch_endianess_ui32(uint32_t old);
+uint32_t			ft_switch_byte_endianess_ui32(uint32_t old);
+uint32_t			ft_switch_bit_endianess_ui32(uint32_t old);
 
 /******************************************************************************\
  * MATH

@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/29 00:10:21 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/29 15:21:08 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,7 +35,6 @@ static unsigned int	write_digits(char *buffer,
 	unsigned int	i;
 
 	char_count = count_chars(number, base_length);
-	buffer[char_count] = '\0';
 	i = char_count;
 	while (i--)
 	{
