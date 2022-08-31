@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 17:50:09 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/30 21:51:58 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,15 +15,15 @@
 /**
  * @brief Trasverses every node of a linked list and runs f on each content.
  *
- * @param list The linked list.
+ * @param node The first node of the linked list.
  * @param f The callback that runs on each node of the list.
  */
-void	ft_lstiter(t_list *list, void (*f)(void *))
+void	ft_lstiter(t_list *node, void (*f)(void *))
 {
-	if (list == NULL)
+	if (node == NULL)
 		return ;
-	f(list->content);
-	if (list->next == NULL)
+	f(node->content);
+	if (node->next == NULL)
 		return ;
-	ft_lstiter(list->next, f);
+	ft_lstiter(node->next, f);
 }

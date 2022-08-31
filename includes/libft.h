@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/29 13:45:40 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/30 21:53:32 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -423,18 +423,18 @@ void				ft_lst_trim_next(t_list *node);
 void				ft_lst_init(t_list **list, void *content);
 void				ft_lst_init_safe(t_list **list, void *content);
 
-t_list				*ft_lstmap(t_list *list,
+t_list				*ft_lstmap(t_list *node,
 						void *(*f)(void *),
 						void (*del)(void *));
-t_list				*ft_lstmap_safe(t_list *list, void *(*f)(void *));
-void				ft_lstiter(t_list *list, void (*f)(void *));
+t_list				*ft_lstmap_safe(t_list *node, void *(*f)(void *));
+void				ft_lstiter(t_list *node, void (*f)(void *));
 
-t_list				*ft_lstdup(t_list *list, void (*del)(void *));
-t_list				*ft_lstdup_safe(t_list *list);
+t_list				*ft_lstdup(t_list *node, void (*del)(void *));
+t_list				*ft_lstdup_safe(t_list *node);
 
-t_list				*ft_lstlast(t_list *list);
+t_list				*ft_lstlast(t_list *node);
 
-int					ft_lstsize(t_list *list);
+int					ft_lstsize(t_list *node);
 
 void				ft_lstadd_front(t_list **list, t_list *new);
 void				ft_lst_nadd_front(t_list **list, t_list *new);
@@ -442,7 +442,7 @@ void				ft_lst_nadd_front(t_list **list, t_list *new);
 void				ft_lstadd_back(t_list **list, t_list *new);
 void				ft_lst_nadd_back(t_list **list, t_list *new);
 
-void				ft_lstdelone(t_list *list, void (*del)(void *));
+void				ft_lstdelone(t_list *node, void (*del)(void *));
 void				ft_lstclear(t_list **list, void (*del)(void *));
 
 void				ft_lst_append(t_list **list, void *content);

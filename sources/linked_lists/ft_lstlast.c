@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 15:48:24 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/30 21:52:35 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,14 @@
 /**
  * @brief Return last node of a linked list.
  *
- * @param list The linked list.
+ * @param node The first node of the linked list.
  * @return t_list* The last node of the list or NULL.
  */
-t_list	*ft_lstlast(t_list *list)
+t_list	*ft_lstlast(t_list *node)
 {
-	if (list == NULL)
+	if (node == NULL)
 		return (NULL);
-	if (list->next == NULL)
-		return (NULL);
-	return (ft_lstlast(list->next));
+	if (node->next == NULL)
+		return (node);
+	return (ft_lstlast(node->next));
 }
