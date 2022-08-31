@@ -1,35 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_pluck_safe.c                               :+:      :+:    :+:   */
+/*   ft_dlst_link.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/31 15:35:19 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:33:36 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Extracts the zero-indexed node of a doubly linked list.
- * If list is uninitialized or empty returns,
- * terminates the program with an error.
- * If index is out of bounds, terminates the program with an error.
+ * @brief Inserts the node between previous and next,
+ * inserting it into the doubly linked list.
  *
- * @param list The doubly linked list.
- * @param index The index of the node.
- * @return t_dlist* The node.
+ * @param previous The previous node to link to.
+ * @param node The node to be linked.
+ * @param next The next node to link to.
  */
-t_dlist	*ft_dlst_pluck_safe(t_dlist **list, int index)
+void	ft_dlst_link(t_dlist *previous, t_dlist *node, t_dlist *next)
 {
-	t_dlist	*target;
-
-	target = ft_dlst_get_safe(list, index);
-	if (target == NULL)
-		return (NULL);
-	ft_dlst_delink(target);
-	ft_dlst_trim(target);
-	return (target);
+	node->prev = previous;
+	node->next = next;
+	if (previous != NULL)
+		previous->next = node;
+	if (next != NULL)
+		next->prev = node;
 }

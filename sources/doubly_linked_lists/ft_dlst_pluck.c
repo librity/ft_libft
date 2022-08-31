@@ -6,22 +6,11 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/31 15:35:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
-
-static void	relink(t_dlist *target)
-{
-	t_dlist	*previous;
-	t_dlist	*next;
-
-	previous = target->prev;
-	next = target->next;
-	previous->next = next;
-	next->prev = previous;
-}
 
 /**
  * @brief Extracts the zero-indexed node of a doubly linked list.
@@ -45,7 +34,7 @@ t_dlist	*ft_dlst_pluck(t_dlist **list, int index)
 	target = ft_dlst_get(list, index);
 	if (target == NULL)
 		return (NULL);
-	relink(target);
+	ft_dlst_delink(target);
 	ft_dlst_trim(target);
 	return (target);
 }

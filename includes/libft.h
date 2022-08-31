@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/30 21:53:32 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:33:55 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -539,10 +539,19 @@ void				ft_dlst_cadd_back_lalloc(t_list **lalloc,
 						t_dlist **list,
 						void *content);
 
+t_dlist				*ft_dlst_find(t_dlist **list, t_dlist *node);
+bool				ft_dlst_node_in_list(t_dlist **list, t_dlist *node);
+
 t_dlist				*ft_dlst_pluck(t_dlist **list, int index);
 t_dlist				*ft_dlst_pluck_safe(t_dlist **list, int index);
 t_dlist				*ft_dlst_pluck_first(t_dlist **list);
 t_dlist				*ft_dlst_pluck_last(t_dlist **list);
+t_dlist				*ft_dlst_pluck_node(t_dlist **list, t_dlist *target);
+
+void				ft_dlst_link(t_dlist *previous,
+						t_dlist *node,
+						t_dlist	*next);
+void				ft_dlst_delink(t_dlist *node);
 
 void				ft_dlst_free(t_dlist **free_me);
 

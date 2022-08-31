@@ -1,35 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dlst_pluck_safe.c                               :+:      :+:    :+:   */
+/*   ft_dlst_node_in_list.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 01:05:12 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/31 15:35:19 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/08/31 17:47:34 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Extracts the zero-indexed node of a doubly linked list.
- * If list is uninitialized or empty returns,
- * terminates the program with an error.
- * If index is out of bounds, terminates the program with an error.
+ * @brief Lienarly searches the linked list for the node
+ * and returns true if it finds it.
  *
  * @param list The doubly linked list.
- * @param index The index of the node.
- * @return t_dlist* The node.
+ * @param node The node to be searched.
+ * @return true The node is in the list.
+ * @return false The node is not in the list.
  */
-t_dlist	*ft_dlst_pluck_safe(t_dlist **list, int index)
+bool	ft_dlst_node_in_list(t_dlist **list, t_dlist *node)
 {
-	t_dlist	*target;
+	t_dlist	*node_in_list;
 
-	target = ft_dlst_get_safe(list, index);
-	if (target == NULL)
-		return (NULL);
-	ft_dlst_delink(target);
-	ft_dlst_trim(target);
-	return (target);
+	node_in_list = ft_dlst_find(list, node);
+	if (node_in_list == NULL)
+		return (false);
+	return (true);
 }
