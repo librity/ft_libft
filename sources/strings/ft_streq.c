@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_streq.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: wwallas- <wwallas-@student.42sp.org.br>    +#+  +:+       +#+        */
+/*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 22:56:51 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/03 11:34:54 by wwallas-         ###   ########.fr       */
+/*   Updated: 2022/09/04 22:50:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@
  * @return true If s1 contains the same characters as s2.
  * @return false If s1 does not contain the same characters as s2.
  */
-bool    ft_streq(char *s1, char *s2)
+bool	ft_streq(char *s1, char *s2)
 {
-    if (s1 == s2)
-        return (true);
-    if (s1 == NULL || s2 == NULL)
-        return (false);
-    while (*s1 || *s2)
-        if (*s1++ != *s2++)
-            return (false);
-    return (true);
+	if (s1 == s2)
+		return (true);
+	if (s1 == NULL || s2 == NULL)
+		return (false);
+	while (*s1 || *s2)
+		if (*s1++ != *s2++)
+			return (false);
+	return (true);
 }
