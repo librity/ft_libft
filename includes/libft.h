@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/31 17:33:55 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/04 23:19:46 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -240,6 +240,8 @@ bool				ft_is_empty_str(char *str);
 /******************************************************************************\
  * STRING ARRAYS
 \******************************************************************************/
+
+char				**ft_strarr_new(size_t length);
 
 size_t				ft_strarr_len(char **strings);
 size_t				ft_strarr_size(char **strings);
