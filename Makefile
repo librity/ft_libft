@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/08/31 17:55:21 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/09/06 13:56:46 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,10 @@ OBJECTS_PATH = ./objects
 INCLUDES_PATH = ./includes
 TESTS_PATH = ./tests
 
-CC = gcc
+# CC = gcc
+# CC = clang
+CC = clang-12
+
 CC_STRICT = $(CC) \
 	$(CCF_INCLUDES) \
 	$(CCF_STRICT)
