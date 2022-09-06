@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/04 23:19:46 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/05 20:15:56 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -251,6 +251,8 @@ void				ft_put_strarr(char **strings);
 
 bool				ft_str_in_strarr(char **haystack, char *needle);
 char				*ft_find_in_strarr(char **haystack, char *needle);
+
+char				*ft_join_strarr(char **strarr);
 
 /******************************************************************************\
  * STRING TO NUMBER
