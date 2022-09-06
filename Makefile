@@ -6,7 +6,7 @@
 #    By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2021/02/02 21:58:14 by lpaulo-m          #+#    #+#              #
-#    Updated: 2022/09/06 13:56:46 by lpaulo-m         ###   ########.fr        #
+#    Updated: 2022/09/06 20:15:04 by lpaulo-m         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -106,11 +106,13 @@ EXAMPLE_MAIN = examples/example.c
 EXECUTE_EXAMPLE = ./a.out
 EXAMPLE_GARBAGE = a.out a.out.dSYM
 
-example: build_example
+example: $(NAME)
+	$(CC_FULL) $(EXAMPLE_MAIN) $(NAME)
 	$(EXECUTE_EXAMPLE)
 
-build_example: $(NAME)
-	$(CC_FULL) $(EXAMPLE_MAIN) $(NAME)
+vgexample: $(NAME)
+	$(CC_STRICT) $(CCF_DEBUG) $(EXAMPLE_MAIN) $(NAME)
+	valgrind $(EXECUTE_EXAMPLE)
 
 example_clean: fclean
 	$(REMOVE_RECURSIVE) $(EXAMPLE_GARBAGE)
@@ -183,7 +185,7 @@ dump_sources:
 	clean fclean \
 \
 	test_clean test \
-	example build_example example_clean \
+	example example_clean \
 	vg vglog vg_build vglog_clean \
 \
 	norm git gitm dump_sources

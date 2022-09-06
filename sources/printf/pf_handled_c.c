@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:00:32 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:21:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ static void	initialize_control(t_printf *print_control, t_handle_c *control)
  */
 bool	pf_handled_c(t_printf *print_control)
 {
-	t_handle_c		control;
-	t_parse_flags	*flag_control;
+	static t_handle_c		control;
+	static t_parse_flags	*flag_control;
 
 	if (print_control->conversion != 'c')
 		return (false);

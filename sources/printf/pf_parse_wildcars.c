@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:23:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -44,7 +44,7 @@ static bool	handled_default(t_parse_flags *flag_control,
 void	pf_parse_wildcars(t_printf *print_control,
 					t_parse_flags *flag_control)
 {
-	t_parse_wildcards	control;
+	static t_parse_wildcards	control;
 
 	pf_initialize_wildcard_control(print_control, flag_control, &control);
 	if ((control.found_wildcards) == NULL)

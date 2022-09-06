@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:22:37 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,8 +43,8 @@ static void	interpret_flags(t_parse_flags *flag_control, t_handle_u *control)
  */
 bool	pf_handled_u(t_printf *print_control)
 {
-	t_handle_u		control;
-	t_parse_flags	*flag_control;
+	static t_handle_u		control;
+	static t_parse_flags	*flag_control;
 
 	if (print_control->conversion != 'u')
 		return (false);

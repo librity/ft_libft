@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/03/03 04:05:50 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/06 20:22:15 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,8 +53,8 @@ static void	interpret_flags(t_parse_flags *flag_control,
  */
 bool	pf_handled_lf(t_printf *pf_ctl)
 {
-	t_handle_lf		control;
-	t_parse_flags	*flag_control;
+	static t_handle_lf		control;
+	static t_parse_flags	*flag_control;
 
 	if (pf_ctl->conversion != 'L'
 		&& (pf_ctl->format)[pf_ctl->conversion_position + 1] != 'f')
