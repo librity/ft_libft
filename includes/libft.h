@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/05 20:15:56 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/08 16:14:00 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -217,6 +217,8 @@ char				*ft_strrchr(const char *s, int c);
 char				*ft_strnstr(const char *haystack, const char *needle,
 						size_t len);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
+
+bool				ft_has_char(char *str, char c);
 
 char				*ft_substr(char const *s, unsigned int start, size_t len);
 char				*ft_strtrim(char const *s1, char const *set);
