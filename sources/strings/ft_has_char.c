@@ -6,14 +6,14 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/08 16:19:23 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/08 17:15:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Returns true if the string contains the character.
+ * @brief Checks if the string contains the character.
  *
  * @param str The C-string to be checked.
  * @param c The character to be searched.
