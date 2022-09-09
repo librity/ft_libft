@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/08 17:17:47 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/09 00:52:02 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -245,6 +245,7 @@ bool				ft_is_empty_str(char *str);
 \******************************************************************************/
 
 char				**ft_strarr_new(size_t length);
+char				**ft_strarr_dup(char **clone_me);
 
 size_t				ft_strarr_len(char **strings);
 size_t				ft_strarr_size(char **strings);
