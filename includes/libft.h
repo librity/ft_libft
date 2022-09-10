@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/09 00:52:02 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/09 23:24:33 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -487,6 +487,10 @@ bool				ft_dlst_index_out_of_bounds(t_dlist **list, int index);
 
 t_dlist				*ft_dlstnew(void *content);
 t_dlist				*ft_dlstnew_safe(void *content);
+
+void				*ft_dlst_content(t_dlist *node);
+t_dlist				*ft_dlst_prev(t_dlist *node);
+t_dlist				*ft_dlst_next(t_dlist *node);
 
 void				ft_dlst_trim(t_dlist *node);
 void				ft_dlst_trim_next(t_dlist *node);
