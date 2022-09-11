@@ -1,38 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strarr_dup_shallow.c                            :+:      :+:    :+:   */
+/*   ft_strarr_cut.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/01 17:15:15 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/11 17:02:39 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/11 17:54:39 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Creates a shallow copy of a NULL-terminated C-string array.
+ * @brief Cuts a pointer of a NULL-terminated C-string array.
  *
- * @param copy_me The string array to be copied.
- * @return char** The cloned array or NULL.
+ * @param cut_me The pointer to be cut.
  */
-char	**ft_strarr_dup_shallow(char **copy_me)
+void	ft_strarr_cut(char **cut_me)
 {
-	char	**clone;
-	char	**copier;
-
-	if (copy_me == NULL)
-		return (NULL);
-	clone = ft_strarr_new(ft_strarr_len(copy_me));
-	copier = clone;
-	while (*copy_me != NULL)
+	while (cut_me != NULL && *cut_me != NULL)
 	{
-		*copier = *copy_me;
-		copier++;
-		copy_me++;
+		*cut_me = *(cut_me + 1);
+		cut_me++;
 	}
-	*copier = NULL;
-	return (clone);
 }
