@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/11 21:05:27 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/13 20:20:20 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -596,6 +596,9 @@ char				*ft_strdup_lalloc(t_list **lalloc, const char *s);
 int					ft_get_next_line(int fd, char **line);
 int					ft_gnl(int fd, char **line);
 int					ft_gnl_or_die(int fd, char **line);
+
+void				ft_dump_fd(int fd);
+void				ft_dump_stdin(void);
 
 /******************************************************************************\
  * FT_PRINTF
