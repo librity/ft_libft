@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/27 12:13:17 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/27 14:09:14 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -591,11 +591,13 @@ char				*ft_strdup_lalloc(t_list **lalloc, const char *s);
  * DICTIONARIES
 \******************************************************************************/
 
-typedef struct s_dictionary
+typedef struct s_dict
 {
 	char		*key;
 	void		*value;
-}				t_dictionary;
+}				t_dict;
+
+void				*ft_dict_find(const t_dict **dictionary, char *key);
 
 /******************************************************************************\
  * FT_GET_NEXT_LINE
