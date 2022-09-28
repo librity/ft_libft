@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_dump_fd.c                                       :+:      :+:    :+:   */
+/*   ft_dict_find.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:36:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/27 14:09:11 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/28 00:03:10 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,14 +21,14 @@
  */
 void	*ft_dict_find(const t_dict **dictionary, char *key)
 {
-	t_dict	**node;
+	t_dict	**entry;
 
-	node = (t_dict **)dictionary;
-	while (*node != NULL)
+	entry = (t_dict **)dictionary;
+	while (*entry != NULL)
 	{
-		if (ft_streq(key, (*node)->key))
-			return ((*node)->value);
-		node++;
+		if (ft_streq(key, (*entry)->key))
+			return ((*entry)->value);
+		entry++;
 	}
 	return (NULL);
 }
