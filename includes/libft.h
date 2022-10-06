@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/27 14:09:14 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:12:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -242,29 +242,6 @@ char				*ft_join_size_size(char *s1, size_t s1_size, char *s2,
 bool				ft_starts_with(char *string, char *prefix);
 bool				ft_streq(char *s1, char *s2);
 bool				ft_is_empty_str(char *str);
-
-/******************************************************************************\
- * STRING ARRAYS
-\******************************************************************************/
-
-char				**ft_strarr_new(size_t length);
-
-size_t				ft_strarr_len(char **strings);
-size_t				ft_strarr_size(char **strings);
-
-char				**ft_strarr_dup(char **clone_me);
-char				**ft_strarr_dup_shallow(char **copy_me);
-
-void				ft_strarr_cut(char **cut_me);
-void				ft_strarr_cutn(char **cut_me, int n);
-
-void				ft_free_strarr(char **free_me);
-void				ft_put_strarr(char **strings);
-
-bool				ft_str_in_strarr(char **haystack, char *needle);
-char				*ft_find_in_strarr(char **haystack, char *needle);
-
-char				*ft_join_strarr(char **strarr);
 
 /******************************************************************************\
  * STRING TO NUMBER
@@ -580,12 +557,40 @@ void				ft_dlst_free(t_dlist **free_me);
 \******************************************************************************/
 
 void				*ft_lalloc(t_list **lalloc, size_t size);
+void				*ft_clalloc(t_list **lalloc, size_t nmemb, size_t size);
+
 void				ft_add_lalloc(t_list **lalloc, void *allocated_address);
 void				ft_add_lalloc_array(t_list **lalloc,
 						void **allocated_array);
 void				ft_free_lalloc(t_list **free_me);
 
 char				*ft_strdup_lalloc(t_list **lalloc, const char *s);
+
+/******************************************************************************\
+ * STRING ARRAYS
+\******************************************************************************/
+
+char				**ft_strarr_new(size_t length);
+
+size_t				ft_strarr_len(char **strings);
+size_t				ft_strarr_size(char **strings);
+
+char				**ft_strarr_dup(char **clone_me);
+char				**ft_strarr_dup_shallow(char **copy_me);
+
+void				ft_strarr_cut(char **cut_me);
+void				ft_strarr_cutn(char **cut_me, int n);
+
+void				ft_free_strarr(char **free_me);
+void				ft_put_strarr(char **strings);
+
+bool				ft_str_in_strarr(char **haystack, char *needle);
+char				*ft_find_in_strarr(char **haystack, char *needle);
+
+char				*ft_join_strarr(char **strarr);
+
+void				ft_add_lalloc_strarr(t_list **lalloc,
+						char **allocated_strarr);
 
 /******************************************************************************\
  * DICTIONARIES

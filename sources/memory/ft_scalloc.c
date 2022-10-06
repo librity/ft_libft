@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/11/30 23:59:17 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:28:29 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/10/06 15:59:24 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,9 +17,9 @@
  * and sets them all to zero.
  * If allocation fails it terminates the program with an error.
  *
- * @param nmemb Byte size of each element.
- * @param size Number of elements.
- * @return void* The addres of the allocated memory.
+ * @param nmemb Number of elements.
+ * @param size Byte size of each element.
+ * @return void* The address of the allocated memory.
  */
 void	*ft_scalloc(size_t nmemb, size_t size)
 {

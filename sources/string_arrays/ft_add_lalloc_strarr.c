@@ -1,29 +1,24 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_lalloc.c                                        :+:      :+:    :+:   */
+/*   ft_add_lalloc_strarr.c                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/27 21:13:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/28 18:25:28 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/10/06 16:10:49 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <internals.h>
 
 /**
- * @brief Safely allocates memory and adds it to the lalloc.
+ * @brief Add the allocated pointer array and all of its addresses to the lalloc.
  *
  * @param lalloc A linked list with the pointers of all allocated variables.
- * @param size The number of bytes to be allocated.
- * @return void* The address of the allocated memory.
+ * @param allocated_strarr An arbitrary, NULL-terminated C-string array.
  */
-void	*ft_lalloc(t_list **lalloc, size_t size)
+void	ft_add_lalloc_strarr(t_list **lalloc, char **allocated_strarr)
 {
-	void	*pointer;
-
-	pointer = ft_salloc(size);
-	ft_add_lalloc(lalloc, pointer);
-	return (pointer);
+	ft_add_lalloc_array(lalloc, (void **)allocated_strarr);
 }

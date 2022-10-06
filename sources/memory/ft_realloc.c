@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/04/09 22:57:20 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/09/28 18:25:11 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
  * @param pointer The address to be reallocated.
  * @param old_size Its size.
  * @param new_size The new size.
- * @return void* The addres of the allocated memory.
+ * @return void* The address of the allocated memory.
  */
 void	*ft_realloc(void *pointer, size_t old_size, size_t new_size)
 {
