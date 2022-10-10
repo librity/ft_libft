@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/10/06 16:12:43 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/10/10 16:28:21 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -582,7 +582,9 @@ void				ft_strarr_cut(char **cut_me);
 void				ft_strarr_cutn(char **cut_me, int n);
 
 void				ft_free_strarr(char **free_me);
+
 void				ft_put_strarr(char **strings);
+void				ft_put_strarr_inline(char **strings);
 
 bool				ft_str_in_strarr(char **haystack, char *needle);
 char				*ft_find_in_strarr(char **haystack, char *needle);
