@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/12/14 18:39:28 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/14 18:49:50 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -611,9 +611,9 @@ void				*ft_dict_find(const t_dict **dictionary, char *key);
  * FT_GET_NEXT_LINE
 \******************************************************************************/
 
-# define GNL_FOUND_LINEBREAK 1
-# define GNL_FOUND_EOF 0
-# define GNL_ERROR -1
+# define FT_GNL_FOUND_LINEBREAK 1
+# define FT_GNL_FOUND_EOF 0
+# define FT_GNL_ERROR -1
 
 int					ft_get_next_line(int fd, char **line);
 int					ft_gnl(int fd, char **line);
