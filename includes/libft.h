@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/10/10 16:28:21 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/14 18:39:28 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -369,6 +369,7 @@ unsigned int		ft_count_digits_ld(long double number, int precision);
 
 char				*ft_skip_digits(char *str);
 char				*ft_skip_whitespace(char *str);
+char				*ft_skip_nonwhitespace(char *str);
 char				*ft_skip_plus_or_minus(char *str);
 char				*ft_skip_commas(char *str);
 
