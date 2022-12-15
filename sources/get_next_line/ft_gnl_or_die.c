@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:36:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:32:43 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,7 @@ int	ft_gnl_or_die(int fd, char **line)
 	int	status;
 
 	status = ft_get_next_line(fd, line);
-	if (status == GNL_ERROR)
+	if (status == FT_GNL_ERROR)
 		ft_die(GNL_ERROR_MESSAGE);
 	return (status);
 }

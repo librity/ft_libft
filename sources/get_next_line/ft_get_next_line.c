@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/14 01:52:11 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:32:26 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -100,16 +100,16 @@ int	ft_get_next_line(int fd, char **line)
 	bool		found_linebreak;
 
 	if (bad_params(fd, line))
-		return (GNL_ERROR);
+		return (FT_GNL_ERROR);
 	found_linebreak = false;
 	line_buffer = initialize_line_buffer(read_buffer, &found_linebreak);
 	if (line_buffer == NULL)
-		return (GNL_ERROR);
+		return (FT_GNL_ERROR);
 	line_buffer = read_and_join(fd, read_buffer, line_buffer, &found_linebreak);
 	*line = line_buffer;
 	if (line_buffer == NULL)
-		return (GNL_ERROR);
+		return (FT_GNL_ERROR);
 	if (found_linebreak)
-		return (GNL_FOUND_LINEBREAK);
-	return (GNL_FOUND_EOF);
+		return (FT_GNL_FOUND_LINEBREAK);
+	return (FT_GNL_FOUND_EOF);
 }

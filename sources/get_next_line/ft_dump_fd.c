@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/03/25 13:36:08 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/09/13 20:21:44 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/15 18:32:07 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,11 @@ void	ft_dump_fd(int fd)
 	while (true)
 	{
 		status = ft_get_next_line(fd, &line);
-		if (status == GNL_ERROR)
+		if (status == FT_GNL_ERROR)
 			break ;
 		ft_putendl(line);
 		free(line);
-		if (status == GNL_FOUND_EOF)
+		if (status == FT_GNL_FOUND_EOF)
 			break ;
 	}
 }
