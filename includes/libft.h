@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/12/14 18:49:50 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/29 17:08:47 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -207,6 +207,7 @@ size_t				ft_strlen(const char *s);
 size_t				ft_strsize(const char *s);
 
 char				*ft_strcpy(char *dest, char *src);
+char				*ft_strcpy_end(char *dest, char *src);
 void				ft_strdel(char **delete_me);
 char				*ft_strnchr(const char *s, int c, unsigned int limit);
 

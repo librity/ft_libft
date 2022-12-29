@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/07 00:22:45 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/08/27 21:21:36 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2022/12/29 17:10:38 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,5 @@
  */
 void	ft_putstr(char *str)
 {
-	if (str == NULL)
-		return ;
-	while (*str)
-		ft_putchar(*str++);
+	ft_putstr_fd(str, STDOUT_FILENO);
 }
