@@ -6,7 +6,7 @@
 /*   By: lpaulo-m <lpaulo-m@student.42sp.org.br>    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2021/02/02 21:58:19 by lpaulo-m          #+#    #+#             */
-/*   Updated: 2022/12/29 17:08:47 by lpaulo-m         ###   ########.fr       */
+/*   Updated: 2023/01/30 19:48:25 by lpaulo-m         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -88,6 +88,7 @@ int					ft_clamp_i(int x, int min, int max);
 
 void				ft_swap(int *a, int *b);
 void				ft_swap_i(int *a, int *b);
+void				ft_swap_d(double *a, double *b);
 
 void				ft_div_mod(int dividend, int divisor,
 						int *result, int *remainder);
